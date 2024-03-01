@@ -11,7 +11,7 @@ export default function Illustration() {
             Craft Engaging <br></br>Messages, Drive Results
           </h1>
           <p className="text-xl font-light text-left">
-            Inscreva-se no Twitter hoje mesmo
+            Inscreva-se no Twitter hoje mesms
           </p>
         </div>{" "}
         <div className="md:w-10/12 w-11/12 m-auto md:m-0 relative h-96">
