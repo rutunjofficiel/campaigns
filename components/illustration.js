@@ -4,13 +4,8 @@ import { SlEnvolopeLetter } from "react-icons/sl";
 
 export default function Illustration() {
   return (
-    <div className="bg-[#029AFF] lg:flex flex-col   justify-center w-full hidden md:w-1/2 md:h-screen text-white text-center lg:text-left">
-      <div className="max-w-fit flex flex-col m-auto lg:text-left text-center">
-        <div className="flex flex-col gap-2 lg:gap-4 p-8 ">
-          <div className="flex flex-row gap-1 items-center py-1 lg:hidden m-auto">
-            <SlEnvolopeLetter size={22} color="#fff" />
-            <h1 className="font-bold text-xl">OfficielCampaign</h1>
-          </div>
+    <div className="bg-[#029AFF] hidden md:flex flex-col justify-center w-full md:w-1/2 md:h-screen text-white  text-left">
+      <div className="max-w-fit flex flex-col m-auto">
         <div className="flex flex-col gap-2 lg:gap-4 p-6">
           <h1 className="font-bold text-4xl">
             Craft Engaging <br></br>Messages, Drive Results
