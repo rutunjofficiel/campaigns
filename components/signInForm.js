@@ -2,11 +2,12 @@ import { SlEnvolopeLetter } from "react-icons/sl";
 import { FcGoogle } from "react-icons/fc";
 import { ImAppleinc } from "react-icons/im";
 import { Button } from "./ui/button";
+import { Card } from "./ui/card";
 
 export default function SignInForm() {
   return (
     <div className="flex flex-col justify-center md:py-0 py-4 px-4 w-full md:w-1/2 md:px-1 ">
-      <div className="md:ml-10 md:p-6 flex flex-col md:gap-8 gap-8">
+      <div className="md:ml-16 md:p-6 flex flex-col md:gap-8 gap-8">
         <div className="flex flex-row gap-1 items-center m-auto md:m-0">
           <SlEnvolopeLetter size={22} color="#029AFF" />
           <h1 className="font-bold text-xl">
@@ -23,7 +24,7 @@ export default function SignInForm() {
               Access Your Campaigns with Ease
             </h3>
           </div>
-          <div className="flex flex-col gap-7 lg:w-[70%] w-[90%] m-auto md:m-0">
+          <div className="flex flex-col gap-7 lg:w-[60%] w-[90%] m-auto md:m-0">
             <form className="flex flex-col gap-8">
               <div className="flex flex-col gap-5">
                 {" "}
@@ -58,12 +59,18 @@ export default function SignInForm() {
               <div className="flex-1 bg-[#424242]  px-12 h-[0.4px] opacity-40"></div>
             </div>
 
-            <div className="flex lg:flex-row gap-3 flex-col justify-around">
-              <Button className="text-sm font-semibold lg:text-md w-full flex gap-2 items-center bg-slate-200 hover:bg-slate-300 text-black">
+            <div className="flex lg:flex-row flex-col gap-3 md:gap-0 justify-around">
+              <Button
+                className="font-semibold py-6 md:py-6 md:px-3 text-sm flex gap-1 items-center bg-slate-200 hover:bg-slate-300 text-gray-700 "
+                style={{ margin: "10px" }}
+              >
                 <FcGoogle size={28} />
                 Login with Google
               </Button>
-              <Button className="text-sm font-semibold lg:text-md w-full flex gap-2 items-center align-middle">
+              <Button
+                className="font-semibold py-6 md:py-6 md:px-3 text-sm flex gap-1 items-center align-middle "
+                style={{ margin: "10px" }}
+              >
                 <ImAppleinc size={28} />
                 Login with Apple
               </Button>
