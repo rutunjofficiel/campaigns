@@ -12,54 +12,53 @@ import {
 } from "@/components/ui/card";
 export default function SignInForm() {
   return (
-    <div className="flex flex-col justify-center md:py-0 py-4 px-4 w-full md:w-1/2 md:px-1">
-      <Card className="w-fit m-auto border-0 shadow-none">
-        <div className="md:p-6 flex flex-col md:gap-8 gap-8">
+    <div className="flex flex-col justify-center md:py-0 py-4 w-full md:w-1/2">
+      <Card className="w-fit m-auto border-0 shadow-none pb-0 hideIllustration:mt-[3rem]">
+        <div className="md:p-6 md:pl-0 flex flex-col md:gap-8 gap-8">
           <div className="flex flex-col md:gap-4 gap-5 pl-0">
-            <CardHeader className="gap-7 pb-0">
-              <div className="flex flex-row lg:w-[60%] md:w-[80%] w-[90%] gap-1 items-center justify-center md:justify-normal m-auto md:m-0 ">
+            <CardHeader className="gap-7 py-0">
+              <div className="flex flex-row  hideIllustration:w-full w-fit gap-1 items-center justify-center lg:justify-normal m-auto md:m-0 ">
                 <SlEnvolopeLetter size={22} color="#029AFF" />
                 <h1 className="font-bold text-xl">
                   <span>Officiel</span>
-                  <span className="text-blue-500">Campaign</span>
+                  <span className="text-[#029AFF]">Campaign</span>
                 </h1>
               </div>{" "}
-              <div className="flex flex-col md:gap-5 gap-4 text-center md:text-left">
-                <CardTitle className="lg:text-[2.5rem] md:text-[2rem] text-[1.6rem]  leading-tight font-extrabold">
+              <div className="flex flex-col md:gap-5 gap-4 hideIllustration:text-center md:text-left">
+                <CardTitle className="lg:text-[2.5rem] text-[2rem] xs:text-[1.6rem] 2xs:text-[1.2rem] leading-tight font-extrabold">
                   Welcome Back to Your <br></br> Email Marketing Hub
                 </CardTitle>
                 {/* <h1 className="md:text-[2.5rem] text-[1.6rem] leading-tight font-extrabold"></h1> */}
-                <CardDescription className="text-lg font-semibold text-gray-500">
+                <CardDescription className="text-[1rem]  2xs:text-[0.8rem]  font-semibold text-gray-500">
                   Access Your Campaigns with Ease
                 </CardDescription>
               </div>
             </CardHeader>
             <CardContent>
               <div className="flex flex-col gap-7  m-auto md:m-0">
-                <form className="flex flex-col gap-8">
-                  <div className="flex flex-col gap-5">
+                <form className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-3">
                     <div className="flex flex-col gap-3">
                       <input
                         type="email"
                         placeholder="Enter email address"
-                        className="bg-[#EEEEEE] py-2.5 px-2 rounded-sm"
+                        className="bg-[#EEEEEE] py-2.5  2xs:py-1.6  px-2 rounded-sm"
                       />
                       <input
                         type="password"
                         placeholder="Enter password"
-                        className="bg-[#EEEEEE] py-2.5 px-3 rounded-sm"
+                        className="bg-[#EEEEEE] py-2.5  2xs:py-1.6  px-3 rounded-sm"
                       />
                     </div>
 
-                    <div className="flex flex-row sm:text-sm text-xs justify-between">
-                      <p>
-                        Don’t have an account?
-                        <span className="font-bold text-blue-500">Sign Up</span>
-                      </p>
+                    <div className="flex flex-row sm:text-sm text-xs justify-end">
                       <p>Forgot password?</p>
                     </div>
                   </div>
-                  <Button className="bg-[#029AFF] w-full py-6" type="submit">
+                  <Button
+                    className="bg-[#029AFF] hover:bg-blue-500 w-full py-6"
+                    type="submit"
+                  >
                     Login
                   </Button>
                 </form>
@@ -80,7 +79,11 @@ export default function SignInForm() {
                     Login with Apple
                   </Button>
                 </div>
-              </div>
+                <p className="m-auto 2xs:text-sm">
+                  Don’t have an account?
+                  <span className="font-bold text-[#029AFF]"> Sign Up</span>
+                </p>
+              </div>{" "}
             </CardContent>
           </div>
         </div>

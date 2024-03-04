@@ -72,6 +72,9 @@ module.exports = {
     },
     screens: {
       md: "767px",
+      xs: { max: "500px" },
+      "2xs": { max: "345px" },
+      hideIllustration: { max: "900px" },
     },
   },
   plugins: [require("tailwindcss-animate")],
