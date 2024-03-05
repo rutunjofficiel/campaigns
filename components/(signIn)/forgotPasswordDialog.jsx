@@ -32,7 +32,7 @@ const { formId, formField } = ForgotPasswordModel;
 function _renderStepContent(step) {
   switch (step) {
     case 0:
-      return <EmailForm  formField={formField} />;
+      return <EmailForm formField={formField} />;
     case 1:
       return <OTPForm formField={formField} />;
     case 2:
@@ -78,7 +78,7 @@ export default function ForgotPasswordDialog() {
             ) : (
               <Formik
                 onSubmit={(values) => {
-                  console.log(values);  
+                  console.log(values);
                 }}
               >
                 {({ errors, touched }) => (

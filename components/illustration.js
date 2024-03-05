@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 export default function Illustration() {
   return (
-    <div className="bg-[#029AFF]  hideIllustration:hidden md:flex flex-col justify-center gap-0 align-middle w-full md:w-1/2 md:h-screen text-white text-left">
+    <div className="bg-[#029AFF]  hideIllustration:hidden md:flex flex-col justify-center gap-0 align-middle w-full md:w-1/2  md:min-h-screen  text-white text-left">
       {" "}
       <Card className="w-fit m-auto border-0 shadow-none text-white bg-transparent relative">
         <div className="max-w-fit 2xl:w-[90%] flex flex-col m-auto">
@@ -24,7 +24,7 @@ export default function Illustration() {
             </p>
           </div>
           <div className="w-[75%] 2xl:w-[90%] m-auto lg:m-0 relative h-[45vh]">
-            <Image  
+            <Image
               src={signInIllustration}
               quality={100}
               priority={true}

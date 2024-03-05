@@ -13,7 +13,7 @@ export default function EmailForm(props) {
   return (
     <>
       {formField && (
-        <div className="stepform flex flex-col gap-2 justify-start">
+        <div className="flex flex-col gap-2 justify-start">
           <label className="font-semibold w-fit">
             {formField?.recoveryEmail.label}
           </label>

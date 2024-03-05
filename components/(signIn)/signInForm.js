@@ -94,7 +94,7 @@ export default function SignInForm() {
                         </div>
                       </div>
                       <div className="flex flex-row sm:text-sm text-xs justify-end">
-                        <Dialog>
+                        <Dialog onOpenAutoFocus>
                           <DialogTrigger>
                             <p>Forgot password?</p>
                           </DialogTrigger>
