@@ -6,11 +6,11 @@ import { Button } from "../ui/button";
 import { ICONS } from "@/config";
 
 export default function NewPasswordForm() {
-  const [showPassword, setShowPassword] = useState("false");
-  const [showConfirmPassword, setShowConfirmPassword] = useState("false");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   return (
     <>
-      <div className="w-fit flex flex-col gap-4">
+      <div className="stepform flex flex-col gap-4 items-center justify-center m-auto">
         <div>
           <label>Enter New Password</label>
           <div className="flex flex-row bg-[#EEEEEE] rounded-sm">
@@ -18,11 +18,14 @@ export default function NewPasswordForm() {
               className="bg-[#EEEEEE] py-2.5 2xs:py-1.6 px-3 rounded-sm"
               type={showPassword ? "text" : "password"}
               placeholder="Enter new password"
-            />{" "}
+            />
             <Button
               variant="ghost"
               className="rounded-s-none bg-[#EEEEEE] hover:bg-[#EEEEEE]"
-              onClick={() => setShowPassword(!showPassword)}
+              onClick={(e) => {
+                e.preventDefault();
+                setShowPassword(!showPassword);
+              }}
             >
               {showPassword ? (
                 <ICONS.passwordVisible size={18} />
@@ -37,15 +40,19 @@ export default function NewPasswordForm() {
           <div className="flex flex-row bg-[#EEEEEE] rounded-sm">
             <Field
               className="bg-[#EEEEEE] py-2.5 2xs:py-1.6 px-3 rounded-sm"
-              type={showPassword ? "text" : "password"}
+              type={showConfirmPassword ? "text" : "password"}
               placeholder="Enter new password"
             />{" "}
             <Button
               variant="ghost"
+              type="button"
               className="rounded-s-none bg-[#EEEEEE] hover:bg-[#EEEEEE]"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              onClick={(e) => {
+                e.preventDefault();
+                setShowConfirmPassword(!showConfirmPassword);
+              }}
             >
-              {showPassword ? (
+              {showConfirmPassword ? (
                 <ICONS.passwordVisible size={18} />
               ) : (
                 <ICONS.passwordHidden size={18} />
@@ -53,6 +60,7 @@ export default function NewPasswordForm() {
             </Button>
           </div>
         </div>
+        <Button type="submit">Set New Password</Button>
       </div>
     </>
   );

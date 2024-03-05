@@ -124,7 +124,7 @@ export default function SignInForm() {
                     <FcGoogle size={28} />
                     Login with Google
                   </Button>
-                  <Button className="font-semibold py-6 md:py-6 md:px-3 text-sm flex gap-1 items-center align-middle  ">
+                  <Button className="font-semibold bg-primary hover:bg-primary/90 py-6 md:py-6 md:px-3 text-sm flex gap-1 items-center align-middle  ">
                     <ImAppleinc size={28} />
                     Login with Apple
                   </Button>
