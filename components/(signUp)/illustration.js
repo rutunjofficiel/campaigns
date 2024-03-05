@@ -24,7 +24,7 @@ export default function Illustration() {
             </p>
           </div>
           <div className="w-[75%] 2xl:w-[90%] m-auto lg:m-0 relative h-[45vh]">
-            <Image  
+            <Image
               src={signInIllustration}
               quality={100}
               priority={true}

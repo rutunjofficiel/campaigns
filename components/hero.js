@@ -1,4 +1,7 @@
+import { HeroFeatures } from "@/config";
 import { Button } from "./ui/button";
+import HeroFeature from "./(hero)/heroFeature";
+import HeroFeatureCard from "./(hero)/heroFeatureCard";
 
 export default function Hero() {
   return (
@@ -20,8 +23,11 @@ export default function Hero() {
           <Button className="bg-[#029AFF]">Contact Us</Button>
           <Button variant="outline">Learn More</Button>
         </div>
+        {HeroFeatures.map((feature, i) => (
+          <HeroFeature feature={feature} key={i} />
+        ))}
 
-        
+        <HeroFeatureCard />
       </div>
     </section>
   );
