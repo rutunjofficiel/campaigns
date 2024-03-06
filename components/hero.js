@@ -5,28 +5,33 @@ import HeroFeatureCard from "./(hero)/heroFeatureCard";
 
 export default function Hero() {
   return (
-    <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32 flex-1">
-      <div>
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-          <h1 className="font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#029AFF]  ">
-            Email Marketing and SMS Marketing Made Easy
+    <section className="container flex max-w-[64rem] flex-col items-center gap-10 text-center">
+      <div className="sm:gap-8 flex flex-col items-center justify-center gap-12">
+        <div className="sm:gap-4 container flex max-w-[64rem] flex-col items-center gap-10   text-center">
+          <h1 className="sm:text-5xl lg:text-7xl text-3xl font-semibold md:text-6xl">
+            <span className="text-[#029AFF]">Email Marketing</span> and SMS
+            Marketing Made Easy
           </h1>
-          <p>
+          <p className="sm:text-xl sm:leading-8 max-w-[42rem] leading-normal text-muted-foreground">
             Lorem Ipsum is a dummy text. Lorem Ipsum is a dummy text. Lorem
             Ipsum is a dummy text. Lorem Ipsum is a dummy text. Lorem Ipsum is a
             dummy text. Lorem Ipsum is a dummy text. Lorem Ipsum is a dummy
-            text.{" "}
+            text.
           </p>
+          <div className="m-auto flex w-fit flex-row gap-2">
+            <Button className="bg-[#029AFF]">Contact Us</Button>
+            <Button variant="outline">Learn More</Button>
+          </div>
         </div>
-
-        <div>
-          <Button className="bg-[#029AFF]">Contact Us</Button>
-          <Button variant="outline">Learn More</Button>
+        <div className="flex flex-col justify-evenly md:flex-row">
+          {HeroFeatures.map((feature, i) => (
+            <HeroFeature feature={feature} key={i} />
+          ))}
         </div>
-        {HeroFeatures.map((feature, i) => (
-          <HeroFeature feature={feature} key={i} />
-        ))}
-
+      </div>
+      <div className="sm:grid-cols-2 lg:max-w-[80vw] m-auto mx-auto grid w-fit max-w-[85vw]  justify-center gap-4 md:grid-cols-3">
+        <HeroFeatureCard />
+        <HeroFeatureCard />
         <HeroFeatureCard />
       </div>
     </section>
