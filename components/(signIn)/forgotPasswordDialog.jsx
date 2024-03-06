@@ -32,7 +32,7 @@ const { formId, formField } = ForgotPasswordModel;
 function _renderStepContent(step) {
   switch (step) {
     case 0:
-      return <EmailForm formField={formField} />;
+      return <EmailForm />;
     case 1:
       return <OTPForm formField={formField} />;
     case 2:
@@ -48,12 +48,14 @@ export default function ForgotPasswordDialog() {
   const isLastStep = activeStep === steps.length - 1;
 
   function _handleSubmit(values, actions) {
+    console.log("onDialog", values);
+    _submitForm(values, actions);
     if (isLastStep) {
-      _submitForm(values, actions);
     } else {
       setActiveStep(activeStep + 1);
     }
   }
+
   function _handleBack() {
     setActiveStep(activeStep - 1);
   }
@@ -76,23 +78,7 @@ export default function ForgotPasswordDialog() {
             {activeStep === steps.length ? (
               <RedirectToLogin />
             ) : (
-              <Formik
-                onSubmit={(values) => {
-                  console.log(values);
-                }}
-              >
-                {({ errors, touched }) => (
-                  <Form
-                    id={formId}
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      _handleSubmit();
-                    }}
-                  >
-                    {_renderStepContent(activeStep)}
-                  </Form>
-                )}
-              </Formik>
+              <> {_renderStepContent(activeStep)} </>
             )}
           </DialogDescription>
         </div>
