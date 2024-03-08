@@ -4,7 +4,7 @@ import CustomErrorMessage from "../customErrorMessage";
 import { CustomInputField } from "../customUIComponents/customInputField";
 import { Button } from "../ui/button";
 
-export default function EmailForm({ onNext, currentStep }) {
+export default function EmailForm({ activeStep, setActiveStep }) {
   const [recoveryEmailState, setRecoveryEmailState] = useState("");
 
   return (
@@ -19,7 +19,10 @@ export default function EmailForm({ onNext, currentStep }) {
           },
           body: JSON.stringify(values), // Convert values to JSON string
         });
-        onNext(currentStep + 1);
+
+        console.log("activeStep", typeof setActiveStep);
+        setActiveStep(activeStep + 1);
+
         console.log("VALUES", values.email);
       }}
       validate={(values) => {
@@ -35,12 +38,12 @@ export default function EmailForm({ onNext, currentStep }) {
       }}
     >
       <Form method="POST" action="/api/email">
-        <div className="flex flex-col gap-2 m-auto">
+        <div className="m-auto flex flex-col gap-2">
           <label className="font-semibold ">Enter recovery email</label>
           <Field
             type="email"
             name="email"
-            className="bg-[#EEEEEE] py-2.5 2xs:py-1.6 px-2  rounded-sm"
+            className="2xs:py-1.6 rounded-sm bg-[#EEEEEE] px-2  py-2.5"
           />
           <ErrorMessage name="email">
             {(errMsg) => {

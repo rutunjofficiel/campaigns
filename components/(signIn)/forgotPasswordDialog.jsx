@@ -29,35 +29,38 @@ const steps = [
   "Redirecting to Login",
 ];
 const { formId, formField } = ForgotPasswordModel;
-function _renderStepContent(step) {
-  switch (step) {
-    case 0:
-      return <EmailForm />;
-    case 1:
-      return <OTPForm formField={formField} />;
-    case 2:
-      return <NewPasswordForm formField={formField} />;
-    case 3:
-      return <RedirectToLogin />;
-    default:
-      return <div>Not Found</div>;
-  }
-}
+
 export default function ForgotPasswordDialog() {
   const [activeStep, setActiveStep] = useState(0);
   const isLastStep = activeStep === steps.length - 1;
 
-  function _handleSubmit(values, actions) {
-    console.log("onDialog", values);
-    _submitForm(values, actions);
-    if (isLastStep) {
-    } else {
-      setActiveStep(activeStep + 1);
+  function _renderStepContent(step) {
+    switch (step) {
+      case 0:
+        return (
+          <EmailForm activeStep={activeStep} setActiveStep={setActiveStep} />
+        );
+      case 1:
+        return (
+          <OTPForm
+            activeStep={activeStep}
+            setActiveStep={setActiveStep}
+            formField={formField}
+          />
+        );
+      case 2:
+        return (
+          <NewPasswordForm
+            activeStep={activeStep}
+            setActiveStep={setActiveStep}
+            formField={formField}
+          />
+        );
+      case 3:
+        return <RedirectToLogin />;
+      default:
+        return <div>Not Found</div>;
     }
-  }
-
-  function _handleBack() {
-    setActiveStep(activeStep - 1);
   }
   return (
     <>
