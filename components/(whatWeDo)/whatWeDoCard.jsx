@@ -1,5 +1,4 @@
-import { CardBody, CardTitle } from "react-bootstrap";
-import { Card } from "../ui/card";
+import { Card, CardTitle, CardBody } from "../ui/card";
 import { ICONS } from "@/config";
 
 export default function WhatWeDoCard({ title, description }) {
