@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="m-auto  flex flex-col gap-10 px-3 text-start md:mt-16 md:max-w-[64rem] md:items-center md:text-center">
       <div className="flex max-w-[64rem] flex-col items-start gap-4 md:items-center md:gap-8 ">
-        <h1 className="lg:text-7xl  text-4xl font-bold text-[#00243B]">
+        <h1 className="lg:text-7xl text-4xl  font-bold text-[#00243B] md:text-6xl">
           <span className="text-[#029AFF]">Email Marketing</span> and SMS
           Marketing Made Easy
         </h1>
@@ -16,11 +16,11 @@ export default function Hero() {
           marketing solutions.
         </p>
         <div className="flex w-fit flex-row gap-2">
-          <Button className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg bg-[#029AFF]">
+          <Button className="md:h-14 md:rounded-full md:px-12 md:text-lg">
             Contact Us
           </Button>
           <Button
-            className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg "
+            className="md:h-14 md:rounded-full md:px-12 md:text-lg"
             variant="outline"
           >
             Learn More

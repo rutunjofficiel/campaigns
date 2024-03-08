@@ -4,7 +4,7 @@ import HeroFeatureCard from "./officielCampaignServices";
 
 export default function OfficielCampaignServices() {
   return (
-    <div className="md:mt-16 m-auto md:max-w-[64rem]">
+    <div className="m-auto  md:max-w-[64rem]">
       <div className=" flex flex-col gap-10 text-center  md:items-center">
         <h1 className="text-3xl font-bold">Officiel Campaign Services </h1>
         <p className="max-w-[42rem] text-xl font-medium   leading-normal text-[#00243B] opacity-90 ">

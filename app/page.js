@@ -10,10 +10,10 @@ import Navbar from "@/components/navbar";
 
 export default function Page() {
   return (
-    <div className=" flex flex-col justify-center gap-8 px-3 ">
+    <div className=" flex flex-col justify-center gap-8">
       <Navbar />
       <Hero />
-      <div className="flex w-full flex-col justify-center gap-5">
+      <div className="flex w-full flex-col justify-center gap-12">
         <FeatureSection />
         <div className="w-full bg-[#F3F3F3]">
           <FeatureSection2 />
@@ -25,7 +25,7 @@ export default function Page() {
         </div>
         <Benefits />
       </div>
-      <div className="relative w-full bg-[#029AFF] py-16 ">
+      <div className="relative mt-24 w-full bg-[#029AFF] py-16 ">
         <CtaBottom />
       </div>
     </div>

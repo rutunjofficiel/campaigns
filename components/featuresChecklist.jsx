@@ -13,6 +13,13 @@ export default function FeaturesChecklist() {
           Leave internet worries behind, experience, and use Officiel SMS to
           shoot your shots.
         </h1>
+        <ul className="text-[0.8rem] md:text-[1rem]">
+          {officielCampaignModules.map((feature, index) => (
+            <li key={index}>
+              <HeroFeature feature={feature} />
+            </li>
+          ))}
+        </ul>
         <div className="flex w-fit flex-row gap-2">
           <Button className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg bg-[#029AFF]">
             Try it now
@@ -24,13 +31,6 @@ export default function FeaturesChecklist() {
             Subscribe
           </Button>
         </div>
-        <ul className="text-[0.8rem] md:text-[1rem]">
-          {officielCampaignModules.map((feature, index) => (
-            <li key={index}>
-              <HeroFeature feature={feature} />
-            </li>
-          ))}
-        </ul>
       </div>
       <div className="lg:m-0 relative m-auto aspect-square w-[94vw] md:w-[80vw]">
         <Image
