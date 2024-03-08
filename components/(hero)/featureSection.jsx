@@ -5,7 +5,7 @@ import HeroFeature from "./heroFeature";
 import { officielCampaignModules } from "@/app/utils/content";
 export default function FeatureSection() {
   return (
-    <div className="  m-auto flex h-max max-w-[64rem] flex-col-reverse items-center   justify-start px-2 py-8  md:flex-row">
+    <div className="m-auto flex h-max max-w-[64rem] flex-col-reverse items-center justify-start px-2 py-8  md:flex-row">
       <div className="flex flex-col items-start gap-4 md:gap-10">
         <h1 className="lg:text-3xl xl:text-4xl text-[1rem] font-semibold md:text-3xl">
           Make your learning easy with all these modules, and experience the

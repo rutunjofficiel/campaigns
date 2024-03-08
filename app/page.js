@@ -10,19 +10,21 @@ import Navbar from "@/components/navbar";
 
 export default function Page() {
   return (
-    <div className="m-auto flex flex-col justify-center gap-8">
+    <div className=" flex flex-col justify-center gap-8 px-3 ">
       <Navbar />
       <Hero />
-      <div className=" w-full">
+      <div className="flex w-full flex-col justify-center gap-5">
         <FeatureSection />
+        <div className="w-full bg-[#F3F3F3]">
+          <FeatureSection2 />
+        </div>
+        <WhatWeDo />
+        <VideoSection />
+        <div className="w-full ">
+          <FeaturesChecklist />
+        </div>
+        <Benefits />
       </div>
-      <div className="w-full bg-[#F3F3F3]">
-        <FeatureSection2 />
-      </div>
-      <WhatWeDo />
-      <VideoSection />
-      <FeaturesChecklist />
-      <Benefits />
       <div className="relative w-full bg-[#029AFF] py-16 ">
         <CtaBottom />
       </div>

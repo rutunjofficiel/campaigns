@@ -1,5 +1,5 @@
 import { Button } from "../ui/button";
-import { Card, CardTitle, CardBody } from "../ui/card";
+import { Card, CardTitle, CardContent } from "../ui/card";
 
 export default function BenefitCard({ benefit }) {
   return (

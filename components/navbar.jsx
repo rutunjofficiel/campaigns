@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <header>
       <nav
-        className={`${navHidden ? "rounded-[2rem]" : "rounded-[2rem]  rounded-b-[2rem]"} lg:px-4 lg:py-4 lg:mt-4 lg:flex-row m-auto mt-2 flex w-[85%]  flex-col items-center justify-between rounded-full bg-[#00243B] px-4  text-lg text-gray-700 md:max-w-[64rem] md:justify-between md:gap-3 `}
+        className={`${navHidden ? "rounded-[2rem]" : "rounded-[2rem]  rounded-b-[2rem]"} lg:px-4 lg:py-4 lg:mt-4 lg:flex-row m-auto mt-2 flex w-[85%]  flex-col items-center justify-between rounded-full bg-[#00243B] px-4 text-lg text-gray-700 md:max-w-[64rem] md:justify-between md:gap-3 `}
       >
         <div className="lg:w-fit flex w-full flex-row items-center justify-between">
           <Link href="#">
@@ -72,7 +72,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`${navHidden ? "hidden" : "flex "} lg:flex lg:flex-row m-auto w-[85%] flex-col justify-between gap-3 bg-[#00243B] py-3 md:items-center md:bg-transparent`}
+          className={`${navHidden ? "hidden" : "flex"} lg:flex lg:flex-row m-auto w-[85%] flex-col justify-between gap-3 bg-[#00243B] py-3 md:items-center md:bg-transparent`}
           id="menu"
         >
           <ul

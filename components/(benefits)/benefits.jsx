@@ -1,4 +1,3 @@
- 
 import { Card } from "../ui/card";
 import { Button } from "../ui/button";
 import Image from "next/image";
@@ -13,7 +12,7 @@ export default function Benefits({ benefit, benefitDescription }) {
       <div className="flex  flex-col gap-4 text-start md:gap-6 ">
         <h1 className="lg:text-3xl xl:text-4xl text-[1rem] font-semibold md:text-3xl">
           With Officiel, boost your business growth, and experience maximum
-          revenue.  
+          revenue.
         </h1>
         {boostContent.map((benefit, index) => {
           return <BenefitCard benefit={benefit} key={index} />;

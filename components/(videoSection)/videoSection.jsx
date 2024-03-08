@@ -4,7 +4,7 @@ export default function VideoSection() {
   return (
     <div className="m-auto flex max-w-[64rem] flex-col items-center justify-center gap-4 rounded-2xl bg-slate-200 p-4 py-6 text-center">
       <div className="flex flex-col items-center gap-6">
-        <h1 className="w-[90%] text-2xl font-medium text-[#050505]">
+        <h1 className="w-[90%] text-[1rem] font-medium text-[#050505] md:text-2xl">
           Data-driven decisions, cost-effective investment, enhanced analytics,
           integration of third-party, everything is in one place with Officiel
           Campaign.
