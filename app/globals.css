@@ -75,3 +75,15 @@
     background-position: 0% 50%;
   }
 }
+
+.heading {
+  font-family: var(--font-inter); 
+ letter-spacing: -2px;
+  font-weight:750;
+}
+
+.paragraph {
+  font-family: var(--font-inter); 
+  font-size: 1.1rem; 
+}
+

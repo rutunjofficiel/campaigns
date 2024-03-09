@@ -9,7 +9,7 @@ export default function Navbar() {
   const [navHidden, setNavHidden] = useState(true);
 
   return (
-    <header className="sticky top-0 z-40 border-b-2 border-slate-50 backdrop-blur-sm">
+    <header className="backdrop-blur-sm md:sticky md:top-0 md:z-40">
       <nav
         className={`${navHidden ? "rounded-[2rem]" : "rounded-[2rem]"} lg:py-4 lg:mt-4 m-auto mt-2 flex   max-w-[64rem] flex-col items-center justify-between rounded-full text-lg md:flex-row md:justify-between md:gap-3`}
       >

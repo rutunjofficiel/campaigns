@@ -16,17 +16,17 @@ export default function Page() {
       <Hero />
       <div className="flex w-full flex-col justify-center gap-12">
         <FeatureSection />
-        <div className="w-full bg-[#F3F3F3]">
+        <div className="w-full bg-[#F4FAFF]">
           <FeatureSection2 />
         </div>
         <WhatWeDo />
         <VideoSection />
-        <div className="w-full ">
+        <div className="w-full">
           <FeaturesChecklist />
         </div>
         <Benefits />
       </div>
-      <div className="bg-campaingnBlue mt-24 flex w-full flex-col  gap-8">
+      <div className="mt-24 flex w-full flex-col gap-8  bg-campaingnBlue">
         <CtaBottom />
 
         <Footer />

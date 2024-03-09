@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function VideoSection() {
   return (
-    <div className="m-auto flex max-w-[64rem] flex-col items-center justify-center gap-4 rounded-2xl bg-slate-200 p-4 py-6 text-center">
+    <div className=" m-auto flex flex-col items-center justify-center gap-4 rounded-2xl bg-slate-50 p-4 py-8 text-center shadow md:max-w-[80vw]">
       <div className="flex flex-col items-center gap-6">
         <h1 className="w-[90%] text-[1rem] font-medium text-[#050505] md:text-2xl">
           Data-driven decisions, cost-effective investment, enhanced analytics,
@@ -21,7 +21,7 @@ export default function VideoSection() {
           </Button>
         </div>
       </div>
-      <div className="border-12px aspect-video   h-auto w-[99%] rounded-2xl border-black bg-slate-400 "></div>
+      <div className="border-12px aspect-video h-auto w-[90vh] rounded-2xl border-black bg-slate-200 "></div>
     </div>
   );
 }
