@@ -12,7 +12,7 @@ export default function CtaBottom() {
             Well, bring the change and let Officiel handle all your tasks.
           </p>
           <div className="flex w-fit flex-row gap-2">
-            <Button className="lg:h-14 lg:rounded-lg lg:px-12 lg:text-lg bg-white text-[#029AFF]">
+            <Button className="lg:h-14 lg:rounded-lg lg:px-12 lg:text-lg text-campaingnBlue bg-white">
               Start for free
             </Button>
             <Button className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg outline outline-1 outline-white">

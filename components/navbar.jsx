@@ -4,27 +4,23 @@ import Link from "next/link";
 import logo from "../public/images/logo.png";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { SlEnvolopeLetter } from "react-icons/sl";
 export default function Navbar() {
   const [navHidden, setNavHidden] = useState(true);
 
   return (
-    <header>
+    <header className="sticky top-0 z-40 border-b-2 border-slate-50 backdrop-blur-sm">
       <nav
-        className={`${navHidden ? "rounded-[2rem]" : "rounded-[2rem]"} lg:px-4 lg:py-4 lg:mt-4 m-auto mt-2 flex w-[85%] flex-col items-center justify-between rounded-full bg-[#00243B] px-4 text-lg text-gray-700 md:max-w-[64rem] md:flex-row md:justify-between md:gap-3`}
+        className={`${navHidden ? "rounded-[2rem]" : "rounded-[2rem]"} lg:py-4 lg:mt-4 m-auto mt-2 flex   max-w-[64rem] flex-col items-center justify-between rounded-full text-lg md:flex-row md:justify-between md:gap-3`}
       >
         <div className="flex w-full flex-row items-center justify-between md:w-fit">
           <Link href="#">
-            <div className="lg:m-0 relative m-auto h-16 w-48">
-              <Image
-                fill={true}
-                quality={100}
-                style={{
-                  objectFit: "contain",
-                }}
-                sizes="(max-width: 768px) 60vw, (max-width: 1200px) 40vw, 33vw"
-                src={logo}
-                alt="logo"
-              />
+            <div className="lg:justify-normal m-auto flex w-fit flex-row items-center justify-center gap-1 md:m-0 hideIllustration:w-full ">
+              <SlEnvolopeLetter size={22} color="#029AFF" />
+              <h1 className="text-xl font-bold">
+                <span>Officiel</span>
+                <span className="text-campaingnBlue">Campaign</span>
+              </h1>
             </div>
           </Link>
           <Button
@@ -71,40 +67,32 @@ export default function Navbar() {
           </Button>
         </div>
 
-        <div
+        {/* <div
           className={`${navHidden ? "hidden" : "flex"} m-auto w-full flex-col justify-between gap-3 bg-[#00243B] py-3 md:flex md:flex-row md:items-center md:bg-transparent`}
           id="menu"
-        >
-          <ul
-            className="
-              m-auto
-              w-fit  text-base     text-gray-700
-              md:m-0
-              md:flex
-              md:justify-between 
-              md:pt-0"
+        > */}
+        <ul className="text-basetext-gray-700 m-auto w-fit md:m-0 md:flex md:justify-between md:pt-0">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                className="block py-2 text-sm opacity-100 duration-200 md:px-2 md:py-4"
+                href={link?.href}
+              >
+                {link.link}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-row items-center justify-center gap-2 align-middle">
+          <Link
+            className="block py-2 text-sm opacity-100 duration-200 md:px-2 md:py-4"
+            href="/signIn"
           >
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <Link
-                  className="block py-2 text-sm text-white opacity-80  duration-200 hover:opacity-100 md:px-2 md:py-4"
-                  href={link?.href}
-                >
-                  {link.link}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-row items-center justify-center gap-2 align-middle">
-            <Link
-              className="block py-2 text-sm text-white opacity-70  duration-200 hover:opacity-100 md:px-2 md:py-4"
-              href="/signIn"
-            >
-              Sign In
-            </Link>
-            <Button>Try for free</Button>
-          </div>
+            Sign In
+          </Link>
+          <Button>Try for free</Button>
         </div>
+        {/* </div> */}
       </nav>
     </header>
   );

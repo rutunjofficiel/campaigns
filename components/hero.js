@@ -7,10 +7,13 @@ export default function Hero() {
   return (
     <section className="m-auto  flex flex-col gap-10 px-3 text-start md:mt-16 md:max-w-[64rem] md:items-center md:text-center">
       <div className="flex max-w-[64rem] flex-col items-start gap-4 md:items-center md:gap-8 ">
-        <h1 className="lg:text-7xl text-4xl  font-bold text-[#00243B] md:text-6xl">
-          <span className="text-[#029AFF]">Email Marketing</span> and SMS
-          Marketing Made Easy
+        <h1 className=" lg:text-7xl text-4xl font-bold text-[#050505] md:text-6xl">
+          <span className=" lg:text-7xl bg-gradient-to-r from-[#029aff] via-blue-600 to-blue-700 bg-clip-text text-4xl font-bold text-transparent md:text-6xl">
+            Email Marketing{" "}
+          </span>
+          and SMS Marketing Made Easy
         </h1>
+
         <p className="max-w-[42rem] text-xl font-medium   leading-normal text-[#00243B] opacity-90 ">
           Boost your conversions; leave the confusion. Choose Officiel for
           marketing solutions.

@@ -26,7 +26,7 @@ export default function Page() {
         </div>
         <Benefits />
       </div>
-      <div className="mt-24 flex w-full flex-col gap-8 bg-[#029AFF]">
+      <div className="bg-campaingnBlue mt-24 flex w-full flex-col  gap-8">
         <CtaBottom />
 
         <Footer />

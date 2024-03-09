@@ -51,7 +51,7 @@ export default function EmailForm({ activeStep, setActiveStep }) {
               return <CustomErrorMessage errorMessage={errMsg} />;
             }}
           </ErrorMessage>
-          <Button type="submit" className="bg-[#029AFF]">
+          <Button type="submit" className="bg-campaingnBlue">
             Send OTP
           </Button>
         </div>
