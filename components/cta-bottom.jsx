@@ -2,9 +2,9 @@ import { Button } from "./ui/button";
 
 export default function CtaBottom() {
   return (
-    <section className="container flex max-w-[64rem] flex-col items-center gap-10 text-center text-white">
+    <section className="container flex max-w-[64rem] flex-col items-center gap-10 py-24 text-center text-white">
       <div className="sm:gap-8 flex flex-col items-center justify-center gap-12">
-        <div className="sm:gap-4 container flex max-w-[64rem] flex-col items-center gap-10   text-center">
+        <div className=" lg:gap-10   flex max-w-[64rem] flex-col items-center gap-4   text-center">
           <h1 className="text-3xl font-bold">
             Read everything and still doing all these tasks on your own?
           </h1>

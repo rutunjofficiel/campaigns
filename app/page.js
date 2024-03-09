@@ -5,6 +5,7 @@ import WhatWeDo from "@/components/(hero)/fficielCampaignServices";
 import VideoSection from "@/components/(videoSection)/videoSection";
 import CtaBottom from "@/components/cta-bottom";
 import FeaturesChecklist from "@/components/featuresChecklist";
+import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 
@@ -25,8 +26,10 @@ export default function Page() {
         </div>
         <Benefits />
       </div>
-      <div className="relative mt-24 w-full bg-[#029AFF] py-16 ">
+      <div className="mt-24 flex w-full flex-col gap-8 bg-[#029AFF]">
         <CtaBottom />
+
+        <Footer />
       </div>
     </div>
   );
