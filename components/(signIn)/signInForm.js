@@ -41,7 +41,7 @@ export default function SignInForm() {
                 <SlEnvolopeLetter size={22} color="#029AFF" />
                 <h1 className="text-xl font-bold">
                   <span>Officiel</span>
-                  <span className="text-campaingnBlue">Campaign</span>
+                  <span className="text-campaignBlue">Campaign</span>
                 </h1>
               </div>
               <div className="flex flex-col gap-4 md:gap-5 md:text-left hideIllustration:text-center">
@@ -104,7 +104,7 @@ export default function SignInForm() {
                         </Dialog>
                       </div>
                       <Button
-                        className="bg-campaingnBlue w-full py-6 hover:bg-blue-500"
+                        className="bg-campaignBlue w-full py-6 hover:bg-blue-500"
                         type="submit"
                       >
                         Sign In
@@ -131,7 +131,7 @@ export default function SignInForm() {
                 </div>
                 <p className="m-auto 2xs:text-sm">
                   Don’t have an account?
-                  <span className="text-campaingnBlue font-bold">
+                  <span className="text-campaignBlue font-bold">
                     {" "}
                     <Link href="/signUp">Sign Up</Link>
                   </span>

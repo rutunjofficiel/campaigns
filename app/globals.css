@@ -79,6 +79,7 @@
 .heading {
   font-family: var(--font-inter); 
  letter-spacing: -2px;
+ font-size: 5rem;
   font-weight:750;
 }
 

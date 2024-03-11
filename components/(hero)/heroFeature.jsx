@@ -1,9 +1,13 @@
 import { ICONS } from "@/config";
+import { Card, CardContent, CardFooter } from "../ui/card";
+
 export default function HeroFeature({ feature, icon }) {
+  const IconComponent = ICONS[icon];
   return (
-    <div className="flex flex-row gap-1">
-      <ICONS.check color="#029AFF" className="md:w-12 w-6" />
-      <p>{feature}</p>
-    </div>
+  
+    <Card className="flex flex-col items-center justify-center gap-2 rounded-none border-none bg-inherit p-3 text-center">
+      {IconComponent && <IconComponent size="26" />}
+      <p className="w-fit">{feature}</p>
+    </Card>
   );
 }

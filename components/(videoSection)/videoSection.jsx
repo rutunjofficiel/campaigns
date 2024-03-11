@@ -10,7 +10,7 @@ export default function VideoSection() {
           Campaign.
         </h1>
         <div className="flex w-fit flex-row gap-2">
-          <Button className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg bg-campaingnBlue">
+          <Button className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg bg-campaignBlue">
             Try it now
           </Button>
           <Button

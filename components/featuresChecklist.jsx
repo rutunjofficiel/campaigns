@@ -7,21 +7,21 @@ import { officielSMS } from "@/app/utils/content";
 import { officielCampaignModules } from "@/app/utils/content";
 export default function FeaturesChecklist() {
   return (
-    <div className="m-auto flex h-max max-w-[64rem] flex-col-reverse items-center justify-start px-2 py-8  md:flex-row-reverse md:gap-8">
+    <div className="m-auto flex h-max flex-col-reverse items-center justify-start px-2 py-8  md:flex-row-reverse md:gap-8">
       <div className="flex flex-col items-start gap-4 md:gap-10">
         <h1 className="lg:text-3xl xl:text-4xl text-[1rem] font-semibold md:text-3xl">
           Leave internet worries behind, experience, and use Officiel SMS to
           shoot your shots.
         </h1>
-        <ul className="text-[0.8rem] md:text-[1rem]">
-          {officielCampaignModules.map((feature, index) => (
+        <ul className="grid grid-cols-2 text-[0.8rem] md:text-[1rem] ">
+          {officielSMS.map((feature, index) => (
             <li key={index}>
-              <HeroFeature feature={feature} />
+              <HeroFeature icon={feature.icon} feature={feature.feature} />
             </li>
           ))}
         </ul>
         <div className="flex w-fit flex-row gap-2">
-          <Button className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg bg-campaingnBlue">
+          <Button className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg bg-campaignBlue">
             Try it now
           </Button>
           <Button
@@ -32,7 +32,7 @@ export default function FeaturesChecklist() {
           </Button>
         </div>
       </div>
-      <div className="lg:m-0 relative m-auto aspect-square w-[94vw] md:w-[80vw]">
+      <div className="lg:m-0 relative m-auto aspect-square w-[94vw] md:w-[70vw]">
         <Image
           fill={true}
           quality={100}

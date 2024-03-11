@@ -29,7 +29,7 @@ export default function SignUpForm() {
                 <SlEnvolopeLetter size={22} color="#029AFF" />
                 <h1 className="text-xl font-bold">
                   <span>Officiel</span>
-                  <span className="text-campaingnBlue">Campaign</span>
+                  <span className="text-campaignBlue">Campaign</span>
                 </h1>
               </div>{" "}
               <div className="flex flex-col gap-4 md:gap-5 md:text-left hideIllustration:text-center">
@@ -121,7 +121,7 @@ export default function SignUpForm() {
                         </div>
                       </div>
                       <Button
-                        className="bg-campaingnBlue w-full py-6 hover:bg-blue-500"
+                        className="bg-campaignBlue w-full py-6 hover:bg-blue-500"
                         type="submit"
                       >
                         CREATE NEW ACCOUNT
@@ -148,7 +148,7 @@ export default function SignUpForm() {
                 </div>
                 <p className="m-auto 2xs:text-sm">
                   Already have an account?
-                  <span className="text-campaingnBlue font-bold">
+                  <span className="text-campaignBlue font-bold">
                     {" "}
                     <Link href="/signIn">Sign In</Link>{" "}
                   </span>{" "}

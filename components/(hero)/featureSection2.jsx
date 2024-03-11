@@ -1,24 +1,22 @@
 import { Button } from "../ui/button";
 import indexIllustration2 from "../../public/images/indexIllustration2.png";
 import Image from "next/image";
-import { email } from "@/app/utils/content";
 import HeroFeature from "./heroFeature";
-
+import { emailContent, officielCampaignModules } from "@/app/utils/content";
 export default function FeatureSection2() {
   return (
-    <div className="m-auto flex h-max max-w-[64rem] flex-col-reverse items-center justify-start   px-2 py-8 md:flex-row-reverse md:gap-8">
+    <div className="m-auto flex w-[85%]   flex-col-reverse items-center justify-start   py-8 md:flex-row-reverse">
       <div className="flex flex-col items-start gap-4 md:gap-10">
-        <h1 className="lg:text-3xl xl:text-4xl text-[1.2rem] font-semibold md:text-3xl">
-          Open. Click. Convert. Make emails work for you with{" "}
-          <span className="heading bg-gradient-to-r from-[#029aff] via-blue-600 to-blue-700 bg-clip-text     text-transparent">
-            Officiel
-          </span>{" "}
-          Mail.
+        <h1 className="lg:text-3xl xl:text-4xl text-[1rem] font-semibold md:text-3xl">
+          Open. Click. Convert. Make emails work for you with Officiel Mail.
         </h1>
-        <ul className="text-[0.8rem] md:text-[1rem]">
-          {email.map((emailFeature, index) => (
-            <li key={index}>
-              <HeroFeature feature={emailFeature} />
+        <ul className="grid grid-cols-2  text-[0.8rem]  md:text-[1rem] ">
+          {emailContent.map((emailFeature) => (
+            <li key={emailFeature.id}>
+              <HeroFeature
+                feature={emailFeature.feature}
+                icon={emailFeature.icon}
+              />
             </li>
           ))}
         </ul>

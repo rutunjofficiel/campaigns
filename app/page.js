@@ -1,7 +1,7 @@
 import Benefits from "@/components/(benefits)/benefits";
 import FeatureSection from "@/components/(hero)/featureSection";
 import FeatureSection2 from "@/components/(hero)/featureSection2";
-import WhatWeDo from "@/components/(hero)/fficielCampaignServices";
+import WhatWeDo from "@/components/(hero)/officielCampaignServices";
 import VideoSection from "@/components/(videoSection)/videoSection";
 import CtaBottom from "@/components/cta-bottom";
 import FeaturesChecklist from "@/components/featuresChecklist";
@@ -11,26 +11,28 @@ import Navbar from "@/components/navbar";
 
 export default function Page() {
   return (
-    <div className=" flex flex-col justify-center gap-8">
-      <Navbar />
-      <Hero />
-      <div className="flex w-full flex-col justify-center gap-12">
+    <>
+      <div className="m-auto flex w-[85%] flex-col justify-center gap-8">
+        <Navbar />
+        <Hero />
+
         <FeatureSection />
-        <div className="w-full bg-[#F4FAFF]">
-          <FeatureSection2 />
-        </div>
+      </div>
+      <div className="bg-[#f3f3f3]">
+        <FeatureSection2 />
+      </div>
+      <div className="m-auto flex w-[85%] flex-col justify-center gap-8">
         <WhatWeDo />
         <VideoSection />
-        <div className="w-full">
-          <FeaturesChecklist />
-        </div>
+        <FeaturesChecklist />
+
         <Benefits />
       </div>
-      <div className="mt-24 flex w-full flex-col gap-8  bg-campaingnBlue">
+      <div className="bg-campaignBlue mt-24 flex w-full flex-col  gap-8">
         <CtaBottom />
-
-        <Footer />
       </div>
-    </div>
+
+      <Footer />
+    </>
   );
 }

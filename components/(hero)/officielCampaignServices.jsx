@@ -1,30 +1,28 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
-import { ICONS } from "@/config";
+import { officielCampaignServices } from "@/app/utils/content";
+import WhatWeDoCard from "../(whatWeDo)/whatWeDoCard";
+import HeroFeatureCard from "./heroFeatureCard";
 
-export default function HeroFeatureCard({ feature, featureDescription }) {
+export default function OfficielCampaignServices() {
   return (
-    <>
-      <Card className="flex w-fit flex-col justify-between gap-3 px-4 py-4 text-start shadow-sm duration-200 hover:bg-[#F4FAFF] md:gap-5 md:p-4 md:px-5">
-        <div className="flex flex-row md:flex-col md:gap-12">
-          <div className="flex flex-col gap-2">
-            <CardTitle className="flex flex-col gap-4 text-[1.2rem] text-[#050505] ">
-              {/* <div className="h-8 w-8 rounded-full bg-white"></div> */}
-              {feature}
-            </CardTitle>
-            <CardDescription className="paragraph md:text-sm ">
-              {featureDescription}
-            </CardDescription>
-          </div>
+    <div className="mx-auto flex h-[90vh] flex-col gap-8 align-middle md:max-w-[80vw]">
+      <div className="my-auto">
+        <div className=" flex flex-col gap-2 text-center  md:items-center">
+          <h1 className="text-3xl font-bold">Officiel Campaign Services</h1>
+          <p className=" text-xl opacity-90 ">
+            Customize your marketing, reach worldwide, and fulfill your
+            promises.
+          </p>
         </div>
-      </Card>
-    </>
+        <div className=" [&>*:nth-child(even)]:bg-campaignBlueDark  [&>*:nth-child(odd)]:bg-campaignBlue  lg:max-w-[80vw] m-auto mt-8 grid w-fit grid-cols-1 justify-center  gap-4 md:grid-cols-3">
+          {officielCampaignServices.map((content, index) => (
+            <HeroFeatureCard
+              key={index}
+              feature={content.title}
+              featureDescription={content.description}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
-4;

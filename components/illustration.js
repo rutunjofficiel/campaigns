@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 export default function Illustration() {
   return (
-    <div className="bg-campaingnBlue  w-full flex-col justify-center gap-0 text-left align-middle text-white md:flex  md:min-h-screen  md:w-1/2 hideIllustration:hidden">
+    <div className="bg-campaignBlue  w-full flex-col justify-center gap-0 text-left align-middle text-white md:flex  md:min-h-screen  md:w-1/2 hideIllustration:hidden">
       {" "}
       <Card className="relative m-auto w-fit border-0 bg-transparent text-white shadow-none">
         <div className="2xl:w-[90%] m-auto flex max-w-fit flex-col">

@@ -6,19 +6,20 @@ import { boostContent } from "@/app/utils/content";
 import BenefitCard from "./benefitCard";
 import boostIllustration from "../../public/images/boostIllustration.png";
 
-export default function Benefits({ benefit, benefitDescription }) {
+export default function Benefits() {
   return (
-    <div className="m-auto flex h-max max-w-[64rem] flex-col-reverse items-center justify-center md:flex-row">
+    <div className="m-auto flex h-max flex-col-reverse items-center justify-center md:flex-row">
       <div className="flex  flex-col gap-4 text-start md:gap-6 ">
         <h1 className="lg:text-3xl xl:text-4xl text-[1rem] font-semibold md:text-3xl">
           With Officiel, boost your business growth, and experience maximum
           revenue.
         </h1>
+
         {boostContent.map((benefit, index) => {
           return <BenefitCard benefit={benefit} key={index} />;
         })}
       </div>
-      <div className="lg:m-0 relative m-auto h-[50vh] w-[60vw]">
+      <div className="lg:m-0 relative m-auto h-[50vh] w-[70vw]">
         <Image
           fill={true}
           quality={100}
