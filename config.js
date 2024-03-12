@@ -9,9 +9,14 @@ import {
   FileText,
   BarChartHorizontalBig,
   Gauge,
+  SquareUserRound,
   Blocks,
+  HandCoins,
   EyeOff,
+  FileLock,
+  ShieldPlus,
   UsersRound,
+  ToyBrick,
   PanelsTopLeft,
   Eye,
 } from "lucide-react";
@@ -25,6 +30,8 @@ import { MdOutlineContactMail } from "react-icons/md";
 import { FolderSync } from "lucide-react";
 import { GiGrowth } from "react-icons/gi";
 import { HiOutlineRectangleStack } from "react-icons/hi2";
+import { BsRobot } from "react-icons/bs";
+import { MdOutlineQueryStats } from "react-icons/md";
 
 export const ICONS = {
   check: BsCheckLg,
@@ -35,19 +42,20 @@ export const ICONS = {
   performance: SiPagespeedinsights,
   passwordHidden: EyeOff,
   passwordVisible: Eye,
-  costEffective: FaHandHoldingUsd,
+  costEffective: HandCoins,
   globalOutreach: AiOutlineGlobal,
   calendar: CiCalendarDate,
   migrate: FolderSync,
-  automation: FaGears,
-  kyc: FaUserShield,
+  automation: BsRobot,
+  kyc: ShieldPlus,
   campaignMaster: TfiPanel,
   content: PiNewspaperLight,
-  contact: MdOutlineContactMail,
+  contact: SquareUserRound,
   growth: GiGrowth,
   signUpFree: TicketPercent,
+  statistics: MdOutlineQueryStats,
   options: HiOutlineRectangleStack,
-  thirdPartyIntegration: Blocks,
+  thirdPartyIntegration: ToyBrick,
   landingPage: PanelsTopLeft,
   audience: UsersRound,
   analyticalDashboard: BarChartHorizontalBig,

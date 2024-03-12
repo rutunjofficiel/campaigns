@@ -12,16 +12,10 @@ export default function CtaBottom() {
             Well, bring the change and let Officiel handle all your tasks.
           </p>
           <div className="flex w-fit flex-row gap-2">
-            <Button
-              size="lg"
-              className="lg:h-14 lg:rounded-lg lg:px-12 lg:text-lg text-campaignBlue bg-white"
-            >
+            <Button className="lg:h-14 lg:rounded-lg lg:px-12 lg:text-lg hover:bg-campaignBlue text-campaignBlue bg-white hover:text-white">
               Start for free
             </Button>
-            <Button
-              size="lg"
-              className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg outline outline-1 outline-white"
-            >
+            <Button className="lg:h-14 lg:rounded-full lg:px-12 lg:text-lg  outline outline-1 outline-white">
               Request more info
             </Button>
           </div>

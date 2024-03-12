@@ -59,7 +59,12 @@ export const whatWeDoCardsContent = [
       "Offer a discount on a product or service to incentivize subscribers to make a purchase",
   },
 ];
-
+export const videoSection = [
+  { id: 1, feature: "Data-driven decisions", icon: "automation" },
+  { id: 2, feature: "Cost-effective investment", icon: "kyc" },
+  { id: 3, feature: "Enhanced analytics", icon: "campaignMaster" },
+  { id: 4, feature: "Third-party integration", icon: "thirdPartyIntegration" },
+];
 export const officielCampaignModules = [
   { id: 1, feature: "Automation", icon: "automation" },
   { id: 2, feature: "KYC", icon: "kyc" },

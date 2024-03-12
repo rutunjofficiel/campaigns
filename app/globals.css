@@ -56,27 +56,27 @@
  input{
   background-color: #EEEEEE;
  }
-
-.bg-gradient-to-r {
-  animation: gradientAnimation 5s ease infinite;
-  /* Adjust animation duration as needed */
-}
-  
-.heading {
-  font-family: var(--font-inter); 
- letter-spacing: -2px;
  
-  font-weight:750;
+  
+.heading { 
+font-family: var(--font-inter); 
+ letter-spacing: -2px;
+ font-size: 5rem;
+ font-weight:600; 
+ line-height: 120%;
 }
 .sub-heading{
   font-family: var(--font-inter);
      
-  
+  letter-spacing: -1px;
     font-weight: 600;
 }
 
-.paragraph {
-  font-family: var(--font-inter); 
-  
-}
+@media (max-width: 768px) {
+  .sub-heading{letter-spacing: -1px;}
 
+  .heading{
+    font-size: 3.8rem; 
+  }
+}  
+ 

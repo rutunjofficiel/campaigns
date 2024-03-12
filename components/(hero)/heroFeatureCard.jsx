@@ -14,7 +14,7 @@ export default function HeroFeatureCard({ feature, featureDescription, icon }) {
 
   return (
     <>
-      <Card className="  flex w-fit flex-col items-start justify-between gap-3 px-4 py-4 text-start text-white duration-200  hover:opacity-95 hover:shadow-lg md:gap-5 md:p-4 md:px-5">
+      <Card className="  flex w-fit flex-col items-start justify-between gap-3 px-4 py-4 text-start text-white duration-200  hover:opacity-95 hover:shadow-lg md:gap-5 md:px-5 md:py-8">
         <div className="flex flex-col items-center gap-4 text-center align-middle md:flex-col md:gap-12 ">
           <div className="m-auto aspect-square h-12 w-fit">
             {IconComponent && <IconComponent size="100%" color="white" />}

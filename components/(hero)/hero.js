@@ -7,9 +7,9 @@ import { heroCards } from "@/app/utils/content";
 export default function Hero() {
   return (
     <section className="m-auto flex flex-col gap-10  text-start  md:max-w-full md:items-center md:text-center">
-      <div className="flex flex-col items-start justify-center gap-4 py-16 md:items-center md:gap-8 md:py-24">
-        <h1 className="heading text-[3.8rem] leading-none md:text-[5rem]">
-          <span className="heading  bg-gradient-to-r from-[#029aff] via-blue-600 to-blue-700 bg-clip-text     text-transparent  ">
+      <div className="flex flex-col items-start justify-center gap-4 py-16  md:max-w-[70%] md:items-center md:gap-8 md:py-24">
+        <h1 className="heading">
+          <span className="   bg-gradient-to-r from-[#029aff] via-blue-600 to-blue-700 bg-clip-text     text-transparent  ">
             Email Marketing{" "}
           </span>
           and SMS Marketing Made Easy

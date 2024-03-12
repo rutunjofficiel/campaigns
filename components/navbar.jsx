@@ -10,7 +10,7 @@ export default function Navbar() {
   const [navHidden, setNavHidden] = useState(true);
 
   return (
-    <header className="mx-auto max-w-[90%] backdrop-blur-sm md:sticky md:top-0 md:z-40 md:max-w-[85%] ">
+    <header className="mx-auto max-w-[90%] backdrop-blur-sm  md:top-0 md:z-40 md:max-w-[90%] ">
       <nav className="lg:bg-[#00243B] lg:text-white lg:flex-row m-auto mt-2 flex flex-col   items-center justify-between rounded-full text-lg text-white md:mt-4 md:gap-3  md:p-1 md:px-5">
         <div className="lg:w-fit flex w-full flex-row items-center justify-between gap-3">
           <div className="mobileLogo  lg:hidden m-auto flex w-fit  flex-row gap-1 text-black md:m-0">
@@ -20,7 +20,7 @@ export default function Navbar() {
               <span className="text-campaignBlue">Campaign</span>
             </h1>
           </div>
-          <div className="desktopLogo lg:inline-block  lg:w-56  relative hidden w-32 overflow-hidden">
+          <div className="desktopLogo lg:inline-block lg:w-[11rem] relative hidden w-32 overflow-hidden">
             <Image objectFit="cover" src={logo} alt="Logo main" />
           </div>
 

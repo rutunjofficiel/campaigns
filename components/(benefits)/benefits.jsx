@@ -9,10 +9,13 @@ import boostIllustration from "../../public/images/boostIllustration.png";
 export default function Benefits() {
   return (
     <div className="m-auto flex h-max flex-col-reverse items-center justify-center md:flex-row">
-      <div className="flex  flex-col gap-4 text-start md:gap-6 ">
+      <div className="flex  flex-col gap-4 text-start items-center md:gap-6 ">
         <h1 className="sub-heading lg:text-3xl xl:text-4xl text-center text-[1.2rem] md:text-start  md:text-3xl  ">
-          With Officiel, boost your business growth, and experience maximum
-          revenue.
+          With{" "}
+          <span className="heading  bg-gradient-to-r from-[#029aff] via-blue-600 to-blue-700 bg-clip-text     text-transparent  ">
+            Officiel{" "}
+          </span>
+          , boost your business growth, and experience maximum revenue.
         </h1>
 
         {boostContent.map((benefit, index) => {
