@@ -5,12 +5,14 @@ import { CiCalendarDate } from "react-icons/ci";
 import {
   TicketPercent,
   Check,
-  HiOutlineRectangleStack,
   BadgePercent,
   FileText,
+  BarChartHorizontalBig,
   Gauge,
+  Blocks,
   EyeOff,
   UsersRound,
+  PanelsTopLeft,
   Eye,
 } from "lucide-react";
 import { SiPagespeedinsights } from "react-icons/si";
@@ -21,7 +23,8 @@ import { TfiPanel } from "react-icons/tfi";
 import { PiNewspaperLight } from "react-icons/pi";
 import { MdOutlineContactMail } from "react-icons/md";
 import { FolderSync } from "lucide-react";
-import { GiGrowth } from "react-icons/gi"; 
+import { GiGrowth } from "react-icons/gi";
+import { HiOutlineRectangleStack } from "react-icons/hi2";
 
 export const ICONS = {
   check: BsCheckLg,
@@ -44,6 +47,10 @@ export const ICONS = {
   growth: GiGrowth,
   signUpFree: TicketPercent,
   options: HiOutlineRectangleStack,
+  thirdPartyIntegration: Blocks,
+  landingPage: PanelsTopLeft,
+  audience: UsersRound,
+  analyticalDashboard: BarChartHorizontalBig,
 };
 
 export const HeroFeatures = ["Feature 1", "Feature 2", "Feature 3"];

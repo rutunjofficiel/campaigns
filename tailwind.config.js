@@ -15,6 +15,13 @@ module.exports = {
       screens: { "2xl": "1400px" },
     },
     extend: {
+      screens: {
+        md: "767px",
+
+        xs: { max: "500px" },
+        "2xs": { max: "345px" },
+        hideIllustration: { max: "900px" },
+      },
       colors: {
         campaignBlue: "#029AFF",
         campaignBlueDark: "#00243B",
@@ -73,12 +80,6 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-    },
-    screens: {
-      md: "767px",
-      xs: { max: "500px" },
-      "2xs": { max: "345px" },
-      hideIllustration: { max: "900px" },
     },
   },
   plugins: [require("tailwindcss-animate")],

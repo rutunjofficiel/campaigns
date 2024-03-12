@@ -61,30 +61,22 @@
   animation: gradientAnimation 5s ease infinite;
   /* Adjust animation duration as needed */
 }
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
+  
 .heading {
   font-family: var(--font-inter); 
  letter-spacing: -2px;
- font-size: 5rem;
+ 
   font-weight:750;
+}
+.sub-heading{
+  font-family: var(--font-inter);
+     
+  
+    font-weight: 600;
 }
 
 .paragraph {
   font-family: var(--font-inter); 
-  font-size: 1.1rem; 
+  
 }
 

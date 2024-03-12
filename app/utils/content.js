@@ -5,19 +5,19 @@ export const heroCards = [
     feature: "Expanding Your Business",
     featureDescription:
       "Expand your business with the Officiel Campaign and accelerate your growth with many options integrated into one platform.",
-    icon: ICONS.growth,
+    icon: "growth",
   },
   {
     feature: "Sign Up For Free",
     featureDescription:
       "Leave worries about investing. Officiel offers a free sign-up for 500 emails.",
-    icon: ICONS.signUpFree,
+    icon: "signUpFree",
   },
   {
     feature: "Explore Your Options",
     featureDescription:
       "Don't feel stuck with one option; explore SMS, WhatsApp, and Email everything by investing in one app.",
-    icon: ICONS.options,
+    icon: "options",
   },
 ];
 
@@ -80,31 +80,37 @@ export const officielCampaignServices = [
     title: "Analytical dashboard",
     description:
       "Understand your company's insights, which will help you determine where you need to work and what you should add.",
+    icon: "campaignMaster",
   },
   {
     title: "Campaign automation",
     description:
       "Saves you time checking and doing repetitive campaign tasks so that you can work on more ideas.",
+    icon: "automation",
   },
   {
     title: "Third-party integration",
     description:
       "Third-party integration allows you to enjoy services without having to think about them.",
+    icon: "thirdPartyIntegration",
   },
   {
     title: "Campaign Calendar",
     description:
       "Plan, execute, and track your marketing campaigns to achieve your desired goals.",
+    icon: "calendar",
   },
   {
     title: "Landing page",
     description:
       "Well-designed landing page converts users into leads, customers, or maybe subscribers, which pushes your business toward growth.",
+    icon: "landingPage",
   },
   {
     title: "Audience management",
     description:
       "This helps in analyzing your audience so that your marketing strategies reach the targeted audience.",
+    icon: "users",
   },
 ];
 

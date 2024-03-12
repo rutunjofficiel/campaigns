@@ -10,7 +10,7 @@ export default function Benefits() {
   return (
     <div className="m-auto flex h-max flex-col-reverse items-center justify-center md:flex-row">
       <div className="flex  flex-col gap-4 text-start md:gap-6 ">
-        <h1 className="lg:text-3xl xl:text-4xl text-[1rem] font-semibold md:text-3xl">
+        <h1 className="sub-heading lg:text-3xl xl:text-4xl text-center text-[1.2rem] md:text-start  md:text-3xl  ">
           With Officiel, boost your business growth, and experience maximum
           revenue.
         </h1>
