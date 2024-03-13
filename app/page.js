@@ -7,29 +7,30 @@ import CtaBottom from "@/components/cta-bottom";
 import FeaturesChecklist from "@/components/smsFeatures";
 import Footer from "@/components/footer";
 import Hero from "@/components/(hero)/hero";
+import indexIllustration from "../public/images/indexIllustration.png";
+
 import Navbar from "@/components/navbar";
 import SMSFeatures from "@/components/smsFeatures";
+import Image from "next/image";
+import OfficielCampaignServices from "@/components/(hero)/officielCampaignServices";
 
 export default function Page() {
   return (
     <>
       <Navbar />
-      <div className="m-auto flex max-w-[95%] flex-col justify-center gap-28 md:mb-20 md:w-[90%] ">
+      <div className="m-auto flex w-[95%] flex-col justify-center gap-28 md:mb-20 md:w-[90%] ">
         <Hero />
         <FeatureSection />
-        <div className="max-w-[100vw] bg-[#f3f3f3] md:my-28">
-          <div className="m-auto flex max-w-[95%] flex-col justify-center md:w-[90%]">
-            <FeatureSection2 />
-          </div>
-        </div>
+        <FeatureSection2 />
         <VideoSection />
+        <OfficielCampaignServices />
         <SMSFeatures />
         <Benefits />
-        <div className="bg-campaignBlue py-18 mt-24 flex w-full flex-col  md:py-28">
+        <div className="m-auto flex w-[80%] flex-col rounded-3xl bg-campaignBlue">
           <CtaBottom />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

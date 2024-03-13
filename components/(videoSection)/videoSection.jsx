@@ -7,36 +7,33 @@ import Feature from "./feature";
 
 export default function VideoSection() {
   return (
-    <div className="m-auto flex h-max w-[90%] flex-col items-center justify-start gap-6 rounded-2xl bg-slate-100 px-2 py-16  text-center shadow md:gap-8">
+    <div className="m-auto flex h-max w-full flex-col items-center justify-start gap-6 px-2 py-2 pt-14 text-center   md:gap-8">
       <div className="flex flex-col items-center gap-10 md:gap-12">
-        <h1 className="heading lg:text-7xl   text-[2.2rem] text-[#050505] md:text-3xl md:text-[5rem] ">
-          Unify Your Marketing Efforts with <br />
-          <span className="bg-gradient-to-r  from-[#029aff] via-blue-600 to-blue-700 bg-clip-text text-transparent">
-            Officiel Campaign.
-          </span>
-        </h1>
+        <div className="flex flex-col items-center">
+          <span className="bg-gradient-to-r from-[#029aff] via-blue-600 to-blue-700 bg-clip-text text-[3rem] font-semibold text-transparent md:text-[4.2rem]">
+            Officiel Campaign
+          </span>{" "}
+          <h1 className="sub-heading ">Unify Your Marketing Efforts</h1>
+        </div>
 
-        <>
-          <ul className="lg:grid-cols-4 grid grid-cols-2 gap-2">
-            {videoSection.map((feature) => (
-              <li key={feature.id}>
-                <Feature feature={feature.feature} icon={feature.icon} />
-              </li>
-            ))}
-          </ul>
-          <div className="flex  flex-row gap-2">
-            <Button className="  bg-campaignBlue">Try it now</Button>
-            <Button className="  " variant="outline">
-              Subscribe
-            </Button>
-          </div>
-        </>
+        <div className="flex  flex-row gap-2">
+          <Button className="bg-campaignBlue text-lg font-semibold md:h-14 md:px-9 md:py-3">
+            Try it now
+          </Button>
+          <Button
+            className="text-lg   font-semibold md:h-14  md:px-9 md:py-3"
+            variant="outline"
+          >
+            Subscribe
+          </Button>
+        </div>
       </div>
-      <div className="  h-auto  w-full rounded-2xl border-black bg-slate-200 p-4 md:w-[50vw]">
+      <div className="rounded- w-[70vw] p-1 md:p-2">
         <Image
           objectFit="cover"
           alt="Campaigns Dashboard screenshot"
           src={CampaignsDashboard}
+          className="rounded-xl "
         />
       </div>
     </div>

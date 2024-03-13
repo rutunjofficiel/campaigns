@@ -12,12 +12,16 @@ import {
   SquareUserRound,
   Blocks,
   HandCoins,
+  Trophy,
   EyeOff,
   FileLock,
   ShieldPlus,
   UsersRound,
+  ShieldCheck,
   ToyBrick,
   PanelsTopLeft,
+  PartyPopper,
+  Banknote,
   Eye,
 } from "lucide-react";
 import { SiPagespeedinsights } from "react-icons/si";
@@ -32,8 +36,15 @@ import { GiGrowth } from "react-icons/gi";
 import { HiOutlineRectangleStack } from "react-icons/hi2";
 import { BsRobot } from "react-icons/bs";
 import { MdOutlineQueryStats } from "react-icons/md";
+import { LuHeartHandshake } from "react-icons/lu";
+import { LiaHandshakeSolid } from "react-icons/lia";
+import { GiThreeFriends } from "react-icons/gi";
 
 export const ICONS = {
+  rewards: PartyPopper,
+  friends: GiThreeFriends,
+  handShake: LiaHandshakeSolid,
+  trophy: Trophy,
   check: BsCheckLg,
   envolope: SlEnvolopeLetter,
   ticketPercent: TicketPercent,
@@ -47,12 +58,13 @@ export const ICONS = {
   calendar: CiCalendarDate,
   migrate: FolderSync,
   automation: BsRobot,
-  kyc: ShieldPlus,
+  kyc: ShieldCheck,
   campaignMaster: TfiPanel,
   content: PiNewspaperLight,
   contact: SquareUserRound,
   growth: GiGrowth,
   signUpFree: TicketPercent,
+  money: Banknote,
   statistics: MdOutlineQueryStats,
   options: HiOutlineRectangleStack,
   thirdPartyIntegration: ToyBrick,

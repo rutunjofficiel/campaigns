@@ -1,6 +1,7 @@
 import { officielCampaignServices } from "@/app/utils/content";
 import WhatWeDoCard from "../(whatWeDo)/whatWeDoCard";
 import HeroFeatureCard from "./heroFeatureCard";
+import ServiceCard from "./serviceCard";
 
 export default function OfficielCampaignServices() {
   return (
@@ -13,13 +14,13 @@ export default function OfficielCampaignServices() {
             promises.
           </p>
         </div>
-        <div className=" [&>*:nth-child(even)]:bg-campaignBlueDark  [&>*:nth-child(odd)]:bg-campaignBlue lg:max-w-[80vw] lg:grid-cols-3 m-auto mt-8 grid w-fit grid-cols-1 justify-center gap-4 md:grid-cols-2">
+        <div className=" m-auto  mt-8 grid w-fit grid-cols-1 justify-center gap-4 md:grid-cols-2 lg:max-w-[80vw] lg:grid-cols-3  ">
           {officielCampaignServices.map((content, index) => (
-            <HeroFeatureCard
+            <ServiceCard
               key={index}
               icon={content.icon}
-              feature={content.title}
-              featureDescription={content.description}
+              service={content.title}
+              serviceDescription={content.description}
             />
           ))}
         </div>

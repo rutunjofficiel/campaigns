@@ -60,17 +60,17 @@ export const whatWeDoCardsContent = [
   },
 ];
 export const videoSection = [
-  { id: 1, feature: "Data-driven decisions", icon: "automation" },
-  { id: 2, feature: "Cost-effective investment", icon: "kyc" },
-  { id: 3, feature: "Enhanced analytics", icon: "campaignMaster" },
+  { id: 1, feature: "Data-driven decisions", icon: "statistics" },
+  { id: 2, feature: "Cost-effective investment", icon: "costEffective" },
+  { id: 3, feature: "Enhanced analytics", icon: "analyticalDashboard" },
   { id: 4, feature: "Third-party integration", icon: "thirdPartyIntegration" },
 ];
 export const officielCampaignModules = [
   { id: 1, feature: "Automation", icon: "automation" },
   { id: 2, feature: "KYC", icon: "kyc" },
-  { id: 3, feature: "Campaign Master", icon: "campaignMaster" },
   { id: 4, feature: "Content", icon: "content" },
   { id: 5, feature: "Contact", icon: "contact" },
+  { id: 3, feature: "Campaign Master", icon: "campaignMaster" },
 ];
 
 export const emailContent = [
@@ -120,22 +120,36 @@ export const officielCampaignServices = [
 ];
 
 export const officielSMS = [
-  { id: 1, feature: "Can easily reach customers", icon: "costEffective" },
+  { id: 1, feature: "Can easily reach customers", icon: "friends" },
   { id: 2, feature: "Helps in Global reach", icon: "globalOutreach" },
   {
     id: 3,
     feature: "Fosters a sense of personal connection",
-    icon: "calendar",
+    icon: "handShake",
   },
   {
     id: 4,
     feature: "Enhances purchases through coupon codes, rewards, etc.",
-    icon: "migrate",
+    icon: "trophy",
   },
 ];
 
 export const boostContent = [
-  "Manage your audience, simplify marketing, and save money for bigger ideas. ",
-  "Connect with customers, access analytical information, and conquer the world.",
-  "Stay ahead of the competition with a campaign calendar and enjoy all the services with third-party integration.",
+  {
+    benefit:
+      "Manage your audience, simplify marketing, and save money for bigger ideas. ",
+    icon: "money",
+  },
+  {
+    benefit:
+      "Connect with customers, access analytical information, and conquer the world.",
+
+    icon: "money",
+  },
+  {
+    benefit:
+      "Stay ahead of the competition with a campaign calendar and enjoy all the services with third-party integration.",
+
+    icon: "money",
+  },
 ];
