@@ -7,8 +7,8 @@ export default function ServiceCard({ service, serviceDescription, icon }) {
   return (
     <>
       <Card className=" flex w-full -translate-x-1 flex-col items-start justify-between   p-6 text-start  text-campaignBlueDark duration-200  hover:-translate-y-2 hover:shadow-lg md:gap-5">
-        <div className="flex flex-row align-middle md:flex-row md:gap-3 ">
-          <div className="blue-gradient relative  aspect-square h-[4rem] w-fit rounded-full p-4 group-hover:scale-110 lg:h-[5rem]">
+        <div className="flex flex-row  gap-2 align-middle md:flex-row">
+          <div className="blue-gradient relative aspect-square h-[3.7rem] w-fit rounded-full p-3    md:h-[4rem] md:p-4">
             {IconComponent && <IconComponent size="100%" color="#FCFCFC" />}
           </div>
 

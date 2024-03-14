@@ -48,7 +48,9 @@
      --ring: 240 4.9% 83.9%;
    }
  }
-
+body{
+  scroll-behavior: smooth;
+}
  input:focus{
   outline:none;
  }
@@ -67,16 +69,39 @@
  }
      
 .heading { color: #1a2125;
-font-family: var(--font-inter); 
+ 
  letter-spacing: -2px;
  font-size: 5rem;
  font-weight:600; 
  line-height: 110%;  
 }
+.sub-heading-md {
+  color: #00243B;
+  font-size: 2rem;
+  letter-spacing: -0.8px;
+  line-height: 110%;
+  overflow: visible;
+  text-align: start;
+  font-weight: 500;
+  opacity: 80%;
+}
+.sub-heading-lg{ 
+
+  color: #00243B;
+  font-size:4rem;
+   
+  letter-spacing: -0.6px;
+  line-height: 115%;
+   overflow: visible;
+  text-align: start;
+  font-weight: 600;
+  opacity: 100%;
+}
+
 .sub-heading{ 
   color: #00243B;
   font-size: 2.5rem;
-  font-family: var(--font-inter); 
+   
   letter-spacing: -0.5px;
   line-height: 110%;
   text-align: start;
@@ -100,16 +125,36 @@ font-family: var(--font-inter);
 
   .sub-heading{
     color: #00243B;
-    font-family: var(--font-inter); 
+     
     font-weight: 500;
     letter-spacing: -1px;  
     font-size: 1.5rem;
     text-align: center;
     line-height: normal;
   }
+.sub-heading-lg {
 
+  color: #00243B;
+  font-size: 2.6rem;
+  letter-spacing: -0.6px;
+  line-height: 115%;
+  overflow: visible;
+  text-align: center;
+  font-weight: 600;
+  opacity: 100%;
+}
+.sub-heading-md {
+  color: #00243B;
+  font-size: 1.3rem;
+  letter-spacing: -0.7px;
+  line-height: 110%;
+  overflow: visible;
+  text-align: center;
+  font-weight: 500;
+  opacity: 80%;
+}
   .heading{color: #00243B;
-    font-family: var(--font-inter);
+    
     letter-spacing: -2px;   
     font-weight: 600;
     line-height: 120%;
@@ -122,10 +167,18 @@ font-family: var(--font-inter);
 .campaign-gradient{
  background:  linear-gradient(135deg, #029AFF, #3b82f6 ,#2563eb);
  background-clip: text;
+ color: transparent;
 }
 .blue-gradient{
 
  background:  linear-gradient(135deg, #029AFF, #3b82f6 ,#2563eb); 
+
+} 
+ 
+ 
+.white-gradient{
+
+ background:  linear-gradient(135deg, rgb(208, 225, 233), #ececec ,#e9f0ff); 
 
 } 
  

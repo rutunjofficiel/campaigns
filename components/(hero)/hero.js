@@ -6,7 +6,7 @@ import { heroCards } from "@/app/utils/content";
 
 export default function Hero() {
   return (
-    <section className="m-auto flex flex-col    text-start  md:max-w-full md:items-center md:text-center">
+    <section className="m-auto mt-12 flex flex-col  gap-8  text-start  md:max-w-full md:items-center md:text-center">
       <div className="flex flex-col items-start justify-center gap-4 py-16  md:max-w-[70%] md:items-center   ">
         <h1 className="heading">
           <span className="campaign-gradient bg-clip-text text-transparent">
@@ -15,7 +15,7 @@ export default function Hero() {
           and SMS Marketing Made Easy
         </h1>
 
-        <p className="paragraph text-[1.2rem] font-medium leading-normal text-[#00243B] opacity-90 ">
+        <p className="  text-[1.2rem] font-medium leading-normal text-[#00243B] opacity-90 ">
           Boost your conversions; leave the confusion. Choose Officiel for
           marketing solutions.
         </p>
@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="m-auto mx-auto mt-8 grid w-fit grid-cols-1 justify-center gap-4 md:max-w-[85vw] md:grid-cols-3 lg:max-w-[80vw]">
+      <div className="m-auto mx-auto   grid w-fit grid-cols-1 justify-center gap-4 md:max-w-[85vw] md:grid-cols-3 lg:max-w-[80vw]">
         {heroCards.map((feature, index) => (
           <HeroFeatureCard
             key={index}

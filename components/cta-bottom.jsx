@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export default function CtaBottom() {
   return (
-    <section className="container flex flex-col items-center gap-10 py-12 text-center text-white">
+    <section className="container my-10 flex flex-col items-center gap-10  text-center text-white">
       <div className="flex flex-col items-center justify-center gap-12 sm:gap-8">
         <div className=" flex flex-col items-center gap-4 text-center lg:gap-10">
           <h1 className="text-3xl font-bold">
@@ -12,13 +12,10 @@ export default function CtaBottom() {
             Well, bring the change and let Officiel handle all your tasks.
           </p>
           <div className="flex w-fit flex-row gap-2">
-            <Button className="bg-white text-campaignBlue  hover:bg-white hover:text-campaignBlueDark lg:h-14  lg:px-12 lg:text-lg">
+            <Button className="bg-white font-semibold text-campaignBlue  hover:bg-white hover:text-campaignBlueDark lg:h-14  lg:px-12 lg:text-lg">
               Start for free
             </Button>
-            <Button
-              variant="ghost"
-              className="text-campaignBlueDark   lg:h-14 lg:px-12 lg:text-lg"
-            >
+            <Button className="font-semibold  text-white lg:h-14 lg:px-12 lg:text-lg">
               Request more info
             </Button>
           </div>

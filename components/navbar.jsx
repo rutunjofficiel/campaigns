@@ -10,24 +10,24 @@ export default function Navbar() {
   const [navHidden, setNavHidden] = useState(true);
 
   return (
-    <header className="mx-auto max-w-[90%] backdrop-blur-sm  md:top-0 md:z-40 md:max-w-[90%] ">
-      <nav className="lg:bg-[#00243B] lg:text-white lg:flex-row m-auto mt-2 flex flex-col   items-center justify-between rounded-full text-lg text-white md:mt-4 md:gap-3  md:p-1 md:px-5">
-        <div className="lg:w-fit flex w-full flex-row items-center justify-between gap-3">
-          <div className="mobileLogo  lg:hidden m-auto flex w-fit  flex-row gap-1 text-black md:m-0">
+    <header className="mx-auto max-w-[95%] backdrop-blur-sm  md:top-0 md:z-40 md:max-w-[90%] ">
+      <nav className="m-auto mt-2 flex flex-col items-center justify-between rounded-full   text-lg text-white md:mt-4 md:gap-3 md:p-1 md:px-5 lg:flex-row  lg:bg-[#00243B] lg:text-white">
+        <div className="flex w-full flex-row items-center justify-between gap-3 lg:w-fit">
+          <div className="mobileLogo    flex w-fit flex-row  gap-1 text-black md:m-0 lg:hidden">
             <SlEnvolopeLetter size={22} color="#029AFF" />
             <h1 className="text-xl font-bold">
               <span>Officiel</span>
               <span className="text-campaignBlue">Campaign</span>
             </h1>
           </div>
-          <div className="desktopLogo lg:inline-block lg:w-[11rem] relative hidden w-32 overflow-hidden">
+          <div className="desktopLogo relative hidden w-32 overflow-hidden lg:inline-block lg:w-[11rem]">
             <Image objectFit="cover" src={logo} alt="Logo main" />
           </div>
 
           <Button
             variant="link"
             id="menu-button"
-            className="lg:hidden "
+            className="p-3 lg:hidden"
             onClick={() => {
               console.log(navHidden);
               setNavHidden(!navHidden);
@@ -68,24 +68,27 @@ export default function Navbar() {
           </Button>
         </div>
         <div
-          className={`${navHidden ? "hidden" : "flex"} lg:bg-campaignBlueDark lg:flex lg:flex-row m-auto w-full flex-col items-center justify-between gap-3`}
+          className={`${navHidden ? "hidden" : "flex"} m-auto w-full flex-col items-center justify-between gap-3 lg:flex lg:flex-row lg:bg-campaignBlueDark`}
           id="menu"
         >
-          <ul className="text-campaignBlueDark lg:text-white lg:flex lg:flex-row   w-fit text-base">
+          <ul className="w-fit text-base text-campaignBlueDark lg:flex   lg:flex-row lg:text-white">
             {navLinks.map((link, index) => (
-              <li key={index} className="lg:px-2 lg:py-4 py-2">
+              <li
+                key={index}
+                className="transition-200ms py-2 opacity-80 hover:opacity-100 lg:px-2 lg:py-4"
+              >
                 <Link href={link?.href}>{link.link}</Link>
               </li>
             ))}
           </ul>
           <div className="flex flex-row items-center justify-center gap-2 align-middle">
             <Link
-              className="lg:text-white text-campaignBlueDark block py-2 text-base opacity-100 duration-200 md:px-2 md:py-4"
+              className="block py-2 text-base text-campaignBlueDark opacity-100 duration-200 md:px-2 md:py-4 lg:text-white"
               href="/signIn"
             >
               Sign In
             </Link>
-            <Button>Try for free</Button>
+            <Button className="font-semibold ">Try for free</Button>
           </div>
         </div>
       </nav>
@@ -104,7 +107,7 @@ const navLinks = [
   },
   {
     link: "Features",
-    href: "#",
+    href: "#services",
   },
   {
     link: "Pricing",
@@ -112,7 +115,7 @@ const navLinks = [
   },
   {
     link: "Contact",
-    href: "#",
+    href: "/contactUs",
   },
 ];
 

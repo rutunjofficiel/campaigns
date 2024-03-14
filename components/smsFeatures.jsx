@@ -29,7 +29,7 @@ export default function SMSFeatures() {
           </span>{" "}
           to shoot your shots.
         </h2>{" "}
-        <ul class=" grid-cols-auto grid  gap-1 text-sm md:gap-5 md:text-base ">
+        <ul class=" grid-cols-auto grid gap-1  text-sm md:gap-5   lg:grid-cols-2 ">
           {officielSMS.map((feature, id) => (
             <li key={id}>
               <Feature feature={feature.feature} icon={feature.icon} />

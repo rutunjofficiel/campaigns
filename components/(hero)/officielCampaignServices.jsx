@@ -5,16 +5,23 @@ import ServiceCard from "./serviceCard";
 
 export default function OfficielCampaignServices() {
   return (
-    <div className="mx-auto flex h-[90vh] flex-col gap-8 align-middle md:max-w-[80vw]">
+    <section
+      id="services"
+      className="mx-auto flex  flex-col gap-8 align-middle md:max-w-[80vw]"
+    >
       <div className="my-auto">
         <div className=" flex flex-col gap-2 text-center md:items-center">
-          <h1 className="text-3xl font-bold">Officiel Campaign Services</h1>
-          <p className="text-xl opacity-90">
-            Customize your marketing, reach worldwide, and fulfill your
-            promises.
-          </p>
+          <div>
+            <span className="campaign-gradient sub-heading-lg">
+              Officiel Campaign Services
+            </span>{" "}
+            <h1 className="sub-heading-md flex flex-col items-center   ">
+              Customize your marketing, reach worldwide, and fulfill your
+              promises.
+            </h1>
+          </div>
         </div>
-        <div className=" m-auto  mt-8 grid w-fit grid-cols-1 justify-center gap-4 md:grid-cols-2 lg:max-w-[80vw] lg:grid-cols-3  ">
+        <div className="m-auto mt-8 grid w-fit grid-cols-1 justify-center gap-2 md:grid-cols-2 md:gap-4 lg:max-w-[80vw] lg:grid-cols-3  ">
           {officielCampaignServices.map((content, index) => (
             <ServiceCard
               key={index}
@@ -25,6 +32,6 @@ export default function OfficielCampaignServices() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
