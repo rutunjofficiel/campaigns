@@ -35,11 +35,11 @@ export default function Page() {
           dummy text.
         </p>
       </div>
-      <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-0">
-        <div class="min-h-full flex-col justify-center gap-0 bg-campaignBlue text-left align-middle text-white md:flex  ">
+      <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-0 lg:py-12">
+        <div class="min-h-full flex-col justify-center gap-0 bg-campaignBlue py-12 text-left align-middle text-white md:flex  ">
           <ContactUsIllustration />
         </div>
-        <div class="m-auto min-h-full w-full  items-center bg-[#E9EEF4] p-2">
+        <div class="m-auto flex min-h-full w-full flex-col items-center bg-[#E9EEF4] p-2">
           <ContactUsForm />
         </div>
       </div>

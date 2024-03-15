@@ -9,7 +9,7 @@ import { Textarea } from "../ui/textarea";
 
 export default function ContactUsForm() {
   return (
-    <Card className="m-auto flex w-[95%] flex-col gap-12 rounded-lg my-auto border-none bg-transparent outline-none lg:w-[70%]">
+    <Card className="m-auto my-auto flex w-[95%] flex-col gap-12 rounded-lg border-none bg-transparent outline-none lg:w-[70%]">
       <Formik
         validationSchema={ContactusSchema}
         onSubmit={(values) => {
@@ -69,7 +69,7 @@ export default function ContactUsForm() {
             </div>
 
             <Button
-              className="w-fit  bg-campaignBlue py-4 hover:bg-blue-500"
+              className="w-fit  justify-end bg-campaignBlue py-4 hover:bg-blue-500"
               type="submit"
             >
               Send Message

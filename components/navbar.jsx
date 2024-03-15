@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className="mx-auto max-w-[95%] backdrop-blur-sm  md:top-0 md:z-40 md:max-w-[90%] ">
       <nav className="m-auto mt-2 flex flex-col items-center justify-between rounded-full   text-lg text-white md:mt-4 md:gap-3 md:p-1 md:px-5 lg:flex-row  lg:bg-[#00243B] lg:text-white">
         <div className="flex w-full flex-row items-center justify-between gap-3 lg:w-fit">
-          <div className="mobileLogo    flex w-fit flex-row  gap-1 text-black md:m-0 lg:hidden">
+          <div className="mobileLogo flex w-fit flex-row  gap-1 text-black md:m-0 lg:hidden">
             <Link href="/">
               <SlEnvolopeLetter size={22} color="#029AFF" />
               <h1 className="text-xl font-bold">
@@ -79,7 +79,7 @@ export default function Navbar() {
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className="transition-200ms py-2 opacity-80 hover:opacity-100 lg:px-2 lg:py-4"
+                className="transition-200ms py-2 opacity-80 hover:opacity-100 lg:p-4"
               >
                 <Link href={link?.href}>{link.link}</Link>
               </li>

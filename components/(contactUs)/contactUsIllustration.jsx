@@ -13,14 +13,14 @@ export default function ContactUsIllustration() {
   return (
     <Card className="relative m-auto border-0 bg-transparent text-white shadow-none">
       <div className="m-auto flex flex-col items-center">
-        <div className="flex w-[90%] flex-col gap-2 py-6 lg:w-3/5">
-          <h1 className="text-center text-[1.6rem] font-bold leading-tight md:text-[2rem]  lg:text-start lg:text-[2.5rem]">
-            Let&apos;s Talk
-          </h1>
-          <p className="m-auto text-center text-[1rem] font-medium opacity-80 lg:text-start">
-            Lorem Ipsum is a dummy text. Lorem Ipsum is a dummy text. Lorem
-            Ipsum is a dummy text. Lorem Ipsum is a dummy text.
-          </p>{" "}
+        <div className="flex w-[90%] flex-col gap-5 py-6 lg:w-3/5">
+          <div className="flex flex-col gap-2">
+            <h1 className="sub-heading-white">Let&apos;s Talk!</h1>
+            <p className="m-auto text-center text-[1rem] font-medium opacity-80 lg:text-start">
+              Lorem Ipsum is a dummy text. Lorem Ipsum is a dummy text. Lorem
+              Ipsum is a dummy text. Lorem Ipsum is a dummy text.
+            </p>{" "}
+          </div>
           <div class="grid grid-cols-1   gap-4 ">
             <ContactDetailCard
               horizontal={true}
