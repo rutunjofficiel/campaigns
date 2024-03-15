@@ -37,8 +37,8 @@ export default function SMSFeatures() {
           ))}
         </ul>
         <div className="flex w-fit flex-row gap-2">
-          <Button size="lg">Try it now</Button>
-          <Button size="lg" variant="outline">
+          <Button size="xl">Try it now</Button>
+          <Button size="xl" variant="outline">
             Subscribe
           </Button>
         </div>

@@ -33,9 +33,7 @@ export default function FeatureSection() {
             </li>
           ))}
         </ul>
-        <Button size="lg" className="w-fit">
-          Get Started
-        </Button>
+        
       </div>
     </div>
   );

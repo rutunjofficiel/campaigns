@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import HeroFeature from "./heroFeature";
 import HeroFeatureCard from "./heroFeatureCard";
 import { heroCards } from "@/app/utils/content";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -20,8 +21,10 @@ export default function Hero() {
           marketing solutions.
         </p>
         <div className="flex w-fit flex-row gap-2">
-          <Button size="lg">Contact Us</Button>
-          <Button size="lg" variant="outline">
+          <Button size="xl">
+            <Link href="/contactUs">Contact Us</Link>
+          </Button>
+          <Button size="xl" variant="outline">
             Learn More
           </Button>
         </div>

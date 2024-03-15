@@ -1,4 +1,7 @@
 import { BsCheckLg } from "react-icons/bs";
+ 
+import { FaLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { CiCalendarDate } from "react-icons/ci";
@@ -40,14 +43,18 @@ import { LuHeartHandshake } from "react-icons/lu";
 import { LiaHandshakeSolid } from "react-icons/lia";
 import { GiThreeFriends } from "react-icons/gi";
 
+import { FaPhoneAlt } from "react-icons/fa";
 export const ICONS = {
   rewards: PartyPopper,
+  phone: FaPhoneAlt,
   friends: GiThreeFriends,
   handShake: LiaHandshakeSolid,
   trophy: Trophy,
   check: BsCheckLg,
   envolope: SlEnvolopeLetter,
   ticketPercent: TicketPercent,
+  email: MdEmail,
+  location: FaLocationDot,
   check: Check,
   users: UsersRound,
   performance: SiPagespeedinsights,

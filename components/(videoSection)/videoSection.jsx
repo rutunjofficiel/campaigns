@@ -18,10 +18,11 @@ export default function VideoSection() {
           </h1>
         </div>
         <div className="flex  flex-row gap-2">
-          <Button className="bg-campaignBlue text-lg font-semibold md:h-14 md:px-9 md:py-3">
+          <Button size="xl" className="bg-campaignBlue ">
             Try it now
           </Button>
           <Button
+            size="xl" 
             className="text-lg   font-semibold md:h-14  md:px-9 md:py-3"
             variant="outline"
           >

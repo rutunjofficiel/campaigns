@@ -153,3 +153,45 @@ export const boostContent = [
     icon: "money",
   },
 ];
+
+export const addresses = [
+  {
+    city: "Ahmedabad",
+    address: "19 Maypole Crescent Ilford,L62UJ",
+    phoneNumber: 9978333323,
+  },
+  {
+    city: "Banglore",
+    address:
+      " 91 Springboard Business Hub Pvt. Ltd Gopala Krishna Complex. 45/3 Residency Road, Mahatma Gandhi Rd, Bengaluru, Karnataka 560025",
+    phoneNumber: 99783663445,
+  },
+  {
+    city: "Mumbai",
+    address: "19 Maypole Crescent Ilford,L62UJ",
+    phoneNumber: 9978333893,
+  },
+];
+
+export const FAQs = [
+  {
+    question: "1Lorem Ipsum is a dummy text. Write your question here?",
+    answer:
+      "The are going to use a passage of Lorem Ipsum, you need to be sure tdembarrassing hidden in the middle of text. All the Lorem generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ",
+  },
+  {
+    question: "2Lorem Ipsum is a dummy text. Write your question here?",
+    answer:
+      "The are going to use a passage of Lorem Ipsum, you need to be sure tdembarrassing hidden in the middle of text. All the Lorem generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ",
+  },
+  {
+    question: "3Lorem Ipsum is a dummy text. Write your question here?",
+    answer:
+      "The are going to use a passage of Lorem Ipsum, you need to be sure tdembarrassing hidden in the middle of text. All the Lorem generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ",
+  },
+  {
+    question: "4Lorem Ipsum is a dummy text. Write your question here?",
+    answer:
+      "The are going to use a passage of Lorem Ipsum, you need to be sure tdembarrassing hidden in the middle of text. All the Lorem generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ",
+  },
+];

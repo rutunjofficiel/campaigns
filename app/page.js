@@ -30,7 +30,6 @@ export default function Page() {
           <CtaBottom />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

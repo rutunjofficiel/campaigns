@@ -14,14 +14,18 @@ export default function Navbar() {
       <nav className="m-auto mt-2 flex flex-col items-center justify-between rounded-full   text-lg text-white md:mt-4 md:gap-3 md:p-1 md:px-5 lg:flex-row  lg:bg-[#00243B] lg:text-white">
         <div className="flex w-full flex-row items-center justify-between gap-3 lg:w-fit">
           <div className="mobileLogo    flex w-fit flex-row  gap-1 text-black md:m-0 lg:hidden">
-            <SlEnvolopeLetter size={22} color="#029AFF" />
-            <h1 className="text-xl font-bold">
-              <span>Officiel</span>
-              <span className="text-campaignBlue">Campaign</span>
-            </h1>
+            <Link href="/">
+              <SlEnvolopeLetter size={22} color="#029AFF" />
+              <h1 className="text-xl font-bold">
+                <span>Officiel</span>
+                <span className="text-campaignBlue">Campaign</span>
+              </h1>
+            </Link>
           </div>
           <div className="desktopLogo relative hidden w-32 overflow-hidden lg:inline-block lg:w-[11rem]">
-            <Image objectFit="cover" src={logo} alt="Logo main" />
+            <Link href="/">
+              <Image objectFit="cover" src={logo} alt="Logo main" />
+            </Link>
           </div>
 
           <Button
@@ -88,7 +92,9 @@ export default function Navbar() {
             >
               Sign In
             </Link>
-            <Button className="font-semibold ">Try for free</Button>
+            <Link href="/signUp">
+              <Button className="font-semibold ">Try for free</Button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -99,7 +105,7 @@ export default function Navbar() {
 const navLinks = [
   {
     link: "Home",
-    href: "#",
+    href: "/",
   },
   {
     link: "Solutions",

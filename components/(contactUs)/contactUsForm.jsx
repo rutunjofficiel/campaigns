@@ -9,16 +9,7 @@ import { Textarea } from "../ui/textarea";
 
 export default function ContactUsForm() {
   return (
-    <Card className="m-auto flex flex-col  gap-12 rounded-lg border-none bg-transparent outline-none lg:w-[70%]">
-      <div className="flex flex-col gap-2">
-        {/* <CardTitle className="sub-heading ">Let&apos;s Talk</CardTitle>
-
-          <CardDescription>
-            Lorem Ipsum is a dummy text. Lorem Ipsum is a dummy text. Lorem
-            Ipsum is a dummy text. Lorem Ipsum is a dummy text.
-          </CardDescription> */}
-      </div>
-
+    <Card className="m-auto flex w-[95%] flex-col gap-12 rounded-lg my-auto border-none bg-transparent outline-none lg:w-[70%]">
       <Formik
         validationSchema={ContactusSchema}
         onSubmit={(values) => {
