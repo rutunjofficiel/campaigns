@@ -63,7 +63,7 @@ body{
   position: relative;
   aspect-ratio: 1/1;
  
-  width: 25vw;
+  width: 28vw;
   margin:0px;
     
  }
@@ -74,6 +74,14 @@ body{
  font-size: 5rem;
  font-weight:600; 
  line-height: 110%;  
+}
+.sub-title{color: #00243B;
+   font-size: 1.4rem;
+  letter-spacing: -0.8px;
+  line-height: 110%; 
+  text-align: center;
+  font-weight: 500;
+  opacity: 80%;
 }
 .sub-heading-md {
   color: #00243B;
@@ -148,8 +156,7 @@ font-weight: 600;
       text-align: center;
       line-height: normal;
   }
-.sub-heading-lg {
-
+.sub-heading-lg { 
   color: #00243B;
   font-size: 2.6rem;
   letter-spacing: -0.6px;
@@ -168,6 +175,16 @@ font-weight: 600;
   text-align: center;
   font-weight: 500;
   opacity: 80%;
+
+}
+.sub-title {
+  color: #00243B;
+  font-size: 1.3rem;
+  letter-spacing: -0.7px;
+  line-height: 110%; 
+  text-align: center;
+  font-weight: 500;
+  opacity: 80%;
 }
   .heading{color: #00243B;
     
@@ -179,6 +196,69 @@ font-weight: 600;
   }
 }  
      
+@media (max-width: 768px) {
+  .image-container { 
+      position: relative;      
+       width: 70vw;   
+      flex: 1;
+      aspect-ratio: 1/1;
+      margin: auto;
+    }
+.sub-heading-white {
+  color: #fff;
+font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: normal;
+}
+  .sub-heading{
+    color: #00243B;
+    font-weight: 600;
+      letter-spacing: -1px;
+      font-size: 1.8rem;
+      text-align: center;
+      line-height: normal;
+  }
+.sub-heading-lg { 
+  color: #00243B;
+  font-size: 2.6rem;
+  letter-spacing: -0.6px;
+  line-height: 115%;
+  overflow: visible;
+  text-align: center;
+  font-weight: 600;
+  opacity: 100%;
+}
+.sub-heading-md {
+  color: #00243B;
+  font-size: 1.3rem;
+  letter-spacing: -0.7px;
+  line-height: 110%;
+  overflow: visible;
+  text-align: center;
+  font-weight: 500;
+  opacity: 80%;
+
+}
+.sub-title {
+  color: #00243B;
+  font-size: 1.3rem;
+  letter-spacing: -0.7px;
+  line-height: 110%; 
+  text-align: center;
+  font-weight: 500;
+  opacity: 80%;
+}
+  .heading{color: #00243B;
+    
+    letter-spacing: -2px;   
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 3.8rem; 
+      
+  }
+}  
 
 .campaign-gradient{
  background:  linear-gradient(135deg, #029AFF, #3b82f6 ,#2563eb);
@@ -191,6 +271,17 @@ font-weight: 600;
 
 } 
  
+
+.purple-gradient{
+
+ background:  linear-gradient(135deg, #A900A4, #d800d1 ,#d60acf); 
+
+} 
+ 
+.outline_none:focus-visible{
+  outline: none !important;
+  --tw-ring-color: none !important;
+}
  
 .white-gradient{
 
@@ -203,3 +294,73 @@ font-weight: 600;
  background:  linear-gradient(135deg, #f15b2d, #fda23f);
 }
       
+@media (max-width: 1024px) {
+  .image-container {
+    position: relative;
+    width: 70vw;
+    flex: 1;
+    aspect-ratio: 1/1;
+    margin: auto;
+  }
+
+  .sub-heading-white {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: normal;
+  }
+
+  .sub-heading {
+    color: #00243B;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: normal;
+  }
+
+  .sub-heading-lg {
+    color: #00243B;
+    font-size: 2.6rem;
+    letter-spacing: -0.6px;
+    line-height: 115%;
+    overflow: visible;
+    text-align: center;
+    font-weight: 600;
+    opacity: 100%;
+  }
+
+  .sub-heading-md {
+    color: #00243B;
+    font-size: 1.3rem;
+    letter-spacing: -0.7px;
+    line-height: 110%;
+    overflow: visible;
+    text-align: center;
+    font-weight: 500;
+    opacity: 80%;
+
+  }
+
+  .sub-title {
+    color: #00243B;
+    font-size: 1.3rem;
+    letter-spacing: -0.7px;
+    line-height: 110%;
+    text-align: center;
+    font-weight: 500;
+    opacity: 80%;
+  }
+
+  .heading {
+    color: #00243B;
+
+    letter-spacing: -2px;
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 3.8rem;
+
+  }
+}

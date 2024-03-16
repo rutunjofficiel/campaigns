@@ -11,19 +11,15 @@ export default function EmailForm({ activeStep, setActiveStep }) {
     <Formik
       initialValues={{ email: "" }}
       onSubmit={async (values) => {
-        console.log("INNTI", values);
         const response = await fetch("/api/email", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json", // Specify content type as JSON
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(values), // Convert values to JSON string
+          body: JSON.stringify(values),
         });
-
-        console.log("activeStep", typeof setActiveStep);
         setActiveStep(activeStep + 1);
-
-        console.log("VALUES", values.email);
+ 
       }}
       validate={(values) => {
         const errors = {};

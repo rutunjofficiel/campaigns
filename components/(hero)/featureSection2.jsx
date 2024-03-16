@@ -18,7 +18,7 @@ export default function FeatureSection2() {
           <br />
           Make emails work for you with Officiel Mail.
         </h2>
-        <ul class=" grid w-full grid-cols-2   gap-1 text-sm md:gap-5 md:text-base lg:grid-cols-2">
+        <ul className=" grid w-full grid-cols-2   gap-1 text-sm md:gap-5 md:text-base lg:grid-cols-2">
           {emailContent.map((feature, id) => (
             <li key={id}>
               <Feature feature={feature.feature} icon={feature.icon} />

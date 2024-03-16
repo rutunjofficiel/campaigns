@@ -17,7 +17,7 @@ import OfficielCampaignServices from "@/components/(hero)/officielCampaignServic
 export default function Page() {
   return (
     <>
-      <div className="m-auto flex  w-[98%] flex-col justify-center gap-28 scroll-smooth md:mb-20 md:w-[90%]">
+      <div className="m-auto flex w-[98%] flex-col justify-center gap-28 scroll-smooth md:w-[90%]">
         <Hero />
         <FeatureSection />
         <FeatureSection2 />
@@ -26,9 +26,7 @@ export default function Page() {
         <OfficielCampaignServices />
         <SMSFeatures />
         <Benefits />
-        <div className="m-auto my-12 flex w-[95%] flex-col rounded-3xl bg-campaignBlue lg:w-[80%]">
-          <CtaBottom />
-        </div>
+        <CtaBottom />
       </div>
     </>
   );

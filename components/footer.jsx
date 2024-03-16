@@ -19,8 +19,8 @@ export default function Footer() {
     <footer className="bg-[#00243B] py-16 pb-6">
       <div className="m-auto flex flex-col gap-6">
         <div className=" grid grid-cols-1 gap-14 text-center lg:grid-cols-3">
-          <div className="mx-auto flex  flex-col items-center md:block">
-            <div className="relative h-12  w-64 lg:m-0">
+          <div className="mx-auto flex flex-col items-center md:block">
+            <div className="relative h-12 w-64 lg:m-0">
               <Image
                 fill={true}
                 quality={100}
@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
             <p className=" w-fit text-[14px] text-white">Subtext here</p>
           </div>
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+          <div className="grid grid-cols-2 gap-2 text-start md:grid-cols-2  lg:grid-cols-3">
             <div className="flex flex-col gap-2 text-[0.9rem] text-white">
               <h1 className=" font-semibold uppercase">Products</h1>
               <Link className="" href="#">
@@ -47,14 +47,14 @@ export default function Footer() {
                 Solution
               </Link>
             </div>
-            <div className="flex flex-col gap-2 text-[0.9rem] text-white">
+            <div className="flex flex-col  gap-2 text-[0.9rem] text-white">
               <h1 className=" font-bold uppercase">Company</h1>
               <Link href="#">About</Link>
               <Link href="#">Contact</Link>
               <Link href="#">Careers</Link>
               <Link href="#">Blog</Link>
             </div>
-            <div className="col-span-2 flex flex-col gap-2 text-[0.9rem] text-white md:col-span-1">
+            <div className="col-span-2  flex flex-col gap-2 text-[0.9rem] text-white md:col-span-1">
               <h1 className=" font-bold uppercase">Support</h1>
               <Link href="#">Contact Us</Link>
               <Link href="#">Support</Link>
@@ -62,7 +62,7 @@ export default function Footer() {
               <Link href="#">Talk to Sales</Link>
             </div>
           </div>
-          <div className="flex flex-col gap-4 text-[0.9rem] text-white md:w-[80%]  md:items-start md:text-start">
+          <div className="flex flex-col  gap-4 text-[0.9rem] text-white md:w-[80%]  md:items-start md:text-start">
             <h1 className=" font-bold uppercase">
               Subscribe to our newsletter.
             </h1>
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
         <Separator className="m-auto w-[95%]" />
         <div className="grid grid-cols-1 items-center gap-14 text-center text-[0.8rem] text-white md:grid-cols-3">
-          <p>© 2024 Officiel Campaign</p>
+          <p>© 2024 Powered by OfficielCRM</p>
 
           <div className="grid grid-cols-2 gap-1 md:grid-cols-3">
             <p>Privacy Policy</p>

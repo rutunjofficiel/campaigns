@@ -1,10 +1,12 @@
 import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer";
-import { emailMaker } from "@/app/utils/otpEmail";
-
+import {
+  emailMaker,
+  thankYouFunction,
+  mailToCompany,
+} from "@/app/utils/otpEmail";
 export async function POST(req) {
   const reader = req.body.getReader();
-
   let data = "";
   while (true) {
     const { done, value } = await reader.read();
@@ -28,9 +30,14 @@ export async function POST(req) {
         pass: process.env.APP_PASSWORD_GMAIL,
       },
     });
-    const mailOptions = emailMaker(data.email);
+    console.log("data here", data);
+    const mailOptions = thankYouFunction(data.email);
+    const mailtoUs = mailToCompany(data);
+
     console.log("mailOptions", mailOptions);
-    const info = await transporter.sendMail(mailOptions);
+    console.log("mailToCompany", mailtoUs);
+    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailtoUs);
     return NextResponse.json(
       {
         success: true,

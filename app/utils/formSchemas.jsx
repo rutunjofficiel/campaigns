@@ -52,7 +52,7 @@ export const ForgotPasswordModel = {
   },
 };
 
-export const ContactusSchema = Yup.object().shape({
+export const ContactUsSchema = Yup.object().shape({
   fullName: Yup.string().min(2, "Too short").required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
   message: Yup.string()

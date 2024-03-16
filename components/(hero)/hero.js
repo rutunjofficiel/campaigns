@@ -21,10 +21,10 @@ export default function Hero() {
           marketing solutions.
         </p>
         <div className="flex w-fit flex-row gap-2">
-          <Button size="xl">
+          <Button size="lg">
             <Link href="/contactUs">Contact Us</Link>
           </Button>
-          <Button size="xl" variant="outline">
+          <Button size="lg" variant="outline">
             Learn More
           </Button>
         </div>

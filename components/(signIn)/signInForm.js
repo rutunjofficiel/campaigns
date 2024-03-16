@@ -37,7 +37,7 @@ export default function SignInForm() {
         <div className="flex flex-col gap-8 md:gap-8 md:p-6 md:pl-0">
           <div className="flex flex-col gap-5 pl-0 md:gap-4">
             <CardHeader className="gap-7 py-0">
-              <div className="lg:justify-normal m-auto flex w-fit flex-row items-center justify-center gap-1 md:m-0 hideIllustration:w-full ">
+              <div className="m-auto flex w-fit flex-row items-center justify-center gap-1 md:m-0 lg:justify-normal hideIllustration:w-full ">
                 <SlEnvolopeLetter size={22} color="#029AFF" />
                 <h1 className="text-xl font-bold">
                   <span>Officiel</span>
@@ -45,7 +45,7 @@ export default function SignInForm() {
                 </h1>
               </div>
               <div className="flex flex-col gap-4 md:gap-5 md:text-left hideIllustration:text-center">
-                <CardTitle className="lg:text-[2.5rem] text-[2rem] font-extrabold leading-tight xs:text-[1.6rem] 2xs:text-[1.2rem]">
+                <CardTitle className="text-[2rem] font-extrabold leading-tight lg:text-[2.5rem] xs:text-[1.6rem] 2xs:text-[1.2rem]">
                   Welcome Back to Your <br></br> Email Marketing Hub
                 </CardTitle>
                 <CardDescription className="text-[1rem]  font-semibold  text-gray-500 2xs:text-[0.8rem]">
@@ -93,7 +93,7 @@ export default function SignInForm() {
                           </ErrorMessage>
                         </div>
                       </div>
-                      <div className="sm:text-sm flex flex-row justify-end text-xs">
+                      <div className="flex flex-row justify-end text-xs sm:text-sm">
                         <Dialog onOpenAutoFocus>
                           <DialogTrigger>
                             <p>Forgot password?</p>
@@ -104,7 +104,7 @@ export default function SignInForm() {
                         </Dialog>
                       </div>
                       <Button
-                        className="bg-campaignBlue w-full py-6 hover:bg-blue-500"
+                        className="w-full bg-campaignBlue py-6 hover:bg-blue-500"
                         type="submit"
                       >
                         Sign In
@@ -119,19 +119,19 @@ export default function SignInForm() {
                   <div className="h-[0.4px] flex-1  bg-[#424242] px-12 opacity-40"></div>
                 </div>
 
-                <div className="lg:gap-0 flex flex-col justify-around gap-2 md:flex-row">
+                <div className="flex flex-col justify-around gap-2 md:flex-row lg:gap-0">
                   <Button className="flex items-center gap-1 bg-slate-200 py-6 text-sm font-semibold text-gray-700 hover:bg-slate-300 md:px-3 md:py-6">
-                    <FcGoogle size={28} />
+                    <FcGoogle size={26} />
                     Login with Google
                   </Button>
                   <Button className="flex items-center gap-1 bg-primary py-6 align-middle text-sm font-semibold hover:bg-primary/90 md:px-3 md:py-6  ">
-                    <ImAppleinc size={28} />
+                    <ImAppleinc size={26} />
                     Login with Apple
                   </Button>
                 </div>
                 <p className="m-auto 2xs:text-sm">
                   Don’t have an account?
-                  <span className="text-campaignBlue font-bold">
+                  <span className="font-bold text-campaignBlue">
                     {" "}
                     <Link href="/signUp">Sign Up</Link>
                   </span>

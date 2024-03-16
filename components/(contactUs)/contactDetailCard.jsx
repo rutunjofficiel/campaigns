@@ -17,11 +17,11 @@ export default function ContactDetailCard({
 
   return (
     <Card
-      className={`flex flex-col items-center ${bg ? `bg-[${bg}]` : "bg-slate-50"} p-3 py-2 text-center shadow-sm duration-300 hover:scale-105 hover:shadow-md ${horizontal ? " flex-row" : " flex-col"} gap-2 text-campaignBlueDark lg:gap-1 lg:text-start`}
+      className={`flex flex-col items-center ${bg ? `bg-[${bg}]` : "bg-slate-50"} p-3 py-2 text-center shadow-sm duration-300 hover:scale-105 hover:shadow-md ${horizontal ? " flex-row" : " flex-col"} gap-2  text-campaignBlueDark lg:gap-3 lg:text-start`}
     >
-      <div className="blue-gradient relative flex aspect-square w-[2.5rem] items-center rounded-full">
+      <div className=" relative flex aspect-square w-[2.5rem] items-center rounded-full">
         {IconComponent && (
-          <IconComponent color="#fcfcfc" size="60%" className="m-auto" />
+          <IconComponent color="#029AFF" size="60%" className="m-auto" />
         )}
       </div>
       {number ? (

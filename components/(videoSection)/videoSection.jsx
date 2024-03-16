@@ -17,20 +17,28 @@ export default function VideoSection() {
             Unify your marketing efforts
           </h1>
         </div>
-        <div className="flex  flex-row gap-2">
+        <div className="hidden flex-row  gap-2 md:flex">
           <Button size="xl" className="bg-campaignBlue ">
             Try it now
           </Button>
           <Button
-            size="xl" 
+            size="xl"
             className="text-lg   font-semibold md:h-14  md:px-9 md:py-3"
             variant="outline"
           >
             Subscribe
           </Button>
         </div>
+        <div className="flex flex-row  gap-2 md:hidden">
+          <Button size="lg" className="bg-campaignBlue font-semibold ">
+            Try it now
+          </Button>
+          <Button size="lg" variant="outline" className="font-semibold">
+            Subscribe
+          </Button>
+        </div>
       </div>
-      <div className="rounded- w-[70vw] p-1 md:p-2">
+      <div className="w-full p-1 md:p-2 lg:w-[50vw]">
         <Image
           objectFit="cover"
           alt="Campaigns Dashboard screenshot"

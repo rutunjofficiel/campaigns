@@ -26,14 +26,13 @@ export default function FeatureSection() {
           ease of navigation.
         </h2>
 
-        <ul class=" grid-cols-auto grid w-full grid-cols-2 gap-1 text-sm md:gap-5 md:text-base lg:grid-cols-2">
+        <ul className=" grid-cols-auto grid w-full grid-cols-2 gap-1 text-sm md:gap-5 md:text-base lg:grid-cols-2">
           {officielCampaignModules.map((feature, id) => (
             <li key={id}>
               <Feature feature={feature.feature} icon={feature.icon} />
             </li>
           ))}
         </ul>
-        
       </div>
     </div>
   );
