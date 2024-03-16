@@ -24,7 +24,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import FAQIllustration from "../../public/images/faqIllustration.png";
 export default function Page() {
   return (
     <div className="flex flex-col ">
@@ -56,25 +56,40 @@ export default function Page() {
           ))}
         </ul>
       </div>
-      <div className="flex flex-col items-center gap-8  bg-[#E9EEF4] py-16 lg:gap-12 lg:py-16">
-        <h1 className="sub-heading  ">Frequently Asked Questions </h1>
-        <Accordion
-          collapsible
-          className="m-auto flex w-[95%] flex-col gap-3 lg:w-[60%] "
-        >
-          {FAQs.map((faq, index) => (
-            <AccordionItem
-              className="rounded-lg border-none bg-white p-2  px-3"
-              key={index}
-              value={index + 1}
-            >
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent className="w-[95%] lg:w-[80%]">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+
+      <div className="flex w-full flex-col-reverse justify-evenly gap-8 bg-[#E9EEF4] py-8 lg:flex-row  lg:py-16 ">
+        <div className="flex flex-col gap-8">
+          <h1 className="sub-heading">Frequently Asked Questions </h1>
+          <Accordion
+            collapsible
+            className="m-auto flex w-[90vw] flex-col gap-3 lg:w-[50vw]"
+          >
+            {FAQs.map((faq, index) => (
+              <AccordionItem
+                className="w-[90vw] rounded-lg border-none bg-white p-2 px-3 lg:w-[50vw]"
+                key={index}
+                value={index + 1}
+              >
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent className="w-[90vw] lg:w-[50vw]">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+        <div className="image-container">
+          <Image
+            fill={true}
+            quality={100}
+            style={{
+              objectFit: "contain",
+            }}
+            sizes="(max-width: 768px) 60vw, (max-width: 1200px) 40vw, 33vw"
+            src={FAQIllustration}
+            alt="FAQIllustration"
+          />
+        </div>
       </div>
     </div>
   );

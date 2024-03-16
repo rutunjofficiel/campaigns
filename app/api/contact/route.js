@@ -30,12 +30,9 @@ export async function POST(req) {
         pass: process.env.APP_PASSWORD_GMAIL,
       },
     });
-    console.log("data here", data);
     const mailOptions = thankYouFunction(data.email);
     const mailtoUs = mailToCompany(data);
 
-    console.log("mailOptions", mailOptions);
-    console.log("mailToCompany", mailtoUs);
     await transporter.sendMail(mailOptions);
     await transporter.sendMail(mailtoUs);
     return NextResponse.json(

@@ -21,9 +21,9 @@ export default function Hero() {
           marketing solutions.
         </p>
         <div className="flex w-fit flex-row gap-2">
-          <Button size="lg">
-            <Link href="/contactUs">Contact Us</Link>
-          </Button>
+          <Link href="/contactUs">
+            <Button size="lg">Contact Us</Button>
+          </Link>
           <Button size="lg" variant="outline">
             Learn More
           </Button>

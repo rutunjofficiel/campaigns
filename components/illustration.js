@@ -11,19 +11,18 @@ import {
 } from "@/components/ui/card";
 export default function Illustration() {
   return (
-    <div className="bg-campaignBlue  w-full flex-col justify-center gap-0 text-left align-middle text-white md:flex  md:min-h-screen  md:w-1/2 hideIllustration:hidden">
-      {" "}
+    <div className="w-full  flex-col justify-center gap-0 bg-campaignBlue text-left align-middle text-white md:flex    md:w-1/2 hideIllustration:hidden">
       <Card className="relative m-auto w-fit border-0 bg-transparent text-white shadow-none">
-        <div className="2xl:w-[90%] m-auto flex max-w-fit flex-col">
-          <div className="lg:gap-4 flex flex-col gap-2 p-6">
-            <h1 className="lg:text-[2.5rem] text-[1.6rem] font-extrabold  leading-tight md:text-[2rem]">
+        <div className="m-auto flex max-w-fit flex-col 2xl:w-[90%]">
+          <div className="flex flex-col gap-2 p-6 lg:gap-4">
+            <h1 className="text-[1.6rem] font-bold leading-tight  md:text-[2rem] lg:text-[2.5rem]">
               Craft Engaging <br></br>Messages, Drive Results
             </h1>
             <p className="text-[1rem] font-semibold">
               Inscreva-se no Twitter hoje mesms
             </p>
           </div>
-          <div className="2xl:w-[90%] lg:m-0 relative m-auto h-[45vh] w-[75%]">
+          <div className="image-container">
             <Image
               src={signInIllustration}
               quality={100}

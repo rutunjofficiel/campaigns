@@ -16,6 +16,7 @@ import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { SignupSchema } from "@/app/utils/formSchemas";
 import CustomErrorMessage from "../customErrorMessage";
+import { useEffect } from "react";
 
 export default function SignUpForm() {
   return (
@@ -25,15 +26,15 @@ export default function SignUpForm() {
         <div className="flex flex-col gap-8 md:gap-8 md:p-6 md:pl-0">
           <div className="flex flex-col gap-5 pl-0 md:gap-4">
             <CardHeader className="gap-7 py-0">
-              <div className="lg:justify-normal m-auto  flex w-fit flex-row items-center justify-center gap-1 md:m-0 hideIllustration:w-full ">
+              <div className="m-auto flex  w-fit flex-row items-center justify-center gap-1 md:m-0 lg:justify-normal hideIllustration:w-full ">
                 <SlEnvolopeLetter size={22} color="#029AFF" />
                 <h1 className="text-xl font-bold">
                   <span>Officiel</span>
                   <span className="text-campaignBlue">Campaign</span>
                 </h1>
-              </div>{" "}
+              </div>
               <div className="flex flex-col gap-4 md:gap-5 md:text-left hideIllustration:text-center">
-                <CardTitle className="lg:text-[2.5rem] text-[2rem] font-extrabold leading-tight xs:text-[1.6rem] 2xs:text-[1.2rem]">
+                <CardTitle className="text-[2rem] font-extrabold leading-tight lg:text-[2.5rem] xs:text-[1.6rem] 2xs:text-[1.2rem]">
                   Get ready to email like a boss!
                 </CardTitle>
                 {/* <h1 className="md:text-[2.5rem] text-[1.6rem] leading-tight font-extrabold"></h1> */}
@@ -47,16 +48,38 @@ export default function SignUpForm() {
                 <Formik
                   validationSchema={SignupSchema}
                   onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                      alert(JSON.stringify(values, null, 2));
+                    values = { input: values };
+                    setTimeout(async () => {
+                      console.log(JSON.stringify(values, null, 2));
+                      const response = await fetch("/api/signUp", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(values),
+                      });
+                      console.log("response", response);
+                      if (response.status == 200) {
+                        const res = await response.json();
+                        console.log("response.message", res);
+                        toast.success(res?.message);
+                      } else if (response.status == 400) {
+                        const res = await response.json();
+                        console.log("response.message", res);
+                        toast.warning(res?.message);
+                      } else {
+                        toast.error(response.d.Message);
+                      }
+
                       setSubmitting(false);
                     }, 400);
                   }}
                   initialValues={{
-                    email: "",
-                    password: "",
-                    companyName: "",
-                    phoneNumber: "",
+                    Email: "Anjtwr58@gmail.com",
+                    Password: "Test@54321",
+                    ContactName: "Anuj",
+                    Company: "Ideliza",
+                    PhoneNo: "8796283216",
                   }}
                 >
                   {({ errors, touched, validateField, validateForm }) => (
@@ -64,34 +87,34 @@ export default function SignUpForm() {
                       <div className="flex flex-col gap-3">
                         <div className="flex flex-col gap-3">
                           <Field
-                            name="companyName"
+                            name="Company"
                             type="string"
                             placeholder="Company Name"
                             className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-2 py-2.5"
-                          />{" "}
-                          <ErrorMessage name="companyName">
+                          />
+                          <ErrorMessage name="Company">
                             {(errMsg) => (
                               <CustomErrorMessage errorMessage={errMsg} />
                             )}
                           </ErrorMessage>
                           <Field
-                            name="contactName"
+                            name="ContactName"
                             type="string"
                             placeholder="Contact Name"
                             className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-2 py-2.5"
                           />{" "}
-                          <ErrorMessage name="contactName">
+                          <ErrorMessage name="ContactName">
                             {(errMsg) => (
                               <CustomErrorMessage errorMessage={errMsg} />
                             )}
                           </ErrorMessage>
                           <Field
                             type="email"
-                            name="email"
+                            name="Email"
                             placeholder="Email Id"
                             className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-2 py-2.5"
                           />
-                          <ErrorMessage name="email">
+                          <ErrorMessage name="Email">
                             {(errMsg) => (
                               <CustomErrorMessage errorMessage={errMsg} />
                             )}
@@ -99,21 +122,21 @@ export default function SignUpForm() {
                           <Field
                             type="tel"
                             placeholder="Phone Number"
-                            name="phoneNumber"
+                            name="PhoneNo"
                             className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-3 py-2.5"
                           />
-                          <ErrorMessage name="phoneNumber">
+                          <ErrorMessage name="PhoneNo">
                             {(errMsg) => (
                               <CustomErrorMessage errorMessage={errMsg} />
                             )}
                           </ErrorMessage>{" "}
                           <Field
                             type="password"
-                            name="password"
+                            name="Password"
                             placeholder="Enter password"
                             className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-3 py-2.5"
                           />{" "}
-                          <ErrorMessage name="password">
+                          <ErrorMessage name="Password">
                             {(errMsg) => (
                               <CustomErrorMessage errorMessage={errMsg} />
                             )}
@@ -121,7 +144,7 @@ export default function SignUpForm() {
                         </div>
                       </div>
                       <Button
-                        className="bg-campaignBlue w-full py-6 hover:bg-blue-500"
+                        className="w-full bg-campaignBlue py-6 hover:bg-blue-500"
                         type="submit"
                       >
                         CREATE NEW ACCOUNT
@@ -136,19 +159,19 @@ export default function SignUpForm() {
                   <div className="h-[0.4px] flex-1  bg-[#424242] px-12 opacity-40"></div>
                 </div>
 
-                <div className="lg:gap-0 flex flex-col justify-around gap-2 md:flex-row">
+                <div className="flex flex-col justify-around gap-2 md:flex-row lg:gap-0">
                   <Button className="flex items-center gap-1 bg-slate-200 py-6 text-sm font-semibold text-gray-700 hover:bg-slate-300 md:px-3 md:py-6">
                     <FcGoogle size={28} />
                     Continue with Google
                   </Button>
-                  <Button className="flex items-center gap-1 py-6 align-middle text-sm font-semibold md:px-3 md:py-6  ">
+                  <Button className="flex items-center gap-1 bg-black py-6 align-middle text-sm font-semibold md:px-3 md:py-6  ">
                     <ImAppleinc size={28} />
                     Continue with Apple
                   </Button>
                 </div>
                 <p className="m-auto 2xs:text-sm">
                   Already have an account?
-                  <span className="text-campaignBlue font-bold">
+                  <span className="font-bold text-campaignBlue">
                     {" "}
                     <Link href="/signIn">Sign In</Link>{" "}
                   </span>{" "}
