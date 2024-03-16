@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
             <p className=" w-fit text-[14px] text-white">Subtext here</p>
           </div>
-          <div className="grid grid-cols-2 gap-2 text-start md:grid-cols-2  lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2 text-center md:grid-cols-2 lg:grid-cols-3  lg:text-start">
             <div className="flex flex-col gap-2 text-[0.9rem] text-white">
               <h1 className=" font-semibold uppercase">Products</h1>
               <Link className="" href="#">

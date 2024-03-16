@@ -56,8 +56,8 @@ export default function Page() {
           ))}
         </ul>
       </div>
-      <div className="purple-gradient flex flex-col items-center  gap-8 py-16 lg:gap-12 lg:py-16">
-        <h1 className="sub-heading-white  ">Frequently Asked Questions </h1>
+      <div className="flex flex-col items-center gap-8  bg-[#E9EEF4] py-16 lg:gap-12 lg:py-16">
+        <h1 className="sub-heading  ">Frequently Asked Questions </h1>
         <Accordion
           collapsible
           className="m-auto flex w-[95%] flex-col gap-3 lg:w-[60%] "

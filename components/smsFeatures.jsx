@@ -6,6 +6,7 @@ import { officielSMS } from "@/app/utils/content";
 
 import { officielCampaignModules } from "@/app/utils/content";
 import Feature from "./(videoSection)/feature";
+import Link from "next/link";
 export default function SMSFeatures() {
   return (
     <div className="m-auto flex w-full flex-col items-center justify-around py-8   lg:flex-row lg:items-stretch  ">
@@ -37,7 +38,10 @@ export default function SMSFeatures() {
           ))}
         </ul>
         <div className="flex w-fit flex-row gap-2">
-          <Button size="lg">Try it now</Button>
+          <Button size="lg">
+            <Link href="/contactUs">Try it now</Link>
+          </Button>
+
           <Button size="lg" variant="outline">
             Subscribe
           </Button>

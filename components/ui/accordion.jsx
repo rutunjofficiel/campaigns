@@ -29,8 +29,8 @@ const AccordionTrigger = React.forwardRef(
         {...props}
       >
         {children}
-        <div className="flex h-6 w-6 shrink-0 flex-col items-center justify-center  rounded-full bg-[#A900A4] transition-transform duration-200">
-          <ChevronDown color="#fff" className="h-4 w-4" />
+        <div className="flex h-6 w-6 shrink-0 flex-col items-center justify-center  rounded-full  transition-transform duration-200">
+          <ChevronDown color="#00243B" className="h-6 w-6" />
         </div>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
