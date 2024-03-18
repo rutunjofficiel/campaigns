@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+  /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
 
 export const SignupSchema = Yup.object().shape({
   Company: Yup.string()
@@ -11,7 +11,14 @@ export const SignupSchema = Yup.object().shape({
     .min(2, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
-  Password: Yup.string().min(2, "Too Short").required("Required"),
+  Password: Yup.string()
+    .min(8, "Password must be at least 8 characters")
+    .max(15, "Password must be less than 15 characters")
+    .matches(/[a-z]/, "Password must contain a lowercase letter")
+    .matches(/[A-Z]/, "Password must contain an uppercase letter")
+    .matches(/\d/, "Password must contain a number")
+    .matches(/[!@#$%^&*]/, "Password must contain a special character")
+    .required("Password is required"),
   PhoneNo: Yup.string()
     .min(10, "Phone Number must be 10 digits long")
     .matches(phoneRegExp, "Phone number is not valid")
