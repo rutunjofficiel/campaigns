@@ -34,7 +34,7 @@ export default function SignUpForm() {
                 </h1>
               </div>
               <div className="flex flex-col gap-4 md:gap-5 md:text-left hideIllustration:text-center">
-                <CardTitle className="text-[2rem] font-extrabold leading-tight lg:text-[2.5rem] xs:text-[1.6rem] 2xs:text-[1.2rem]">
+                <CardTitle className="sub-heading">
                   Get ready to email like a boss!
                 </CardTitle>
                 {/* <h1 className="md:text-[2.5rem] text-[1.6rem] leading-tight font-extrabold"></h1> */}
@@ -56,7 +56,6 @@ export default function SignUpForm() {
                         headers: {
                           "Content-Type": "application/json",
                         },
-                        body: JSON.stringify(values),
                       });
                       console.log("response", response);
                       if (response.status == 200) {
@@ -88,7 +87,7 @@ export default function SignUpForm() {
                         <div className="flex flex-col gap-3">
                           <Field
                             name="Company"
-                            type="string"
+                            type="text"
                             placeholder="Company Name"
                             className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-2 py-2.5"
                           />
@@ -99,7 +98,7 @@ export default function SignUpForm() {
                           </ErrorMessage>
                           <Field
                             name="ContactName"
-                            type="string"
+                            type="text"
                             placeholder="Contact Name"
                             className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-2 py-2.5"
                           />{" "}

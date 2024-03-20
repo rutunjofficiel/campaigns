@@ -15,7 +15,7 @@ export default function Illustration() {
       <Card className="relative m-auto w-fit border-0 bg-transparent text-white shadow-none">
         <div className="m-auto flex max-w-fit flex-col 2xl:w-[90%]">
           <div className="flex flex-col gap-2 p-6 lg:gap-4">
-            <h1 className="text-[1.6rem] font-bold leading-tight  md:text-[2rem] lg:text-[2.5rem]">
+            <h1 className="sub-heading-white">
               Craft Engaging <br></br>Messages, Drive Results
             </h1>
             <p className="text-[1rem] font-semibold">
@@ -35,9 +35,9 @@ export default function Illustration() {
               sizes="(max-width: 768px) 60vw, (max-width: 1200px) 40vw, 33vw"
             />
           </div>
-          <p className="absolute  bottom-0 left-0 right-0 top-[110%] m-auto max-w-fit text-center font-light">
+          {/* <p className="absolute  bottom-0 left-0 right-0 top-[110%] m-auto max-w-fit text-center font-light">
             &copy; 2024 Officiel Campaigns.
-          </p>
+          </p> */}
         </div>
       </Card>
       {/* <p className="absolute  m-auto max-w-fit font-light">

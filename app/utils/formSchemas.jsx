@@ -27,8 +27,11 @@ export const SignupSchema = Yup.object().shape({
 });
 
 export const SignInSchema = Yup.object().shape({
-  email: Yup.string().email("Invalid email").required("Required"),
-  password: Yup.string().min(2, "Too Short").required("Required"),
+  MobileNo: Yup.string()
+    .min(10, "Phone Number must be 10 digits long")
+    .matches(phoneRegExp, "Phone number is not valid")
+    .required("Required"),
+  CustID: Yup.string().min(2, "Too Short").required("Required"),
 });
 
 export const ForgotPasswordModel = {

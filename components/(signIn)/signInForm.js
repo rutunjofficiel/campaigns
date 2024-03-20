@@ -3,36 +3,31 @@ import { SlEnvolopeLetter } from "react-icons/sl";
 import { FcGoogle } from "react-icons/fc";
 import { ImAppleinc } from "react-icons/im";
 import { Button } from "../ui/button";
-import { Toaster, toast } from "sonner";
-import { SignInSchema, SignupSchema } from "@/app/utils/formSchemas";
+import { toast } from "sonner";
+import { SignInSchema } from "@/app/utils/formSchemas";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Link from "next/link";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import CustomErrorMessage from "../customErrorMessage";
 import ForgotPasswordDialog from "./forgotPasswordDialog";
-import OTPForm from "../(forgotPassword)/OTPForm";
-import NewPasswordForm from "../(forgotPassword)/NewPasswordForm";
+import { useState } from "react";
+import SignInOtp from "./signInOtp";
+const axios = require("axios");
 
 export default function SignInForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showOTPForm, toggleOTPForm] = useState(false);
+  const [userInfo, setUserInfo] = useState({});
+
   return (
     <div className="flex w-full flex-col justify-center py-4 md:w-1/2 md:py-0">
-      <Toaster richColors />
       <Card className="m-auto w-fit border-0 pb-0 shadow-none hideIllustration:mt-[3rem]">
         <div className="flex flex-col gap-8 md:gap-8 md:p-6 md:pl-0">
           <div className="flex flex-col gap-5 pl-0 md:gap-4">
@@ -57,36 +52,64 @@ export default function SignInForm() {
               <div className="m-auto flex flex-col  gap-7 md:m-0">
                 <Formik
                   validationSchema={SignInSchema}
-                  onSubmit={(values) => {
-                    console.log(values);
+                  onSubmit={async (values, { setSubmitting }) => {
+                    console.log(JSON.stringify(values, null, 2));
+                    axios
+                      .post("/api/signIn", {
+                        CustID: values.CustID,
+                        MobileNo: values.MobileNo,
+                      })
+                      .then((response) => {
+                        if (response.data.statusCode == 200) {
+                          console.log(
+                            "response.data.statusCode",
+                            response.data.statusCode,
+                          );
+                          toggleOTPForm(!showOTPForm);
+                          setIsSubmitted(true);
+                          toast.success("OTP Sent to your phone");
+                          setUserInfo(response.data.customerData);
+                        } else {
+                          toast.warning(response.data.message);
+                        }
+                        console.log(response.data);
+                      })
+                      .catch((error) => {
+                        toast.error(error.response.data.message);
+                        console.log("ERRRO:", error.response.data.message);
+                      });
+
+                    setSubmitting(false);
                   }}
                   initialValues={{
-                    email: "",
-                    password: "",
+                    CustID: "IE2557",
+                    MobileNo: "7987291781",
                   }}
                 >
                   {({ errors, touched }) => (
-                    <Form className="flex flex-col gap-4">
+                    <Form className="flex flex-col gap-4" method="get">
                       <div className="flex flex-col gap-3">
                         <div className="flex flex-col gap-3">
                           <Field
-                            type="email"
-                            name="email"
-                            placeholder="Email Id"
-                            className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE] px-2 py-2.5"
+                            type="text"
+                            name="CustID"
+                            // disabled={isSubmitted}
+                            placeholder="Customer ID"
+                            className="2xs:py-1.6 rounded-sm bg-[#EEEEEE] px-2 py-2.5"
                           />
-                          <ErrorMessage name="email">
+                          <ErrorMessage name="CustID">
                             {(errMsg) => (
                               <CustomErrorMessage errorMessage={errMsg} />
                             )}
                           </ErrorMessage>
                           <Field
-                            type="password"
-                            name="password"
-                            placeholder="Enter password"
+                            type="text"
+                            name="MobileNo"
+                            disabled={isSubmitted}
+                            placeholder="Enter Mobile number"
                             className="2xs:py-1.6 rounded-sm bg-[#EEEEEE] px-3 py-2.5"
                           />
-                          <ErrorMessage name="password">
+                          <ErrorMessage name="MobileNo">
                             {(errMsg) => (
                               <CustomErrorMessage errorMessage={errMsg} />
                             )}
@@ -112,11 +135,12 @@ export default function SignInForm() {
                     </Form>
                   )}
                 </Formik>
+                {showOTPForm && userInfo && <SignInOtp userInfo={userInfo} />}
 
                 <div className="m-auto flex flex-row items-center">
                   <div className="h-[0.4px] flex-1  bg-[#424242] px-12 opacity-40"></div>
                   <p className="mx-4 text-[#424242] opacity-100">or</p>
-                  <div className="h-[0.4px] flex-1  bg-[#424242] px-12 opacity-40"></div>
+                  <div className="h-[0.4px] flex-1 bg-[#424242] px-12 opacity-40"></div>
                 </div>
 
                 <div className="flex flex-col justify-around gap-2 md:flex-row lg:gap-0">
@@ -132,7 +156,6 @@ export default function SignInForm() {
                 <p className="m-auto 2xs:text-sm">
                   Don’t have an account?
                   <span className="font-bold text-campaignBlue">
-                    {" "}
                     <Link href="/signUp">Sign Up</Link>
                   </span>
                 </p>
