@@ -1,12 +1,11 @@
 import { Inter } from "next/font/google";
 
-import "./globals.css";
+import "../globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Toaster, toast } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 const additionalClasses = "text-[#050505]";
-0;
 
 const bodyClasses = `${inter.className} ${additionalClasses}`;
 export const metadata = {

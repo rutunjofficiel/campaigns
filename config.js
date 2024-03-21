@@ -1,5 +1,6 @@
 import { BsCheckLg } from "react-icons/bs";
- 
+import { CiSettings } from "react-icons/ci";
+
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { SlEnvolopeLetter } from "react-icons/sl";
@@ -7,6 +8,7 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import { CiCalendarDate } from "react-icons/ci";
 import {
   TicketPercent,
+  Settings,
   Check,
   BadgePercent,
   FileText,
@@ -27,6 +29,8 @@ import {
   Banknote,
   Eye,
 } from "lucide-react";
+import { RxDashboard } from "react-icons/rx";
+
 import { SiPagespeedinsights } from "react-icons/si";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { FaGears } from "react-icons/fa6";
@@ -45,6 +49,7 @@ import { GiThreeFriends } from "react-icons/gi";
 
 import { FaPhoneAlt } from "react-icons/fa";
 export const ICONS = {
+  settings: Settings,
   rewards: PartyPopper,
   phone: FaPhoneAlt,
   friends: GiThreeFriends,
@@ -78,6 +83,7 @@ export const ICONS = {
   landingPage: PanelsTopLeft,
   audience: UsersRound,
   analyticalDashboard: BarChartHorizontalBig,
+  dashboard: RxDashboard,
 };
 
 export const HeroFeatures = ["Feature 1", "Feature 2", "Feature 3"];

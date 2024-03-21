@@ -11,12 +11,11 @@ import { SlEnvolopeLetter } from "react-icons/sl";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import contactUsIllustration from "../../public/images/contactUsIllustration.png";
 import CustomErrorMessage from "@/components/customErrorMessage";
-import { ContactusSchema } from "../utils/formSchemas";
+import { ContactusSchema } from "../../utils/formSchemas";
 import ContactUsIllustration from "@/components/(contactUs)/contactUsIllustration";
 import ContactUsForm from "@/components/(contactUs)/contactUsForm";
-import { FAQs, addresses } from "../utils/content";
+import { FAQs, addresses } from "../../utils/content";
 import OfficesCard from "@/components/(contactUs)/officesCard";
 import {
   Accordion,
@@ -24,7 +23,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import FAQIllustration from "../../public/images/faqIllustration.png";
+import FAQIllustration from "../../../public/images/faqIllustration.png";
 export default function Page() {
   return (
     <div className="flex flex-col ">

@@ -22,7 +22,7 @@ export default function Illustration() {
               Inscreva-se no Twitter hoje mesms
             </p>
           </div>
-          <div className="image-container">
+          <div className="image-container-2">
             <Image
               src={signInIllustration}
               quality={100}

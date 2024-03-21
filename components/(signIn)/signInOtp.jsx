@@ -1,40 +1,48 @@
 "use client";
 import OTPInput from "react-otp-input";
 import { useState } from "react";
-import { permanentRedirect } from "next/navigation";
+import { permanentRedirect, redirect } from "next/navigation";
+import { toast } from "sonner";
 import { Button } from "../ui/button";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
-export default function SignInOtp({ userInfo }) {
+export default function SignInOtp({ userInfo, custID }) {
+  const router = useRouter();
   const [OTP, setOTP] = useState(0);
   const [OTPReEnter, setOTPReEnter] = useState(false);
   const [OTPMatched, setOTPMatched] = useState(false);
-
+  const userData = { userInfo: userInfo, custID: custID };
   console.log("OTP", OTP);
+  console.log({ userInfo: userInfo, custID: custID });
   function verifyOTP() {
     if (OTP?.length == 6) {
       axios
         .post("/api/otpVerify", {
-          OTP: values.OTP,
+          OTP: OTP,
         })
         .then((response) => {
-          if (response.data.statusCode == 200) {
+          console.log(response);
+          console.log(response.data.statusCode);
+          if (Number(response.data.statusCode) == 200) {
             console.log("response.data.statusCode", response.data.statusCode);
             try {
-              window.localStorage.setItem("userInfo", JSON.stringify(userInfo));
+              localStorage.setItem("userInfo", JSON.stringify(userData));
+              toast.success("OTP Verified");
+              setOTPMatched(true);
+
+              redirect('/dashboard') 
             } catch (error) {
               console.error(error);
             }
-            setOTPMatched(true);
-            permanentRedirect("/signUp");
           } else {
             toast.warning(response.data.message);
           }
           console.log(response.data);
         })
         .catch((error) => {
-          toast.error(error.response.data.message);
-          console.log("ERROR:", error.response.data.message);
+          console.log("ERROR:", error);
+          toast.error(error.response?.data?.message || "An error occurred");
         });
     } else if (OTP?.length != 6) {
       toast.warning("OTP must be 6 digits long");
@@ -42,7 +50,7 @@ export default function SignInOtp({ userInfo }) {
   }
 
   return (
-    <div className="flex flex-col items-center bg-slate-50">
+    <div className="flex flex-col items-center gap-4 bg-slate-50 p-8">
       <OTPInput
         value={OTP}
         onChange={setOTP}

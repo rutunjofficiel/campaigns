@@ -51,25 +51,31 @@
 body{
   scroll-behavior: smooth;
 }
- input:focus{
+input:focus{
   outline:none;
  }
  
- input{
+input{
   background-color: #EEEEEE;
  }
- 
- .image-container{
+.image-container-2{
+  position: relative;
+    aspect-ratio: 1/1;
+    width: 28vw;
+    margin: 0px;
+}
+.image-container{
   position: relative;
   aspect-ratio: 1/1;
- 
   width: 28vw;
-  margin:0px;
-    
+  margin:0px;    
  }
-     
-.heading { color: #1a2125;
- 
+.sidenav-link{
+  font-size: 1rem;
+  font-weight:500;
+}
+.heading { 
+ color: #1a2125;
  letter-spacing: -2px;
  font-size: 5rem;
  font-weight:600; 
@@ -131,7 +137,14 @@ body{
     flex: 1;
     aspect-ratio: 1/1;
     margin: auto;
-  }}
+  }
+.image-container-2 {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 40vw;
+  margin: 0px;
+}
+}
 @media (max-width: 768px) {
   .image-container { 
       position: relative;      
@@ -363,4 +376,19 @@ font-weight: 600;
     font-size: 3.8rem;
 
   }
+
+} 
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 99999 !important;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255,1);
 }

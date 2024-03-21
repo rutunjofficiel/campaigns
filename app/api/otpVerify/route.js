@@ -29,7 +29,7 @@ export async function POST(req) {
 
     const xmlResponse = otpResponse.data;
     const result = convert.xml2json(xmlResponse, { compact: true, spaces: 4 });
-    jsonResult = JSON.parse(result);
+    let jsonResult = JSON.parse(result);
     jsonResult = JSON.parse(jsonResult.string._text);
 
     console.log("jsonResult", jsonResult);
