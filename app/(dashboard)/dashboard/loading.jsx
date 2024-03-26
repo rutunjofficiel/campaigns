@@ -1,9 +1,9 @@
-'use client'
-import { Audio } from "react-loader-spinner";
+"use client";
+import { Puff } from "react-loader-spinner";
 export default function Loading() {
   return (
     <div className="overlay">
-      <Audio
+      <Puff
         visible={true}
         height={100}
         width={100}

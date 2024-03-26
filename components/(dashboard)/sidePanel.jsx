@@ -10,30 +10,34 @@ import { IoLogOutOutline } from "react-icons/io5";
 
 import { Separator } from "../ui/separator";
 import Link from "next/link";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/sidePanelTabs";
 import { Button } from "../ui/button";
 import { dashboardLinks, dashboardSubLinks } from "@/dashboardConfig";
 import IcButton from "./icButton";
-import { ICONS } from "@/config";
 
 export default function SidePanel() {
   return (
-    <aside className="h-screen w-[18%] bg-campaignBlue py-6 pl-2 text-white">
+    <aside className="sticky top-0 z-40 h-screen w-[18%] bg-campaignBlue py-6 text-white">
       <div className="flex h-full flex-col justify-between">
         <div className="flex flex-col justify-between gap-8">
           <div className="relative my-auto ml-3 aspect-auto w-36 ">
             <Image src={DashLogo} alt="DashLogo" />
           </div>
           <Separator />
-          <div>
-            <div className="flex flex-col gap-2">
+          <div className="pl-2">
+            <div className="flex flex-col  gap-2">
               <Tabs
                 dashboard
                 defaultValue="dashboard"
                 className="w-full items-start text-start"
               >
                 <TabsList className="grid w-full grid-cols-1">
-                  <div className="mx-auto mb-8">
+                  <div className="mx-auto ">
                     {dashboardLinks.map((link, index) => {
                       return (
                         <TabsTrigger
@@ -61,7 +65,7 @@ export default function SidePanel() {
                           dashboard
                           value={category.value}
                         >
-                          <AccordionTrigger white>
+                          <AccordionTrigger dashboard={true} white>
                             <IcButton
                               large={true}
                               text={category.category}
@@ -70,8 +74,8 @@ export default function SidePanel() {
                           </AccordionTrigger>
                           <AccordionContent>
                             <ul className="ml-6">
-                              {category.links.map((link) => (
-                                <li>
+                              {category.links.map((link, index) => (
+                                <li key={index}>
                                   <TabsTrigger dashboard value={link.value}>
                                     <Link
                                       href={link.link}
@@ -94,7 +98,7 @@ export default function SidePanel() {
           </div>
         </div>
         <div>
-          <Button className="flex w-full flex-row content-around justify-around p-0">
+          <Button className="m-auto flex w-full flex-row justify-between rounded-md  p-0 px-2">
             <p className="sidenav-link">Logout</p>
             <IoLogOutOutline size={22} />
           </Button>

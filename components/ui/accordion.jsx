@@ -4,7 +4,7 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -23,7 +23,7 @@ const AccordionItem = React.forwardRef(
 AccordionItem.displayName = "AccordionItem";
 
 const AccordionTrigger = React.forwardRef(
-  ({ className, white, children, ...props }, ref) => (
+  ({ className, white, dashboard, children, ...props }, ref) => (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         ref={ref}
@@ -35,10 +35,20 @@ const AccordionTrigger = React.forwardRef(
       >
         {children}
         <div className="flex h-6 w-6 shrink-0 flex-col items-center justify-center  rounded-full  transition-transform duration-200">
-          {white ? (
+          {/* {white ? (
+            
             <ChevronDown color="#fff" className="h-6 w-6" />
           ) : (
             <ChevronDown color="#00243B" className="h-6 w-6" />
+          )} */}
+          {white ? (
+            dashboard ? (
+              <ChevronDown color="#fff" className="h-4 w-4" /> // Smaller size for dashboard
+            ) : (
+              <ChevronDown color="#fff" className="h-6 w-6" /> // Default size for white background
+            )
+          ) : (
+            <ChevronDown color="#00243B" className="h-6 w-6" /> // Default color and size for other backgrounds
           )}
         </div>
       </AccordionPrimitive.Trigger>

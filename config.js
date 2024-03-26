@@ -46,9 +46,10 @@ import { MdOutlineQueryStats } from "react-icons/md";
 import { LuHeartHandshake } from "react-icons/lu";
 import { LiaHandshakeSolid } from "react-icons/lia";
 import { GiThreeFriends } from "react-icons/gi";
-
 import { FaPhoneAlt } from "react-icons/fa";
+import { LogOut } from "lucide-react";
 export const ICONS = {
+  signout: LogOut,
   settings: Settings,
   rewards: PartyPopper,
   phone: FaPhoneAlt,

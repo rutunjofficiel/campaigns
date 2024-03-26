@@ -1,5 +1,5 @@
 "use client";
-import { ICONS } from "@/config";
+import { ICONS } from "../../config";
 
 export default function IcButton({ icon, text, large }) {
   const IconComponent = ICONS[icon];

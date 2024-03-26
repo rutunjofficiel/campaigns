@@ -1,6 +1,6 @@
 export const dashboardLinks = [
   {
-    link: "#",
+    link: "/dashboard",
     text: "Dashboard",
     icon: "dashboard",
     value: "dashboard",
@@ -12,13 +12,13 @@ export const dashboardLinks = [
     value: "kyc",
   },
   {
-    link: "#",
+    link: "dashboard/campaignMaster",
     text: "Campaign Master",
     icon: "campaignMaster",
     value: "campaignMaster",
   },
   {
-    link: "#",
+    link: "dashboard/settings",
     text: "Settings",
     icon: "settings",
     value: "settings",
@@ -32,13 +32,23 @@ export const dashboardSubLinks = [
     value: "automation",
     links: [
       {
-        link: "#",
+        link: "/dashboard/automation/whatsapp",
         text: "Whatsapp",
-        icon: " ",
+        icon: "",
         value: "whatsappAutomation",
       },
-      { link: "#", text: "Mail", icon: "  ", value: "mailAutomation" },
-      { link: "#", text: "SMS", icon: "  ", value: "smsAutomation" },
+      {
+        link: "/dashboard/automation/email",
+        text: "Mail",
+        icon: "",
+        value: "mailAutomation",
+      },
+      {
+        link: "/dashboard/automation/sms",
+        text: "SMS",
+        icon: "",
+        value: "smsAutomation",
+      },
     ],
   },
   {

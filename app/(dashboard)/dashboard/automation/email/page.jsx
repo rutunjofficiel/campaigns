@@ -1,8 +1,6 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { DataTable } from "./dataTable";
-import { SMSAutomationColumns } from "./columns";
 import SectionHeader from "@/components/(dashboard)/sectionHeader";
+import { DataTable } from "../../dataTable";
+import { SMSAutomationColumns } from "../../columns";
 
 async function getData() {
   return [
@@ -19,8 +17,8 @@ async function getData() {
     {
       srNo: 2,
       date: "25 May 2024",
-      customer: "Adil Seth",
-      mobile: 9978878787,
+      customer: "Jonty Rhodes",
+      mobile: 9972378787,
       campaign: "Whatssapp Campaign",
       deliveryStatus: "Success",
       deliveryDate: "25 May 2024",
@@ -30,20 +28,10 @@ async function getData() {
 }
 
 export default async function Page() {
-  const router = useRouter();
   const data = await getData();
-
-  if (typeof window !== "undefined") {
-    let d = JSON.parse(window.localStorage.getItem("userInfo"));
-    console.log("d", d);
-    if (d === null) {
-      // router.push("/signIn");
-    }
-  }
-
   return (
     <div className="mx-auto flex w-full flex-col gap-8 py-10">
-      <SectionHeader section="Dashboard" />
+      <SectionHeader section="Email Automation" />
       <DataTable columns={SMSAutomationColumns} data={data} />
     </div>
   );
