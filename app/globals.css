@@ -69,11 +69,7 @@ input{
   aspect-ratio: 1/1;
   width: 28vw;
   margin:0px;    
- }
-.sidenav-link{
-  font-size: 1rem;
-  font-weight:500;
-}
+ } 
 .heading { 
  color: #1a2125;
  letter-spacing: -2px;

@@ -8,7 +8,7 @@ export default function IcButton({ icon, text, large }) {
     <span className="flex flex-row items-center  gap-2 ">
       {IconComponent && <IconComponent size={20} />}
       {large ? (
-        <span className="font-white text-lg font-normal ">{text}</span>
+        <span className="font-white text-[1rem] font-medium ">{text}</span>
       ) : (
         <span className="sidenav-link">{text}</span>
       )}

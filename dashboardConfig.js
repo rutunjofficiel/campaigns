@@ -6,19 +6,19 @@ export const dashboardLinks = [
     value: "dashboard",
   },
   {
-    link: "#",
+    link: "/dashboard/kyc",
     text: "KYC",
     icon: "kyc",
     value: "kyc",
   },
   {
-    link: "dashboard/campaignMaster",
+    link: "/dashboard/campaignMaster",
     text: "Campaign Master",
     icon: "campaignMaster",
     value: "campaignMaster",
   },
   {
-    link: "dashboard/settings",
+    link: "/dashboard/settings",
     text: "Settings",
     icon: "settings",
     value: "settings",

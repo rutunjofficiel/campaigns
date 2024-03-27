@@ -71,3 +71,12 @@ export const ContactUsSchema = Yup.object().shape({
     .max(200, "Message can be no longer than 200words")
     .required("Required"),
 });
+
+export const KYCSchema = Yup.object().shape({
+  companyName: Yup.string().min(2, "Too short").required("Required"),
+  branch: Yup.string().min(2, "Too short").required("Required"),
+  message: Yup.string()
+    .min(2, "Too short")
+    .max(200, "Message can be no longer than 200words")
+    .required("Required"),
+});

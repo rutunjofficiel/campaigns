@@ -1,5 +1,6 @@
 import Image from "next/image";
 import DashLogo from "../../public/images/DashLogo.png";
+import UpgradeToProCard from "@/components/(dashboard)/upgradeToProCard";
 import {
   AccordionContent,
   AccordionTrigger,
@@ -22,7 +23,7 @@ import IcButton from "./icButton";
 
 export default function SidePanel() {
   return (
-    <aside className="sticky top-0 z-40 h-screen w-[18%] bg-campaignBlue py-6 text-white">
+    <aside className="sticky top-0 z-40 h-screen w-[18%] bg-campaignBlue py-6  text-white">
       <div className="flex h-full flex-col justify-between">
         <div className="flex flex-col justify-between gap-8">
           <div className="relative my-auto ml-3 aspect-auto w-36 ">
@@ -34,9 +35,9 @@ export default function SidePanel() {
               <Tabs
                 dashboard
                 defaultValue="dashboard"
-                className="w-full items-start text-start"
+                className="w-full items-start text-start "
               >
-                <TabsList className="grid w-full grid-cols-1">
+                <TabsList className="grid w-full grid-cols-1 ">
                   <div className="mx-auto ">
                     {dashboardLinks.map((link, index) => {
                       return (
@@ -77,12 +78,7 @@ export default function SidePanel() {
                               {category.links.map((link, index) => (
                                 <li key={index}>
                                   <TabsTrigger dashboard value={link.value}>
-                                    <Link
-                                      href={link.link}
-                                      className="sidenav-link"
-                                    >
-                                      {link.text}
-                                    </Link>
+                                    <Link href={link.link}>{link.text}</Link>
                                   </TabsTrigger>
                                 </li>
                               ))}
@@ -98,6 +94,7 @@ export default function SidePanel() {
           </div>
         </div>
         <div>
+          {/* <UpgradeToProCard /> */}
           <Button className="m-auto flex w-full flex-row justify-between rounded-md  p-0 px-2">
             <p className="sidenav-link">Logout</p>
             <IoLogOutOutline size={22} />
