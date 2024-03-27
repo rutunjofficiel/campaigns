@@ -1,7 +1,6 @@
 import Image from "next/image";
 // import signInIllustration from "../public/images/signInIllustration.png";
-import signInIllustration from "@/public/images/signInIllustration.png";
-import { SlEnvolopeLetter } from "react-icons/sl";
+import signInIllustration from "../public/images/signInIllustration.png";
 import {
   Card,
   CardContent,

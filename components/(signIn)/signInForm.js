@@ -71,7 +71,7 @@ export default function SignInForm() {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="m-auto flex flex-col  gap-7 md:m-0">
+                <div className="m-auto flex flex-col gap-7 md:m-0">
                   <Formik
                     validationSchema={SignInSchema}
                     onSubmit={async (values, { setSubmitting }) => {
@@ -117,7 +117,6 @@ export default function SignInForm() {
                             <Field
                               type="text"
                               name="CustID"
-                              // disabled={isSubmitted}
                               placeholder="Customer ID"
                               className="2xs:py-1.6 rounded-sm bg-[#EEEEEE] px-2 py-2.5"
                             />
