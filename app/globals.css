@@ -62,14 +62,15 @@ input{
    border-radius: 4px;
    padding: 1rem;
    width: 6rem;
-   height: 4rem;
+   height: 4rem; 
+   background-color: #fefefe;
    border: #00243B 1px solid;
  }
  .formikInputField{
    border-radius: 4px;   
    padding: 0.5rem 0.625rem;
   background-color: #EEEEEE;
- }
+ } 
 .image-container-2{
   position: relative;
     aspect-ratio: 1/1;
