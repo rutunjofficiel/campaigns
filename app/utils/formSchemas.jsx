@@ -142,3 +142,12 @@ export const KYCSchema = Yup.object().shape({
       return value.type === "application/pdf";
     }),
 });
+
+export const kycFormDocsFields = [
+  { htmlFor: "aadharCard", name: "Aadhar Card" },
+  { htmlFor: "panCard", name: "Pan Card" },
+  { htmlFor: "gstin", name: "GSTIN" },
+  { htmlFor: "cin", name: "CIN" },
+  { htmlFor: "agreement", name: "Agreement" },
+  { htmlFor: "other", name: "Other" },
+];

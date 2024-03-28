@@ -26,11 +26,11 @@ async function getData() {
     },
   ];
 }
-
+  
 export default async function Page() {
   const data = await getData();
   return (
-    <div className="mx-auto flex w-full flex-col gap-8 py-10">
+    <div className="tableSectionWrapper">
       <SectionHeader section="Email Automation" />
       <DataTable columns={SMSAutomationColumns} data={data} />
     </div>

@@ -23,15 +23,15 @@ import IcButton from "./icButton";
 
 export default function SidePanel() {
   return (
-    <aside className="sticky top-0 z-40 h-screen w-[18%] bg-campaignBlue py-6  text-white">
+    <aside className="sticky top-0 z-40 h-screen w-[18%] bg-campaignBlue  text-white">
       <div className="flex h-full flex-col justify-between">
         <div className="flex flex-col justify-between gap-8">
-          <div className="relative my-auto ml-3 aspect-auto w-36 ">
+          <div className="relative m-auto ml-3 mt-8 aspect-auto w-36">
             <Image src={DashLogo} alt="DashLogo" />
           </div>
           <Separator />
           <div className="pl-2">
-            <div className="flex flex-col  gap-2">
+            <div className="gap- flex  flex-col ">
               <Tabs
                 dashboard
                 defaultValue="dashboard"
@@ -66,7 +66,11 @@ export default function SidePanel() {
                           dashboard
                           value={category.value}
                         >
-                          <AccordionTrigger dashboard={true} white>
+                          <AccordionTrigger
+                            className="my-2 py-0"
+                            dashboard={true}
+                            white
+                          >
                             <IcButton
                               large={true}
                               text={category.category}
@@ -95,7 +99,7 @@ export default function SidePanel() {
         </div>
         <div>
           {/* <UpgradeToProCard /> */}
-          <Button className="m-auto flex w-full flex-row justify-between rounded-md  p-0 px-2">
+          <Button className="m-auto mt-auto flex w-full flex-row justify-between rounded-md  p-0 px-2">
             <p className="sidenav-link">Logout</p>
             <IoLogOutOutline size={22} />
           </Button>

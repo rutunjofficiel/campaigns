@@ -53,11 +53,11 @@ export default async function Page() {
   const data = await getData();
   const CampaignMasterData = await getDataCampaignMaster();
   return (
-    <div>
+    <div className="tableSectionWrapper">
+      <SectionHeader section="Campaign Master" />
       <Tabs defaultValue="sms">
-        <div>
-          <SectionHeader section="Campaign Master" />
-          <TabsList className="ml-14">
+        <div className="ml-[68px]  w-[90%] ">
+          <TabsList>
             <TabsTrigger value="sms">SMS</TabsTrigger>
             <TabsTrigger value="whatsapp">Whatsapp</TabsTrigger>
             <TabsTrigger value="email">Email</TabsTrigger>
