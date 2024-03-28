@@ -42,7 +42,7 @@ export default async function Page() {
   }
 
   return (
-    <div className="mx-auto flex w-full flex-col gap-8 py-10">
+    <div className="mx-auto flex w-full flex-col gap-8  py-6">
       <SectionHeader section="Dashboard" />
       <DataTable columns={SMSAutomationColumns} data={data} />
     </div>

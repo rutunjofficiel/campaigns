@@ -74,9 +74,71 @@ export const ContactUsSchema = Yup.object().shape({
 
 export const KYCSchema = Yup.object().shape({
   companyName: Yup.string().min(2, "Too short").required("Required"),
-  branch: Yup.string().min(2, "Too short").required("Required"),
-  message: Yup.string()
-    .min(2, "Too short")
-    .max(200, "Message can be no longer than 200words")
-    .required("Required"),
+  branch: Yup.mixed()
+    .required("Please select an option")
+    .oneOf(["HR", "Developers", "R&D"]),
+  department: Yup.string().min(2, "Too short").required("Required"),
+  customerName: Yup.string().min(2, "Too short").required("Required"),
+  businessType: Yup.string().min(2, "Too short").required("Required"),
+  teamSize: Yup.number().required("Required"),
+  aadharCard: Yup.mixed()
+    .required("Please select a file")
+    .test("fileSize", "File is too large", (value) => {
+      if (!value) return true;
+      return value.size <= 1024 * 1024;
+    })
+    .test("fileType", "Invalid file type", (value) => {
+      if (!value) return true;
+      return value.type === "application/pdf";
+    }),
+  panCard: Yup.mixed()
+    .required("Please select a file")
+    .test("fileSize", "File is too large", (value) => {
+      if (!value) return true;
+      return value.size <= 1024 * 1024;
+    })
+    .test("fileType", "Invalid file type", (value) => {
+      if (!value) return true;
+      return value.type === "application/pdf";
+    }),
+  gstn: Yup.mixed()
+    .required("Please select a file")
+    .test("fileSize", "File is too large", (value) => {
+      if (!value) return true;
+      return value.size <= 1024 * 1024;
+    })
+    .test("fileType", "Invalid file type", (value) => {
+      if (!value) return true;
+      return value.type === "application/pdf";
+    }),
+  cin: Yup.mixed()
+    .required("Please select a file")
+    .test("fileSize", "File is too large", (value) => {
+      if (!value) return true;
+      return value.size <= 1024 * 1024;
+    })
+    .test("fileType", "Invalid file type", (value) => {
+      if (!value) return true;
+      return value.type === "application/pdf";
+    }),
+  agreement: Yup.mixed()
+    .required("Please select a file")
+    .test("fileSize", "File is too large", (value) => {
+      if (!value) return true;
+      return value.size <= 1024 * 1024;
+    })
+    .test("fileType", "Invalid file type", (value) => {
+      if (!value) return true;
+      return value.type === "application/pdf";
+    }),
+  other: Yup.mixed()
+    .required("Please select a file")
+    .test("fileSize", "File is too large", (value) => {
+      if (!value) return true;
+      return value.size <= 1024 * 1024;
+    })
+    .test("fileType", "Invalid file type", (value) => {
+      if (!value) return true;
+      return value.type === "application/pdf";
+    }),
 });

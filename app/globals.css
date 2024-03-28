@@ -58,6 +58,18 @@ input:focus{
 input{
   background-color: #EEEEEE;
  }
+ .formikInputFieldDocument{
+   border-radius: 4px;
+   padding: 1rem;
+   width: 6rem;
+   height: 4rem;
+   border: #00243B 1px solid;
+ }
+ .formikInputField{
+   border-radius: 4px;   
+   padding: 0.5rem 0.625rem;
+  background-color: #EEEEEE;
+ }
 .image-container-2{
   position: relative;
     aspect-ratio: 1/1;
@@ -297,7 +309,9 @@ font-weight: 600;
  background:  linear-gradient(135deg, rgb(208, 225, 233), #ececec ,#e9f0ff); 
 
 } 
- 
+ .yellow-gradient {
+   background: linear-gradient(135deg, #F1EA2D, #fda23f);
+ }
 
 .fire-gradient{
  background:  linear-gradient(135deg, #f15b2d, #fda23f);

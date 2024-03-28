@@ -9,7 +9,7 @@ import { ListFilterIcon } from "lucide-react";
 
 export default function SectionHeader({ section }) {
   return (
-    <div className="mx-auto mt-4 flex w-[90%] flex-row items-center justify-between">
+    <div className="mx-auto flex w-[90%] flex-row items-center justify-between">
       <h1 className="dashboard">{section}</h1>
       <div className="flex flex-row items-center gap-2">
         <Button size="xs" className="flex flex-row items-center rounded-full">
