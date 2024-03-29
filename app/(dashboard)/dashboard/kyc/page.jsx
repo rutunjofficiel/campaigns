@@ -49,7 +49,11 @@ export default function Page() {
       setCurrentStep((step) => step + 1);
     }
   };
- 
+  const handleFileChange = (e) => {
+    const file = e.currentTarget.files[0];
+    setFileName(file.name); // Set the file name for display
+    setFieldValue(field.name, file); // Set the field value using setFieldValue from Formik
+  };
   const prev = () => {
     if (currentStep > 0) {
       setPreviousStep(currentStep);
@@ -121,7 +125,6 @@ export default function Page() {
           </nav>
           <div className="flex h-max flex-row  items-start gap-4 border-l-2 px-6">
             <Formik
-            
               initialValues={{
                 companyName: "",
                 branch: "",
@@ -141,7 +144,6 @@ export default function Page() {
                 console.log(values);
                 setSubmitting(false);
               }}
-                on
             >
               {({
                 values,
@@ -166,11 +168,7 @@ export default function Page() {
                           type="text"
                           name="companyName"
                           id="companyName"
-                          onChange={(event) => {
-                            handleChange;
-                            handleFileChange(event); // Call the second function
-                          }}
-                          value={}
+                          onChange={handleFileChange}
                           onBlur={handleBlur}
                         />
                         <ErrorMessage
@@ -300,7 +298,7 @@ export default function Page() {
                           className="flex flex-col items-center p-1 "
                         >
                           <label
-                            className="file-label flex h-[6rem] w-[6rem] cursor-pointer flex-col items-center justify-center rounded-sm bg-slate-500 text-sm opacity-75 duration-200  hover:bg-gray-700"
+                            className="file-label flex h-[6rem] w-[6rem] cursor-pointer flex-col items-center justify-center rounded-sm bg-slate-200 text-sm opacity-75 duration-200  hover:bg-slate-300"
                             htmlFor={field.htmlFor}
                           >
                             <h2 className="text-center">{field.name}</h2>
