@@ -12,17 +12,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
+import moment from "moment";
 const Page = () => {
   let file = JSON.parse(localStorage?.getItem("xls"));
-  console.log(file);
-  //   let data = file[0];
-  console.log(file[0]);
-  const keys = Object.keys(file[0]);
 
-  const data = keys.map((key) => {
-    return { key: "So" };
-  });
+  file[0].date = moment(file[0].date).format("MM/DD/YYYY");
+
+  console.log(file.date);
 
   return (
     <div className="tableSectionWrapper">

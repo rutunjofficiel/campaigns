@@ -17,11 +17,13 @@ import {
 } from "../../../components/ui/table";
 import { useState } from "react";
 import { Button } from "../../../components/ui/button";
+import moment from "moment";
 
 export function DataTable({ columns, data }) {
+  console.log("data", data[0].Date);
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
-  console.log(data);
+
   const table = useReactTable({
     data,
     columns,
