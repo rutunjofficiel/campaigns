@@ -1,18 +1,6 @@
 "use client";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { SlEnvolopeLetter } from "react-icons/sl";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
-import CustomErrorMessage from "@/components/customErrorMessage";
-import { ContactusSchema } from "../../utils/formSchemas";
 import ContactUsIllustration from "@/components/(contactUs)/contactUsIllustration";
 import ContactUsForm from "@/components/(contactUs)/contactUsForm";
 import { FAQs, addresses } from "../../utils/content";

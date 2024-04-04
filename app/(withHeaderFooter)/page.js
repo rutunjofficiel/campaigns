@@ -16,7 +16,6 @@ export default function Page() {
         <FeatureSection />
         <FeatureSection2 />
         <VideoSection />
-
         <OfficielCampaignServices />
         <SMSFeatures />
         <Benefits />

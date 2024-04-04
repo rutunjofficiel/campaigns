@@ -32,3 +32,34 @@ export const columns = [
     header: "Response",
   },
 ];
+
+export const columnsSMSAutomation = [
+  {
+    accessorKey: "srNo",
+    header: "Sr No.",
+  },
+  {
+    accessorKey: "date",
+    header: "Date",
+  },
+  {
+    accessorKey: "customerName",
+    header: "Customer Name",
+  },
+  {
+    accessorKey: "email",
+    header: "Email",
+  },
+  {
+    accessorKey: "campaign",
+    header: "Campaign Name",
+  },
+  {
+    accessorKey: "deliveryStatus",
+    header: "Delivery Status",
+  },
+  {
+    accessorKey: "number",
+    header: "Number",
+  },
+];

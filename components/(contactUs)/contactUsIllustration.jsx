@@ -1,12 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Feature from "../(videoSection)/feature";
+import { Card } from "@/components/ui/card";
 import ContactDetailCard from "./contactDetailCard";
 
 export default function ContactUsIllustration() {

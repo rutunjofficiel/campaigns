@@ -21,7 +21,7 @@ import { Button } from "../../../components/ui/button";
 export function DataTable({ columns, data }) {
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
-
+  console.log(data);
   const table = useReactTable({
     data,
     columns,

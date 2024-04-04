@@ -1,10 +1,8 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import CustomErrorMessage from "../customErrorMessage";
 import { ContactUsSchema } from "@/app/utils/formSchemas";
-import { Card, CardDescription, CardTitle } from "../ui/card";
-import { Label } from "../ui/label";
+import { Card } from "../ui/card";
 import { Textarea } from "../ui/textarea";
 
 export default function ContactUsForm() {

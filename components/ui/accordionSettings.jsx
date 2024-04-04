@@ -37,7 +37,7 @@ const AccordionTrigger = React.forwardRef(
         <div className="triggerIcon flex h-6 w-6 shrink-0 flex-col items-center justify-center  rounded-full  transition-transform duration-200">
           {white ? (
             dashboard ? (
-              <ChevronDown color="#fff" className="h-4 w-4 " /> // Smaller size for dashboard
+              <ChevronDown color="#fff" className="h-4 w-4" /> // Smaller size for dashboard
             ) : (
               <ChevronDown color="#fff" className="h-6 w-6" /> // Default size for white background
             )

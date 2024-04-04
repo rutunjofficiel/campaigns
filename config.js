@@ -26,6 +26,7 @@ import {
   ToyBrick,
   PanelsTopLeft,
   PartyPopper,
+  MessageSquareMore,
   Banknote,
   Eye,
 } from "lucide-react";
@@ -33,7 +34,7 @@ import { RxDashboard } from "react-icons/rx";
 
 import { SiPagespeedinsights } from "react-icons/si";
 import { FaHandHoldingUsd } from "react-icons/fa";
-import { FaGears } from "react-icons/fa6";
+import { FaGears, FaWhatsapp } from "react-icons/fa6";
 import { FaUserShield } from "react-icons/fa";
 import { TfiPanel } from "react-icons/tfi";
 import { PiNewspaperLight } from "react-icons/pi";
@@ -42,6 +43,8 @@ import { FolderSync } from "lucide-react";
 import { GiGrowth } from "react-icons/gi";
 import { HiOutlineRectangleStack } from "react-icons/hi2";
 import { BsRobot } from "react-icons/bs";
+import { GrDomain } from "react-icons/gr";
+
 import { MdOutlineQueryStats } from "react-icons/md";
 import { LuHeartHandshake } from "react-icons/lu";
 import { LiaHandshakeSolid } from "react-icons/lia";
@@ -51,9 +54,12 @@ import { LogOut } from "lucide-react";
 export const ICONS = {
   signout: LogOut,
   settings: Settings,
+  domain: GrDomain,
+  sms: MessageSquareMore,
   rewards: PartyPopper,
   phone: FaPhoneAlt,
   friends: GiThreeFriends,
+  whatsApp: FaWhatsapp,
   handShake: LiaHandshakeSolid,
   trophy: Trophy,
   check: BsCheckLg,

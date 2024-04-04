@@ -151,3 +151,16 @@ export const kycFormDocsFields = [
   { htmlFor: "agreement", name: "Agreement" },
   { htmlFor: "other", name: "Other" },
 ];
+
+export const UploadAttachmentDialog = Yup.object().shape({
+  attachement: Yup.mixed()
+    .required("Please select a file")
+    .test("fileSize", "File is too large", (value) => {
+      if (!value) return true;
+      return value.size <= 1024 * 1024;
+    })
+    .test("fileType", "Invalid file type", (value) => {
+      if (!value) return true;
+      return value.type === "application/xlsx";
+    }),
+});

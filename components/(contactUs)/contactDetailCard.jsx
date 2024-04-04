@@ -1,8 +1,6 @@
 "use client";
 import { ICONS } from "@/config";
-import { Card, CardContent, CardFooter } from "../ui/card";
-import rewards from "/public/images/rewards.png";
-import Image from "next/image";
+import { Card } from "../ui/card";
 import Link from "next/link";
 
 export default function ContactDetailCard({

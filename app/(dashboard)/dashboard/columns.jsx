@@ -76,3 +76,34 @@ export const CampaignMasterColumns = [
     header: "Action",
   },
 ];
+
+export const columnsSMSAutomation = [
+  {
+    accessorKey: "SrNo",
+    header: "Sr No.",
+  },
+  {
+    accessorKey: "Date",
+    header: "Date",
+  },
+  {
+    accessorKey: "Customer Name",
+    header: "Customer Name",
+  },
+  {
+    accessorKey: "Email",
+    header: "Email",
+  },
+  {
+    accessorKey: "Campaign",
+    header: "Campaign Name",
+  },
+  {
+    accessorKey: "Delivery Status",
+    header: "Delivery Status",
+  },
+  {
+    accessorKey: "Number",
+    header: "Number",
+  },
+];

@@ -25,7 +25,7 @@ export default function OfficesCard({ city, address, phoneNumber }) {
             <CardTitle className="flex flex-col gap-4 text-[1.2rem] ">
               {city}
             </CardTitle>
-            <CardDescription className="paragraph  md:text-base">
+            <CardDescription className="   md:text-base">
               {address}
             </CardDescription>
           </div>

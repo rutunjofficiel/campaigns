@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/images/logo.png";
 import { FaXTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import navDesktopLogo from "../public/images/navDesktopLogo.png";
 
 import { Input } from "./ui/input";
 import { Separator } from "./ui/separator";
@@ -28,7 +29,7 @@ export default function Footer() {
                   objectFit: "contain",
                 }}
                 sizes="(max-width: 768px) 60vw, (max-width: 1200px) 40vw, 33vw"
-                src={logo}
+                src={navDesktopLogo}
                 alt="logo"
               />
             </div>
@@ -91,14 +92,16 @@ export default function Footer() {
             <p>Terms of Service</p>
             <p>Cookie Settings</p>
           </div>
-          <div className=" m-auto flex flex-row items-center gap-5 lg:m-0">
-            <Select defaultValue="english" className="bg-transparent">
+          <div className="m-auto flex flex-row items-center  gap-5 lg:m-0">
+            <Select defaultValue="english" bgNone="true" className="bg-none ">
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Select a fruit" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectItem value="english">English</SelectItem>
+                  <SelectItem className=" " value="english">
+                    English
+                  </SelectItem>
                   <SelectItem value="hindi">Hindi</SelectItem>
                   <SelectItem value="arabic">Arabic</SelectItem>
                   <SelectItem value="german">German</SelectItem>
