@@ -22,7 +22,7 @@ export default function Page() {
             domain: "",
           }}
           onSubmit={(values) => {
-            console.log(values);
+            // console.log(values);
           }}
         >
           <Form>

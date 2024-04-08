@@ -29,11 +29,11 @@ export default function VideoSection() {
             Subscribe
           </Button>
         </div>
-        <div className="flex flex-row  gap-2 md:hidden">
+        <div className="flex flex-row items-center gap-2 md:hidden">
           <Button size="lg" className="bg-campaignBlue font-semibold ">
             Try it now
           </Button>
-          <Button size="lg" variant="outline" className="font-semibold">
+          <Button size="lg" variant="outlineLg" className="font-semibold">
             Subscribe
           </Button>
         </div>

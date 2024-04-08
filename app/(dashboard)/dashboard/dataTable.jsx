@@ -20,7 +20,7 @@ import { Button } from "../../../components/ui/button";
 import moment from "moment";
 
 export function DataTable({ columns, data }) {
-  console.log("data", data[0].Date);
+  // console.log("data", data);
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
 

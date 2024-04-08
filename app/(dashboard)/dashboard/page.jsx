@@ -35,7 +35,7 @@ export default async function Page() {
 
   if (typeof window !== "undefined") {
     let d = JSON.parse(window.localStorage.getItem("userInfo"));
-    console.log("d", d);
+    // console.log("d", d);
     if (d === null) {
       // router.push("/signIn");
     }

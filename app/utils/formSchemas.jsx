@@ -208,6 +208,7 @@ export const SmsSettings = Yup.object().shape({
   apiUrl: Yup.string().matches(urlRegExp, "Enter valid API URL"),
   apiKeysecretToken: Yup.string().min(8, "Minimum required length: 8"),
   apiKey: Yup.string().min(8, "Minimum required length: 8"),
+  defaultApi: Yup.string().min(2, "Min 2 characters required"),
 });
 export const EmailSettings = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),

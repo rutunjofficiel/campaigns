@@ -5,6 +5,12 @@ import navDesktopLogo from "../public/images/navDesktopLogo.png";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { SlEnvolopeLetter } from "react-icons/sl";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function Navbar() {
   const [navHidden, setNavHidden] = useState(true);
@@ -86,15 +92,33 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="flex flex-row items-center justify-center gap-2 align-middle">
-            <Link
-              className="block py-2 text-base text-campaignBlueDark opacity-100 duration-200 md:px-2 md:py-4 lg:text-white"
-              href="/signIn"
-            >
-              Sign In
-            </Link>
-            <Link href="/signUp">
-              <Button className="font-semibold ">Try for free</Button>
-            </Link>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Link
+                    className="block py-2 text-base text-campaignBlueDark opacity-100 duration-200 md:px-2 md:py-4 lg:text-white"
+                    href="#"
+                  >
+                    Sign In
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent className="bg-campaignBlue">
+                  <p className="text-white">Coming soon...</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Link href="/#">
+                    <Button className="font-semibold ">Try for free</Button>
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent className="bg-campaignBlue">
+                  <p className="text-white">Coming soon...</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         </div>
       </nav>
@@ -107,18 +131,18 @@ const navLinks = [
     link: "Home",
     href: "/",
   },
-  {
-    link: "Solutions",
-    href: "#",
-  },
+  // {
+  //   link: "Solutions",
+  //   href: "#",
+  // },
   {
     link: "Features",
     href: "#services",
   },
-  {
-    link: "Pricing",
-    href: "#",
-  },
+  // {
+  //   link: "Pricing",
+  //   href: "#",
+  // },
   {
     link: "Contact",
     href: "/contactUs",

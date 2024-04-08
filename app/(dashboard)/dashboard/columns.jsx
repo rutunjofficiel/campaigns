@@ -131,3 +131,56 @@ export const columnsSMSAutomation = [
     header: "Number",
   },
 ];
+
+export const emailSenderList = [
+  {
+    accessorKey: "email",
+    header: "Email Id",
+  },
+  {
+    accessorKey: "smtpName",
+    header: "SMTP Name",
+  },
+  {
+    accessorKey: "password",
+    header: "Password",
+  },
+  {
+    accessorKey: "port",
+    header: "Port",
+  },
+];
+
+export const domainList = [
+  {
+    accessorKey: "Domain",
+    header: "Domain",
+  },
+];
+
+export const smsSenderList = [
+  {
+    accessorKey: "smsNumber",
+    header: "SMS Number",
+  },
+  {
+    accessorKey: "apiUrl",
+    header: "Api Url",
+  },
+  {
+    accessorKey: "apiKeysecretToken",
+    header: "Token",
+  },
+  {
+    accessorKey: "apiKey",
+    header: "Api Key",
+  },
+  {
+    accessorKey: "accountId",
+    header: "Account ID",
+  },
+  {
+    accessorKey: "defaultApi",
+    header: "Default API",
+  },
+];

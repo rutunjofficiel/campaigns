@@ -2,6 +2,7 @@
 
 import SectionHeader from "@/components/(dashboard)/sectionHeader";
 import { DataTable } from "../dataTable";
+
 import { columnsSMSAutomation } from "../columns";
 import {
   Select,
@@ -13,12 +14,25 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import moment from "moment";
+import { useEffect, useState } from "react";
 const Page = () => {
-  let file = JSON.parse(localStorage?.getItem("xls"));
+  const [file, setFile] = useState(null);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedFile = localStorage?.getItem("xls");
+      if (storedFile) {
+        const parsedFile = JSON.parse(storedFile);
+        parsedFile[0].date = moment(parsedFile[0].date).format("MM/DD/YYYY");
+        setFile(parsedFile);
+      }
+    }
+  }, []);
+  // if (typeof window !== "undefined") {
+  //   let file = JSON.parse(localStorage?.getItem("xls"));
 
-  file[0].date = moment(file[0].date).format("MM/DD/YYYY");
-
-  console.log(file.date);
+  // file[0].date = moment(file[0].date).format("MM/DD/YYYY");
+  // }
+  // console.log(file.date);
 
   return (
     <div className="tableSectionWrapper">
@@ -57,7 +71,7 @@ const Page = () => {
           </Select>
         </div>
       </div>
-      <DataTable data={file} columns={columnsSMSAutomation} />
+      {file && <DataTable data={file} columns={columnsSMSAutomation} />}
     </div>
   );
 };
