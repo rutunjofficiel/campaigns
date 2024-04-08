@@ -6,6 +6,7 @@ import { ListFilter } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "../../components/ui/toggle-group";
 import { List } from "lucide-react";
 import { smsXlsFormat } from "../../xlsFormats";
+import CreateAutomation from "../../components/(dashboard)/createAutomation";
 import { UploadAttachmentDialog } from "../../app/utils/formSchemas";
 import { LayoutGrid } from "lucide-react";
 import {
@@ -26,7 +27,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import * as XLSX from "xlsx";
 
-export default function SectionHeader({ section, hideButtons }) {
+export default function SectionHeader({ section, hideButtons, filterButtons }) {
   const [fileName, setFileName] = useState("No file chosen");
   const [file, setFile] = useState(null);
   const [data, setData] = useState([]);
@@ -79,7 +80,7 @@ export default function SectionHeader({ section, hideButtons }) {
   };
 
   return (
-    <div className="mx-auto flex w-[90%] flex-row items-center justify-between">
+    <div className="mx-auto flex w-[90%] flex-row items-center justify-between  ">
       <h1 className="dashboard">{section}</h1>
       {hideButtons ? (
         <> </>
@@ -193,6 +194,7 @@ export default function SectionHeader({ section, hideButtons }) {
           </ToggleGroup>
         </div>
       )}
+      {filterButtons ? <CreateAutomation /> : ""}
     </div>
   );
 }

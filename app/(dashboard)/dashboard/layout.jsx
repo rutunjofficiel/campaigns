@@ -6,7 +6,6 @@ import SearchPanel from "../../../components/(dashboard)/searchPanel";
 const inter = Inter({ subsets: ["latin"] });
 const additionalClasses = "text-[#050505] bg-[#fafafa]";
 import styles from "./styles.module.css";
-import SectionHeader from "@/components/(dashboard)/sectionHeader";
 
 const bodyClasses = `${inter.className} ${additionalClasses} ${styles.dashboard}`;
 export const metadata = {

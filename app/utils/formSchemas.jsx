@@ -1,6 +1,8 @@
 import * as Yup from "yup";
 const phoneRegExp =
   /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+const urlRegExp =
+  /(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?\/[a-zA-Z0-9]{2,}|((https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)|(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})?/g;
 
 export const SignupSchema = Yup.object().shape({
   Company: Yup.string()
@@ -163,4 +165,63 @@ export const UploadAttachmentDialog = Yup.object().shape({
       if (!value) return true;
       return value.type === "application/xlsx";
     }),
+});
+
+//DASHBOARD -> SETTINGS ->
+export const GeneralSettings = Yup.object().shape({
+  companyName: Yup.string()
+    .min(2, "Minimum required length: 2")
+    .required("Required"),
+  whatsappNumber: Yup.string().matches(
+    phoneRegExp,
+    "Phone number is not valid",
+  ),
+  secretToken: Yup.string().min(8, "Minimum required length: 8"),
+  apiKey: Yup.string().min(8, "Minimum required length: 8"),
+  description: Yup.string().max(200, "Maximum allowed length: 200"),
+});
+export const WhatsappSettings = Yup.object().shape({
+  companyName: Yup.string()
+    .min(2, "Minimum required length: 2")
+    .required("Required"),
+  whatsappNumber: Yup.string().matches(
+    phoneRegExp,
+    "Phone number is not valid",
+  ),
+  secretToken: Yup.string().min(8, "Minimum required length: 8"),
+  apiKey: Yup.string().min(8, "Minimum required length: 8"),
+  description: Yup.string().max(200, "Maximum allowed length: 200"),
+});
+
+export const KycSettings = Yup.object().shape({
+  companyName: Yup.string()
+    .min(2, "Minimum required length: 2")
+    .required("Required"),
+  businessPerson: Yup.string()
+    .min(2, "Minimum required length: 2")
+    .required("Required"),
+  addressDocument: Yup.mixed().required("File is required"),
+});
+
+export const SmsSettings = Yup.object().shape({
+  smsNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
+  apiUrl: Yup.string().matches(urlRegExp, "Enter valid API URL"),
+  apiKeysecretToken: Yup.string().min(8, "Minimum required length: 8"),
+  apiKey: Yup.string().min(8, "Minimum required length: 8"),
+});
+export const EmailSettings = Yup.object().shape({
+  email: Yup.string().email("Invalid email").required("Required"),
+  password: Yup.string()
+    .min(8, "Password must be at least 8 characters")
+    .max(15, "Password must be less than 15 characters")
+    .matches(/[a-z]/, "Password must contain a lowercase letter")
+    .matches(/[A-Z]/, "Password must contain an uppercase letter")
+    .matches(/\d/, "Password must contain a number")
+    .matches(/[!@#$%^&*]/, "Password must contain a special character")
+    .required("Password is required"),
+  port: Yup.number().max(999),
+  smtpName: Yup.string(),
+});
+export const DomainSettings = Yup.object().shape({
+  domain: Yup.string().matches(urlRegExp, "Enter valid domain"),
 });

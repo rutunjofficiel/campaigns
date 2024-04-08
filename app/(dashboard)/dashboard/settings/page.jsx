@@ -1,142 +1,82 @@
 "use client";
-
 import SectionHeader from "@/components/(dashboard)/sectionHeader";
-import {
-  AccordionContent,
-  AccordionItem,
-  Accordion,
-  AccordionTrigger,
-} from "@/components/ui/accordionSettings";
 import { ICONS } from "@/config";
-import { ArrowRight } from "lucide-react";
-import { Settings } from "lucide-react";
-import Link from "next/link";
+import Link from "next/link"; // Assuming you're using Next.js
 
-const settings = {
-  "General Settings": {
-    icon: "settings",
-    options: [
-      "Company Information",
-      "Company document",
-      "Person document",
-      "Address document",
-      "Business person",
-    ],
+const settings = [
+  {
+    "General Settings": {
+      href: "settings/generalSettings",
+      icon: "settings",
+    },
   },
-  "Whatsapp Settings": {
-    icon: "whatsApp",
-    options: [
-      "Company Information",
-      "Company document",
-      "Person document",
-      "Address document",
-      "Business person",
-    ],
+  {
+    "Whatsapp Settings": {
+      href: "settings/whatsappSettings",
+      icon: "whatsApp",
+    },
   },
-  "Email Settings": {
-    icon: "email",
-    options: [
-      "Company Information",
-      "Company document",
-      "Person document",
-      "Address document",
-      "Business person",
-    ],
+  {
+    "Email Settings": {
+      href: "settings/emailSettings",
+      icon: "email",
+    },
   },
-  "Sms Settings": {
-    icon: "sms",
-    options: [
-      "Company Information",
-      "Company document",
-      "Person document",
-      "Address document",
-      "Business person",
-    ],
+  {
+    "Sms Settings": {
+      href: "settings/smsSettings",
+      icon: "sms",
+    },
   },
-  "Domain Settings": {
-    icon: "settings",
-    options: [
-      "Company Information",
-      "Company document",
-      "Person document",
-      "Address document",
-      "Business person",
-    ],
+  {
+    "Domain Settings": {
+      href: "settings/domainSettings",
+      icon: "settings",
+    },
   },
-  "Kyc Settings": {
-    icon: "kyc",
-    options: [
-      "Company Information",
-      "Company document",
-      "Person document",
-      "Address document",
-      "Business person",
-    ],
+  {
+    "Kyc Settings": {
+      href: "settings/kycSettings",
+      icon: "kyc",
+    },
   },
-};
+];
 
 export default function Page() {
   return (
     <div className="tableSectionWrapper">
       <SectionHeader section="Settings" hideButtons={true} />
-
-      <Accordion
-        type="single"
-        collapsible
-        className=" mx-auto  w-[90%] rounded-md border-none"
-      >
-        <ul className="grid grid-cols-1 gap-3 lg:grid-cols-2">
-          {Object.keys(settings).map((settingKey, index) => {
-            const IconComponent = ICONS[settings[settingKey].icon];
-            return (
-              <li key={index}>
-                <AccordionItem value={`item-${index}`} className="shadow-md  ">
-                  <AccordionTrigger
-                    white="true"
-                    className="w-[fit] rounded-md bg-campaignBlue p-4 hover:no-underline"
-                  >
-                    <div className="  flex flex-row items-center gap-4 text-white">
-                      <div className="flex h-10 w-10 flex-col items-center justify-center rounded-full bg-white ">
-                        {IconComponent && (
-                          <IconComponent
-                            color="#029AFF"
-                            size="60%"
-                            className="m-auto"
-                          />
-                        )}
-                      </div>
-                      <div className=" flex flex-col items-start   text-start ">
-                        {/* Displaying the setting name */}
-                        <h2 className=" text-lg font-semibold">{settingKey}</h2>
-                        <p>Dummy Description here</p>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="rounded-md ">
-                    <ul>
-                      <div className="mt-2 grid grid-cols-1 gap-1 px-4 md:grid-cols-2 lg:mx-auto lg:w-fit  lg:p-0">
-                        {settings[settingKey].options.map(
-                          (option, optionIndex) => (
-                            <Link
-                              href="#"
-                              className="flex flex-row  items-center gap-1 p-2 font-medium text-[#6C757D]"
-                            >
-                              <div className="flex w-fit flex-col items-center rounded-full bg-campaignBlue stroke-white p-[4px]">
-                                <ArrowRight size={16} color="#fff" />
-                              </div>
-                              <li key={optionIndex}>{option}</li>
-                            </Link>
-                          ),
-                        )}
-                      </div>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </li>
-            );
-          })}
-        </ul>
-      </Accordion>
+      <ul className="mx-auto grid w-[90%] grid-cols-1 justify-between gap-3 lg:grid-cols-2">
+        {settings.map((setting, index) => {
+          const settingName = Object.keys(setting)[0];
+          const { href, icon } = setting[settingName];
+          const IconComponent = ICONS[icon];
+          return (
+            <li
+              key={index}
+              className="mx-auto w-full rounded-md border-none bg-campaignBlue p-6"
+            >
+              <Link href={href}>
+                <div className="flex w-full flex-row items-center gap-4 text-white">
+                  <div className="flex aspect-square h-12 w-12 flex-col items-center justify-center rounded-full bg-white ">
+                    {IconComponent && (
+                      <IconComponent
+                        color="#029AFF"
+                        size="60%"
+                        className="m-auto"
+                      />
+                    )}
+                  </div>
+                  <div className="flex w-full flex-col items-start text-start">
+                    <h2 className="text-lg font-semibold">{settingName}</h2>
+                    <p>Dummy Description here</p>
+                  </div>
+                </div>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

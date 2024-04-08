@@ -93,15 +93,6 @@ export default function KYCForm() {
             {currentStep === 0 && (
               <>
                 <div>
-                  {/* < htmlFor="companyName">Company Name</label> */}
-                  {/* <Field
-                    type="text"
-                    name="companyName"
-                    id="companyName" 
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  /> */}
-
                   <Field
                     type="text"
                     name="companyName"

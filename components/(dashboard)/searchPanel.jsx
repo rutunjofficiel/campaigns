@@ -17,6 +17,7 @@ import {
 } from "../../components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 import SectionHeader from "./sectionHeader";
+import { ChevronDown } from "lucide-react";
 
 export default function SearchPanel() {
   return (
@@ -32,8 +33,20 @@ export default function SearchPanel() {
         </Toggle>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button className="rounded-lg" variant="outline">
-              Open
+            <Button className="rounded-lg px-2  py-5" variant="outline">
+              <div className="flex flex-row items-center justify-between gap-9">
+                <div className="flex flex-row items-center gap-1">
+                  <div className="h-8 w-8 rounded-sm bg-slate-300"></div>
+                  <div className="flex flex-col items-start py-1">
+                    <span className="text-[0.6rem] opacity-90">
+                      Welcome back,
+                    </span>{" "}
+                    <span className="text-[1rem]">Vivek </span>
+                  </div>
+                </div>
+
+                <ChevronDown size={18} />
+              </div>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56">
@@ -88,7 +101,6 @@ export default function SearchPanel() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      
     </div>
   );
 }

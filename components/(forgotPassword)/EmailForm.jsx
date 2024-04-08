@@ -19,7 +19,6 @@ export default function EmailForm({ activeStep, setActiveStep }) {
           body: JSON.stringify(values),
         });
         setActiveStep(activeStep + 1);
- 
       }}
       validate={(values) => {
         const errors = {};
