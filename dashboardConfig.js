@@ -5,12 +5,7 @@ export const dashboardLinks = [
     icon: "dashboard",
     value: "dashboard",
   },
-  {
-    link: "/dashboard/kyc",
-    text: "KYC",
-    icon: "kyc",
-    value: "kyc",
-  },
+
   {
     link: "/dashboard/campaignMaster",
     text: "Campaign Master",

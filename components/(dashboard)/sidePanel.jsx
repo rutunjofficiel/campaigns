@@ -1,6 +1,5 @@
 import Image from "next/image";
 import DashLogo from "../../public/images/DashLogo.png";
-import UpgradeToProCard from "@/components/(dashboard)/upgradeToProCard";
 import {
   AccordionContent,
   AccordionTrigger,
@@ -8,15 +7,9 @@ import {
   Accordion,
 } from "../ui/accordion";
 import { IoLogOutOutline } from "react-icons/io5";
-
 import { Separator } from "../ui/separator";
 import Link from "next/link";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/sidePanelTabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/sidePanelTabs";
 import { Button } from "../ui/button";
 import { dashboardLinks, dashboardSubLinks } from "@/dashboardConfig";
 import IcButton from "./icButton";
@@ -31,13 +24,13 @@ export default function SidePanel() {
           </div>
           <Separator />
           <div className="pl-2">
-            <div className="gap- flex  flex-col ">
+            <div className="gap- flex flex-col">
               <Tabs
                 dashboard
                 defaultValue="dashboard"
-                className="w-full items-start text-start "
+                className="w-full items-start text-start"
               >
-                <TabsList className="grid w-full grid-cols-1 ">
+                <TabsList className="grid w-full grid-cols-1">
                   <div className="mx-auto ">
                     {dashboardLinks.map((link, index) => {
                       return (
