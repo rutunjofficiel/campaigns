@@ -49,18 +49,20 @@ export default function Footer() {
               </Link>
             </div>
             <div className="flex flex-col  gap-2 text-[0.9rem] text-white">
-              <h1 className=" font-bold uppercase">Company</h1>
-              <Link href="#">About</Link>
-              <Link href="#">Contact</Link>
-              <Link href="#">Careers</Link>
-              <Link href="#">Blog</Link>
+              <h1 className="font-bold uppercase">Company</h1>
+              <Link href="https://officielcrm.com/about/">About</Link>
+              <Link href="/contactUs">Contact</Link>
+              <Link href="https://officielcrm.com/career/">Careers</Link>
+              <Link href="https://officielcrm.com/blog/">Blog</Link>
             </div>
             <div className="col-span-2  flex flex-col gap-2 text-[0.9rem] text-white md:col-span-1">
-              <h1 className=" font-bold uppercase">Support</h1>
-              <Link href="#">Contact Us</Link>
-              <Link href="#">Support</Link>
-              <Link href="#">Policy</Link>
-              <Link href="#">Talk to Sales</Link>
+              <h1 className="font-bold uppercase">Support</h1>
+              <Link href="/contactUs">Contact Us</Link>
+              <Link href="https://officielcrm.com/help-center/">Support</Link>
+              <Link href="https://officielcrm.com/privacy-policy-2/">
+                Policy
+              </Link>
+              <Link href="https://officielcrm.com/contact/">Talk to Sales</Link>
             </div>
           </div>
           <div className="flex flex-col  gap-4 text-[0.9rem] text-white md:w-[80%]  md:items-start md:text-start">
@@ -93,7 +95,7 @@ export default function Footer() {
             <p>Cookie Settings</p>
           </div>
           <div className="m-auto flex flex-row items-center  gap-5 lg:m-0">
-            <Select defaultValue="english" bgNone="true" className="bg-none ">
+            {/* <Select defaultValue="english" bgNone="true" className="bg-none ">
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Select a fruit" />
               </SelectTrigger>
@@ -108,7 +110,7 @@ export default function Footer() {
                   <SelectItem value="spanish">Spanish</SelectItem>
                 </SelectGroup>
               </SelectContent>
-            </Select>
+            </Select> */}
             <div className="flex flex-row items-end gap-3">
               <FaXTwitter size={19} />
               <FaLinkedinIn size={19} />
