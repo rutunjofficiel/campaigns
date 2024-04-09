@@ -1,8 +1,10 @@
 "use client";
 import { ContentMasterTemplateForm } from "@/app/utils/formSchemas";
+
 import SectionHeader from "@/components/(dashboard)/sectionHeader";
 import { Tabs, TabsContent, TabsTrigger, TabsList } from "@/components/ui/tabs";
 import { Field, Form, Formik } from "formik";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
   return (
@@ -30,13 +32,15 @@ export default function Page() {
           >
             <Form>
               <label>Template Name</label>
-              <Field type="text" placeholder="Type here" />
+              <Field name="templateName" type="text" placeholder="Type here" />
 
               <label>Template Body</label>
-              <Field type="text" placeholder="Type here" />
+              <Field name="templateBody" type="text" placeholder="Type here" />
+              <Button type="submit">Save</Button>
             </Form>
           </Formik>
         </TabsContent>
+        <TabsContent value="email"></TabsContent>
       </Tabs>
     </div>
   );

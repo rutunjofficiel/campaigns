@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import navDesktopLogo from "../public/images/navDesktopLogo.png";
+import navDesktopLogo from "@/public/images/navDesktopLogo.png";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { SlEnvolopeLetter } from "react-icons/sl";
@@ -30,7 +30,7 @@ export default function Navbar() {
           </div>
           <div className="desktopLogo relative hidden w-32 overflow-hidden lg:inline-block lg:w-[180px]">
             <Link href="/" className="flex flex-row gap-1">
-              <Image objectFit="cover" src={navDesktopLogo} alt="Logo main" />{" "}
+              <Image objectFit="cover" src={navDesktopLogo} alt="Logo main" />
             </Link>
           </div>
 
