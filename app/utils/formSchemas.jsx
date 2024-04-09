@@ -226,3 +226,8 @@ export const EmailSettings = Yup.object().shape({
 export const DomainSettings = Yup.object().shape({
   domain: Yup.string().matches(urlRegExp, "Enter valid domain"),
 });
+
+export const ContentMasterTemplateForm = Yup.object().shape({
+  templateName: Yup.string().max(100),
+  templateBody: Yup.string().max(250),
+});
