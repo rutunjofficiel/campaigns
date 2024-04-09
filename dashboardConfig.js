@@ -12,6 +12,8 @@ export const dashboardLinks = [
     icon: "campaignMaster",
     value: "campaignMaster",
   },
+];
+export const dashboardLinks2 = [
   {
     link: "/dashboard/settings",
     text: "Settings",

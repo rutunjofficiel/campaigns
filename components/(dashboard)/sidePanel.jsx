@@ -11,7 +11,11 @@ import { Separator } from "../ui/separator";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/sidePanelTabs";
 import { Button } from "../ui/button";
-import { dashboardLinks, dashboardSubLinks } from "@/dashboardConfig";
+import {
+  dashboardLinks,
+  dashboardLinks2,
+  dashboardSubLinks,
+} from "@/dashboardConfig";
 import IcButton from "./icButton";
 
 export default function SidePanel() {
@@ -85,6 +89,23 @@ export default function SidePanel() {
                       );
                     })}
                   </Accordion>
+                  {dashboardLinks2.map((link, index) => {
+                    return (
+                      <TabsTrigger
+                        key={index}
+                        dashboard="true"
+                        value={link.value}
+                      >
+                        <Link href={link.link}>
+                          <IcButton
+                            large={true}
+                            text={link.text}
+                            icon={link.icon}
+                          />
+                        </Link>
+                      </TabsTrigger>
+                    );
+                  })}
                 </TabsList>
               </Tabs>
             </div>
