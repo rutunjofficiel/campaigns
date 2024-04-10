@@ -106,8 +106,8 @@ export default function SignInForm() {
                       setSubmitting(false);
                     }}
                     initialValues={{
-                      CustID: "IE2557",
-                      MobileNo: "7987291781",
+                      CustID: "",
+                      MobileNo: "",
                     }}
                   >
                     {({ isSubmitting }) => (

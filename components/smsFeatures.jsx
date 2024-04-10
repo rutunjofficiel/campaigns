@@ -39,12 +39,12 @@ export default function SMSFeatures() {
         </ul>
         <div className="flex w-fit flex-row gap-2">
           <Button size="lg">
-            <Link href="/contactUs">Try it now</Link>
+            <Link href="/support">Try it now</Link>
           </Button>
 
-          <Button size="lg" variant="outline">
+          {/* <Button size="lg" variant="outline">
             Subscribe
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

@@ -175,23 +175,24 @@ export const addresses = [
 
 export const FAQs = [
   {
-    question: "1Lorem Ipsum is a dummy text. Write your question here?",
+    question:
+      "Do I need my contacts to have my number saved on WhatsApp to send them messages?",
     answer:
-      "The are going to use a passage of Lorem Ipsum, you need to be sure tdembarrassing hidden in the middle of text. All the Lorem generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ",
+      "Yes (if applicable to your platform). Explain the importance of opt-in for WhatsApp communication.",
   },
   {
-    question: "2Lorem Ipsum is a dummy text. Write your question here?",
-    answer:
-      "The are going to use a passage of Lorem Ipsum, you need to be sure tdembarrassing hidden in the middle of text. All the Lorem generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ",
+    question: "Can I design custom email templates for my campaigns?",
+    answer: "Explain your platform's email template capabilities.",
   },
   {
-    question: "3Lorem Ipsum is a dummy text. Write your question here?",
+    question: "How do I choose the right channel for my campaign?",
     answer:
-      "The are going to use a passage of Lorem Ipsum, you need to be sure tdembarrassing hidden in the middle of text. All the Lorem generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ",
+      "Provide guidance on selecting the appropriate channel based on Campaign goals: Increase brand awareness (SMS), drive sales (WhatsApp), share detailed information (Email)Target audience: Consider their preferred communication methods and demographics.Message content: SMS for concise messages, WhatsApp for both text and rich media, Email for detailed content. ",
   },
   {
-    question: "4Lorem Ipsum is a dummy text. Write your question here?",
+    question:
+      "What are the benefits of using SMS, WhatsApp, and Email for campaigns?",
     answer:
-      "The are going to use a passage of Lorem Ipsum, you need to be sure tdembarrassing hidden in the middle of text. All the Lorem generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ",
+      "SMS: High open rates, ideal for urgent messages or short updates.WhatsApp: Personalized communication, high engagement rates, rich media support.Email: Cost-effective, in-depth content delivery, suitable for targeted and nurture campaigns.",
   },
 ];

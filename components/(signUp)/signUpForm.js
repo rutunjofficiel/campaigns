@@ -90,11 +90,11 @@ export default function SignUpForm() {
                       }, 400);
                     }}
                     initialValues={{
-                      Email: "Anjtwr58@gmail.com",
-                      Password: "Test@54321",
-                      ContactName: "Anuj",
-                      Company: "Ideliza",
-                      PhoneNo: "8796283216",
+                      Email: "",
+                      Password: "",
+                      ContactName: "",
+                      Company: "",
+                      PhoneNo: "",
                     }}
                   >
                     {({ errors, touched, validateField, validateForm }) => (

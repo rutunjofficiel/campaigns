@@ -290,6 +290,11 @@ input {
   background-clip: text;
   color: transparent;
 }
+.campaign-gradientViolet {
+  background: linear-gradient(135deg, #4c70f8, #7a03b0, #3b82f6, #8402ae);
+  background-clip: text;
+  color: transparent;
+}
 .blue-gradient {
   background: linear-gradient(135deg, #029aff, #3b82f6, #2563eb);
 }

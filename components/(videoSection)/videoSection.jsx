@@ -11,13 +11,13 @@ export default function VideoSection() {
       <div className="sub-heading flex flex-col items-center gap-10 md:gap-12">
         <div>
           <span className="campaign-gradient sub-heading-lg">
-            Officiel Campaign
-          </span>{" "}
+            Officiel <span className="campaign-gradientViolet"> Campaign</span>
+          </span>
           <h1 className="sub-heading-md flex flex-col items-center   ">
             Unify your marketing efforts
           </h1>
         </div>
-        <div className="hidden flex-row  gap-2 md:flex">
+        {/* <div className="hidden flex-row  gap-2 md:flex">
           <Button size="xl" className="bg-campaignBlue ">
             Try it now
           </Button>
@@ -28,7 +28,7 @@ export default function VideoSection() {
           >
             Subscribe
           </Button>
-        </div>
+        </div> */}
         <div className="flex flex-row items-center gap-2 md:hidden">
           <Button size="lg" className="bg-campaignBlue font-semibold ">
             Try it now
