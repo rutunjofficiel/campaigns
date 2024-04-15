@@ -28,7 +28,7 @@ export default function FeatureSection() {
           <div className="grid grid-cols-1 ">
             <div className="flex flex-row gap-4">
               <div className="flex aspect-square h-full  flex-col items-center justify-center rounded-full bg-campaignBlue text-white">
-                <Mail size={88} />
+                <Mail size={80} />
               </div>
               <div className="flex flex-col gap-4">
                 <p className="text-[1.2rem] font-semibold">Email API</p>
@@ -47,7 +47,8 @@ export default function FeatureSection() {
             </div>
           </div>
         </div>
-        <div className="relative flex w-[80%] flex-col items-center  justify-self-end">
+        <div className="relative flex  w-[80%] flex-col items-center  justify-self-end">
+          <div className="absolute -z-10 h-[110%]  w-[80%] self-end rounded-s-2xl bg-[#9F03A8] "></div>
           <Image src={emailFeatureSection1} alt="Hero image SMS" />
         </div>
       </div>
