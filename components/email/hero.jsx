@@ -5,8 +5,8 @@ export default function Hero() {
   return (
     <>
       <div className="gradient-violet-logo absolute inset-0 top-0 -z-50 w-full"></div>
-      <div className="my-16 ml-auto flex flex-col items-baseline gap-2 lg:grid lg:w-[94%] lg:grid-cols-2 lg:place-items-end lg:gap-0">
-        <div className="flex flex-col items-center gap-3 place-self-center lg:items-start lg:gap-6">
+      <div className="my-16 ml-auto flex w-full flex-col items-baseline gap-2 lg:grid lg:w-[94%] lg:grid-cols-2  lg:gap-0">
+        <div className="flex flex-col items-center justify-center  gap-3 self-center lg:items-start lg:gap-6">
           <h1 className="text-[42px] font-medium leading-tight tracking-tighter text-white lg:text-[64px]">
             Flexible, scalable, and results driven email sending platform
           </h1>
@@ -24,7 +24,7 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-        <div className="relative flex w-[80%] flex-col items-center">
+        <div className="relative flex w-[80%] flex-col items-center  justify-self-end">
           <Image src={heroImageEmail} alt="Hero image SMS" />
         </div>
       </div>
