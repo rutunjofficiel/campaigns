@@ -298,6 +298,15 @@ input {
 .blue-gradient {
   background: linear-gradient(135deg, #029aff, #3b82f6, #2563eb);
 }
+.gradient-violet-logo {
+  background: linear-gradient(
+    93.37deg,
+    #3a4fd8 0%,
+    #8101ae 35.92%,
+    #9801a9 72.46%,
+    #a304a7 101.7%
+  );
+}
 
 .purple-gradient {
   background: linear-gradient(135deg, #a900a4, #d800d1, #d60acf);

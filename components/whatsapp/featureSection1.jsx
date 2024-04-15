@@ -3,8 +3,8 @@ import feature from "@/public/images/feature.png";
 import { Button } from "../ui/button";
 export default function FeatureSection1() {
   return (
-    <div className="my-16 flex w-full flex-col items-center lg:grid lg:h-min lg:grid-cols-2  lg:justify-between ">
-      <div className="flex  flex-col  gap-8 lg:gap-10">
+    <div className="mx-auto my-16 flex w-[94%] flex-col items-center md:w-[90%] lg:grid lg:h-min lg:grid-cols-2  lg:justify-between ">
+      <div className="flex flex-col gap-8 lg:gap-10">
         <h2 className="sub-heading">Create marketing campaigns that convert</h2>
         <p className="leading-tighter  text-xl opacity-90">
           Send promotions, offers, and back-in-stock alerts while respecting

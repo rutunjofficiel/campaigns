@@ -19,7 +19,7 @@ import { Separator } from "../ui/separator";
 import { Check } from "lucide-react";
 export default function PricingCard() {
   return (
-    <div className=" w-fit rounded-[36px] bg-white p-10 shadow-md">
+    <div className="w-fit rounded-[36px] bg-white p-10 shadow-md duration-200 hover:scale-100">
       <div className="flex flex-col gap-6">
         <CardTitle className="text-4xl font-bold">Business</CardTitle>
         <CardDescription>Lorem Ipsum is dummy</CardDescription>

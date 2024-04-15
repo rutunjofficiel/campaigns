@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 export default function FeatureSection2() {
   return (
     <div className="bg-[#32D851] py-8 lg:py-12">
-      <div className="  mx-auto h-full  w-[94%] bg-[#32D851] text-white md:w-[90%] ">
+      <div className="mx-auto h-full w-[94%] bg-[#32D851] text-white md:w-[90%]">
         <div className="my-16 flex w-full flex-col items-center gap-4 lg:grid lg:h-min lg:grid-cols-2 lg:justify-between ">
           <div className="relative mx-auto aspect-[5/4] w-[85%] ">
             <div className="absolute inset-0 aspect-[5/4] w-full">
