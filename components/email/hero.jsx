@@ -4,9 +4,9 @@ import heroImageEmail from "../../public/images/heroImageEmail.png";
 export default function Hero() {
   return (
     <>
-      <div className="gradient-violet-logo absolute inset-0 top-0 -z-50 w-full"></div>
+      <div className="gradient-violet-logo absolute  inset-0 top-0 -z-50 w-full"></div>
       <div className="my-16 ml-auto flex w-full flex-col items-baseline gap-2 lg:grid lg:w-[94%] lg:grid-cols-2  lg:gap-0">
-        <div className="flex flex-col items-center justify-center  gap-3 self-center lg:items-start lg:gap-6">
+        <div className="flex flex-col items-center justify-center gap-3 self-center lg:items-start lg:gap-6">
           <h1 className="text-[42px] font-medium leading-tight tracking-tighter text-white lg:text-[64px]">
             Flexible, scalable, and results driven email sending platform
           </h1>
@@ -14,7 +14,7 @@ export default function Hero() {
             Build with the platform that enables you to send, track, and
             optimize emails effortlessly
           </p>
-          <div className="flex flex-row  gap-2 ">
+          <div className="flex flex-row items-start gap-2 ">
             <Button size="xl">Get Started</Button>
             <Button
               size="xl"

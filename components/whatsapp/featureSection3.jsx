@@ -26,14 +26,14 @@ export default function FeatureSection3() {
             <h2 className="sub-heading ">
               Everything you need to Send WhatsApps
             </h2>
-            <p className="leading-tighter text-lg opacity-90">
+            <p className="leading-tighter text-center text-lg opacity-90 lg:text-start">
               Sending and receiving WhatsApp messages was never so easy before.
               We offer a high quality service with a fair pricing.
             </p>
-            <ul className="grid grid-cols-2 gap-2 ">
+            <ul className="grid grid-cols-2 gap-2">
               {features.map((feature) => {
                 return (
-                  <p className="text-md flex flex-row items-center gap-1 lg:text-lg">
+                  <p className="text-md flex  w-max flex-row items-center gap-1 lg:text-lg">
                     <IoCheckmarkCircleOutline
                       size={24}
                       className="text-campaignBlue"
