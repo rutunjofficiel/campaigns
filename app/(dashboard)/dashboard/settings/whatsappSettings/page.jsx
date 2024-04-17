@@ -1,14 +1,29 @@
 "use client";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import CustomErrorMessage from "@/components/customErrorMessage";
-import { EmailSettings, WhatsappSettings } from "@/app/utils/formSchemas";
+import { WhatsappSettings } from "@/app/utils/formSchemas";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import useWhatsappSettingsStore from "../../../../utils/stores";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
+import { create } from "zustand";
 import SettingsBackButton from "@/components/(dashboard)/settingsBackButton";
+import { useEffect } from "react";
+
 export default function Page() {
+  const { setWhatsappNumber, whatsappSetting, getWhatsappNumber } =
+    useWhatsappSettingsStore();
+
+  useEffect(() => {
+    if (WhatsappSettings === null) {
+      getWhatsappNumber();
+    }
+    setWhatsappNumber("7987291782");
+  }, []);
+
+  console.log(whatsappSetting);
+
   return (
     <div className="mx-auto w-[90%]">
       <Card className="mt-6">
@@ -19,11 +34,12 @@ export default function Page() {
         <Formik
           validationSchema={WhatsappSettings}
           initialValues={{
-            description: "",
-            secretToken: "",
-            whatsappNumber: "",
-            companyName: "",
-            apiKey: "",
+            whatsappBusinessId: "433443433443",
+            accessToken: "433443433443",
+            phoneNumberId: "",
+            fbManagerId: "",
+            companyName: "RRRR",
+            apiKey: "433443433443",
           }}
           onSubmit={(values) => {
             console.log(values);
@@ -56,20 +72,17 @@ export default function Page() {
                 </div>
 
                 <div className="flex flex-col  p-1 ">
-                  <label
-                    className="text-sm opacity-75"
-                    htmlFor="whatsappNumber"
-                  >
-                    Whatsapp Number
+                  <label className="text-sm opacity-75" htmlFor="phoneNumberId">
+                    Phone Number Id
                   </label>
                   <Field
                     className="formikInputField"
                     type="tel"
-                    name="whatsappNumber"
-                    id="whatsappNumber"
+                    name="phoneNumberId"
+                    id="phoneNumberId"
                   />
                   <ErrorMessage
-                    name="whatsappNumber"
+                    name="phoneNumberId"
                     component="div"
                     className="error"
                   >
@@ -77,17 +90,17 @@ export default function Page() {
                   </ErrorMessage>
                 </div>
                 <div className="flex flex-col  p-1 ">
-                  <label className="text-sm opacity-75" htmlFor="secretToken">
-                    Secret Token
+                  <label className="text-sm opacity-75" htmlFor="accessToken">
+                    Access Token
                   </label>
                   <Field
                     className="formikInputField"
                     type="number"
-                    name="secretToken"
-                    id="secretToken"
+                    name="accessToken"
+                    id="accessToken"
                   />
                   <ErrorMessage
-                    name="secretToken"
+                    name="accessToken"
                     component="div"
                     className="error"
                   >
@@ -109,17 +122,20 @@ export default function Page() {
                   </ErrorMessage>
                 </div>
                 <div className="flex flex-col p-1">
-                  <label className="text-sm opacity-75" htmlFor="description">
-                    Description
+                  <label
+                    className="text-sm opacity-75"
+                    htmlFor="whatsappBusinessId"
+                  >
+                    Whatsapp Business Id
                   </label>
                   <Field
                     className="formikInputField"
                     type="text"
-                    name="description"
-                    id="description"
+                    name="whatsappBusinessId"
+                    id="whatsappBusinessId"
                   />
                   <ErrorMessage
-                    name="description"
+                    name="whatsappBusinessId"
                     component="div"
                     className="error"
                   >
@@ -129,7 +145,7 @@ export default function Page() {
               </div>
               <CardFooter className="mt-2 px-0">
                 <Button className="w-fit rounded-lg" type="submit">
-                  Update Settings
+                  Add Settings
                 </Button>
               </CardFooter>
             </div>

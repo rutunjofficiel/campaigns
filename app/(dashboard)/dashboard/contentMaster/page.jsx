@@ -1,7 +1,7 @@
 "use client";
 import { ContentMasterTemplateForm } from "@/app/utils/formSchemas";
 import { Editor } from "react-draft-wysiwyg";
-
+import { useStore } from "../settings/whatsappSettings/page";
 import { EditorState, convertToRaw } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import SectionHeader from "@/components/(dashboard)/sectionHeader";
@@ -10,9 +10,10 @@ import { Field, Form, Formik, useField, useFormikContext } from "formik";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { PlusIcon } from "lucide-react";
-
+import useWhatsappSettingsStore from "../../../utils/stores";
 export default function Page() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const { whatsappNumber } = useWhatsappSettingsStore();
 
   return (
     <div className="tableSectionWrapper">
