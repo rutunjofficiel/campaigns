@@ -29,12 +29,14 @@ import { emailSenderList } from "../../columns";
 export default function Page() {
   const data = [
     {
+      srNo: 1,
       email: "tulsi@officiel.com",
       smtpName: "yahoo",
       password: "Test@222",
       port: 8000,
     },
     {
+      srNo: 2,
       email: "rutunj@officiel.com",
       smtpName: "gmail",
       password: "Test@222",
@@ -167,10 +169,19 @@ export default function Page() {
                           )}
                         </ErrorMessage>
                       </div>
-
-                      <Button className="w-fit rounded-lg" type="submit">
-                        Add Email
-                      </Button>
+                      <div className="flex flex-row gap-2">
+                        <Button className="w-fit rounded-lg" type="submit">
+                          Save
+                        </Button>
+                        <Button
+                          onClick={() => {
+                            setOpen(false);
+                          }}
+                          className="w-fit rounded-lg"
+                        >
+                          Cancel
+                        </Button>
+                      </div>
                     </div>
                   </Form>
                 </Formik>

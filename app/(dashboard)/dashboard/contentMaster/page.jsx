@@ -13,7 +13,6 @@ import { PlusIcon } from "lucide-react";
 import useWhatsappSettingsStore from "../../../utils/stores";
 export default function Page() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const { whatsappNumber } = useWhatsappSettingsStore();
 
   return (
     <div className="tableSectionWrapper">

@@ -22,6 +22,7 @@ import SignInOtp from "./signInOtp";
 import { useRouter } from "next/navigation";
 import Loading from "@/app/(dashboard)/dashboard/loading";
 import { TbReload } from "react-icons/tb";
+import { Toaster } from "sonner";
 
 const axios = require("axios");
 
@@ -50,6 +51,7 @@ export default function SignInForm() {
   if (!loading) {
     return (
       <div className="flex w-full flex-col justify-center py-4 md:w-1/2 md:py-0">
+        <Toaster richColors />
         <Card className="m-auto w-fit border-0 pb-0 shadow-none hideIllustration:mt-[3rem]">
           <div className="flex flex-col gap-8 md:gap-8 md:p-6 md:pl-0">
             <div className="flex flex-col gap-5 pl-0 md:gap-4">
@@ -76,8 +78,8 @@ export default function SignInForm() {
                     validationSchema={SignInSchema}
                     onSubmit={async (values, { setSubmitting }) => {
                       setSubmitting(true);
-                      console.log(JSON.stringify(values, null, 2));
                       setCustId(values.CustID);
+                      console.log(JSON.stringify(values, null, 2));
                       axios
                         .post("/api/signIn", {
                           CustID: values.CustID,
@@ -99,8 +101,11 @@ export default function SignInForm() {
                           console.log(response.data);
                         })
                         .catch((error) => {
-                          toast.error(error.response.data.message);
-                          console.log("ERRRO:", error.response.data.message);
+                          console.log("ERROR:", error.response.data.message);
+                          {
+                            error &&
+                              toast.error(`${error.response.data.message}`);
+                          }
                         });
 
                       setSubmitting(false);
@@ -155,7 +160,7 @@ export default function SignInForm() {
                             Please wait
                           </Button>
                         ) : (
-                          <Button>Sign In</Button>
+                          <Button type="submit">Sign In</Button>
                         )}
                       </Form>
                     )}

@@ -65,7 +65,7 @@ export default function SidePanel() {
                         >
                           <AccordionTrigger
                             className="my-2 py-0"
-                            dashboard={true}
+                            dashboard="true"
                             white
                           >
                             <IcButton

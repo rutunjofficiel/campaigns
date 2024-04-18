@@ -117,7 +117,7 @@ export default function SignUpForm() {
                               type="text"
                               placeholder="Contact Name"
                               className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-2 py-2.5"
-                            />{" "}
+                            />
                             <ErrorMessage name="ContactName">
                               {(errMsg) => (
                                 <CustomErrorMessage errorMessage={errMsg} />
@@ -144,18 +144,18 @@ export default function SignUpForm() {
                               {(errMsg) => (
                                 <CustomErrorMessage errorMessage={errMsg} />
                               )}
-                            </ErrorMessage>{" "}
+                            </ErrorMessage>
                             <Field
                               type="password"
                               name="Password"
                               placeholder="Enter password"
                               className="2xs:py-1.6 rounded-sm  bg-[#EEEEEE]  px-3 py-2.5"
-                            />{" "}
+                            />
                             <ErrorMessage name="Password">
                               {(errMsg) => (
                                 <CustomErrorMessage errorMessage={errMsg} />
                               )}
-                            </ErrorMessage>{" "}
+                            </ErrorMessage>
                           </div>
                         </div>
                         <Button
@@ -187,11 +187,11 @@ export default function SignUpForm() {
                   <p className="m-auto 2xs:text-sm">
                     Already have an account?
                     <span className="font-bold text-campaignBlue">
-                      {" "}
-                      <Link href="/signIn">Sign In</Link>{" "}
-                    </span>{" "}
+                      
+                      <Link href="/signIn">Sign In</Link>
+                    </span>
                   </p>
-                </div>{" "}
+                </div>
               </CardContent>
             </div>
           </div>

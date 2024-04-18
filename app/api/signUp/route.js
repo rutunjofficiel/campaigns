@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
+import { connectToDatabase } from "../../utils/database";
 
 export async function POST(req) {
   const reader = req.body.getReader();
-
   let data = "";
   while (true) {
     const { done, value } = await reader.read();

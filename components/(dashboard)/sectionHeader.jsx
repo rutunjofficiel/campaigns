@@ -7,6 +7,7 @@ import { ToggleGroup, ToggleGroupItem } from "../../components/ui/toggle-group";
 import { List } from "lucide-react";
 import { smsXlsFormat } from "../../xlsFormats";
 import CreateAutomation from "../../components/(dashboard)/createAutomation";
+import AddNewWhatsappIdDialog from "@/components/(dashboard)/addNewWhatsappIdDialog";
 import { UploadAttachmentDialog } from "../../app/utils/formSchemas";
 import { LayoutGrid } from "lucide-react";
 import {
@@ -27,7 +28,12 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import * as XLSX from "xlsx";
 
-export default function SectionHeader({ section, hideButtons, filterButtons }) {
+export default function SectionHeader({
+  section,
+  hideButtons,
+  filterButtons,
+  addWhatsappSettings,
+}) {
   const [fileName, setFileName] = useState("No file chosen");
   const [file, setFile] = useState(null);
   const [data, setData] = useState([]);
@@ -193,6 +199,27 @@ export default function SectionHeader({ section, hideButtons, filterButtons }) {
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
+      )}
+      {addWhatsappSettings ? (
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              size="xs"
+              className="flex flex-row items-center rounded-full"
+            >
+              Add New
+              <Plus className="ml-1  h-4 w-4" />
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Add New Whatsapp Id</DialogTitle>
+            </DialogHeader>
+            <AddNewWhatsappIdDialog />
+          </DialogContent>
+        </Dialog>
+      ) : (
+        ""
       )}
       {filterButtons ? <CreateAutomation /> : ""}
     </div>

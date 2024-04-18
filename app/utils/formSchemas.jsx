@@ -184,11 +184,12 @@ export const WhatsappSettings = Yup.object().shape({
   companyName: Yup.string()
     .min(2, "Minimum required length: 2")
     .required("Required"),
-  phoneNumberId: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
+  phoneNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
   accessToken: Yup.string().min(8, "Minimum required length: 8"),
   apiKey: Yup.string().min(8, "Minimum required length: 8"),
-  whatsappBusinessId: Yup.string().max(200, "Maximum allowed length: 200"),
-  fbManagerId: Yup.string().min(8, "Maximum length: 8"),
+  whatsappBusinessId: Yup.string().max(8, "Maximum length: 8"),
+  phoneNumberId: Yup.string().max(8, "Maximum length: 8"),
+  fbManagerId: Yup.string().max(8, "Maximum length: 8"),
 });
 
 export const KycSettings = Yup.object().shape({
@@ -204,7 +205,7 @@ export const KycSettings = Yup.object().shape({
 export const SmsSettings = Yup.object().shape({
   smsNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
   apiUrl: Yup.string().matches(urlRegExp, "Enter valid API URL"),
-  apiKeysecretToken: Yup.string().min(8, "Minimum required length: 8"),
+  apiKeySecretToken: Yup.string().min(8, "Minimum required length: 8"),
   apiKey: Yup.string().min(8, "Minimum required length: 8"),
   defaultApi: Yup.string().min(2, "Min 2 characters required"),
 });

@@ -130,9 +130,17 @@ export const columnsSMSAutomation = [
     accessorKey: "Number",
     header: "Number",
   },
+  {
+    accessorKey: "action",
+    header: "Action",
+  },
 ];
 
 export const emailSenderList = [
+  {
+    accessorKey: "srNo",
+    header: "Sr No.",
+  },
   {
     accessorKey: "email",
     header: "Email Id",
@@ -149,16 +157,32 @@ export const emailSenderList = [
     accessorKey: "port",
     header: "Port",
   },
+  {
+    accessorKey: "action",
+    header: "Action",
+  },
 ];
 
 export const domainList = [
   {
+    accessorKey: "srNo",
+    header: "Sr No.",
+  },
+  {
     accessorKey: "Domain",
     header: "Domain",
+  },
+  {
+    accessorKey: "action",
+    header: "Action",
   },
 ];
 
 export const smsSenderList = [
+  {
+    accessorKey: "srNo",
+    header: "Sr No.",
+  },
   {
     accessorKey: "smsNumber",
     header: "SMS Number",
@@ -182,5 +206,45 @@ export const smsSenderList = [
   {
     accessorKey: "defaultApi",
     header: "Default API",
+  },
+  {
+    accessorKey: "action",
+    header: "Action",
+  },
+];
+
+export const whatsappSettingsColumns = [
+  {
+    accessorKey: "srNo",
+    header: "Sr No.",
+  },
+  {
+    accessorKey: "companyName",
+    header: "Company Name",
+  },
+  {
+    accessorKey: "phoneNumberId",
+    header: "Phone Number Id",
+  },
+  {
+    accessorKey: "fbManagerId",
+    header: "FB Manager Id",
+  },
+
+  {
+    accessorKey: "accessToken",
+    header: "Access Token",
+  },
+  {
+    accessorKey: "whatsappBusinessId",
+    header: "Whatsapp Business Id",
+  },
+  {
+    accessorKey: "apiKey",
+    header: "API Key",
+  },
+  {
+    accessorKey: "action",
+    header: "Action",
   },
 ];

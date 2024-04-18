@@ -29,6 +29,7 @@ import { smsSenderList } from "../../columns";
 export default function Page() {
   const data = [
     {
+      srNo: 1,
       smsNumber: "884583833",
       apiUrl: "yahoo",
       defaultApi: "twillio",
@@ -37,6 +38,7 @@ export default function Page() {
       accountId: 1000,
     },
     {
+      srNo: 2,
       smsNumber: "rutunj@officiel.com",
       apiUrl: "gmail",
       defaultApi: "gupshup",
@@ -72,7 +74,7 @@ export default function Page() {
                   validationSchema={SmsSettings}
                   initialValues={{
                     apiUrl: "",
-                    apiKeysecretToken: "",
+                    apiKeySecretToken: "",
                     apiKey: "",
                     accountId: "",
                     smsNumber: "",
@@ -165,7 +167,7 @@ export default function Page() {
                       <div className="flex flex-col p-1 ">
                         <label
                           className="text-sm opacity-75"
-                          htmlFor="apiKeysecretToken"
+                          htmlFor="apiKeySecretToken"
                         >
                           API Key Secret Token
                         </label>
@@ -173,11 +175,11 @@ export default function Page() {
                         <Field
                           className="formikInputField"
                           type="text"
-                          name="apiKeysecretToken"
-                          id="apiKeysecretToken"
+                          name="apiKeySecretToken"
+                          id="apiKeySecretToken"
                         />
                         <ErrorMessage
-                          name="apiKeysecretToken"
+                          name="apiKeySecretToken"
                           component="div"
                           className="error"
                         >
@@ -207,17 +209,20 @@ export default function Page() {
                         </ErrorMessage>
                       </div>
                       <div className="flex flex-col  p-1 ">
-                        <label className="text-sm opacity-75" htmlFor="apiKey">
-                          API Key
+                        <label
+                          className="text-sm opacity-75"
+                          htmlFor="accountId"
+                        >
+                          Account Id
                         </label>
                         <Field
                           className="formikInputField"
                           type="text"
-                          name="apiKey"
-                          id="apiKey"
+                          name="accountId"
+                          id="accountId"
                         />
                         <ErrorMessage
-                          name="apiKey"
+                          name="accountId"
                           component="div"
                           className="error"
                         >
@@ -226,9 +231,21 @@ export default function Page() {
                           )}
                         </ErrorMessage>
                       </div>
-                      <Button className="w-fit rounded-lg" type="submit">
-                        Update Settings
-                      </Button>
+                      <div className="flex w-fit flex-row gap-2">
+                        <Button className="w-fit rounded-lg" type="submit">
+                          Save
+                        </Button>
+                        <Button
+                          onClick={() => {
+                            setOpen(false);
+                          }}
+                          className="w-fit rounded-lg"
+                          type="submit"
+                          variant="outline"
+                        >
+                          Cancel
+                        </Button>
+                      </div>
                     </div>
                   </Form>
                 </Formik>
