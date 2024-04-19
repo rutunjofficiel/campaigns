@@ -37,7 +37,7 @@ export default function SignInForm() {
   useEffect(() => {
     let d = JSON.parse(localStorage.getItem("userInfo"));
     if (d) {
-      if (d["userInfo"] && d["custID"]) {
+      if (d["userInfo"] && d["custId"]) {
         router.push("/dashboard");
         setLoading(true);
       } else {
@@ -78,11 +78,11 @@ export default function SignInForm() {
                     validationSchema={SignInSchema}
                     onSubmit={async (values, { setSubmitting }) => {
                       setSubmitting(true);
-                      setCustId(values.CustID);
+                      setCustId(values.CustId);
                       console.log(JSON.stringify(values, null, 2));
                       axios
                         .post("/api/signIn", {
-                          CustID: values.CustID,
+                          CustId: values.CustId,
                           MobileNo: values.MobileNo,
                         })
                         .then((response) => {
@@ -111,7 +111,7 @@ export default function SignInForm() {
                       setSubmitting(false);
                     }}
                     initialValues={{
-                      CustID: "",
+                      CustId: "",
                       MobileNo: "",
                     }}
                   >
@@ -121,11 +121,11 @@ export default function SignInForm() {
                           <div className="flex flex-col gap-3">
                             <Field
                               type="text"
-                              name="CustID"
+                              name="CustId"
                               placeholder="Customer ID"
                               className="2xs:py-1.6 rounded-sm bg-[#EEEEEE] px-2 py-2.5"
                             />
-                            <ErrorMessage name="CustID">
+                            <ErrorMessage name="CustId">
                               {(errMsg) => (
                                 <CustomErrorMessage errorMessage={errMsg} />
                               )}
