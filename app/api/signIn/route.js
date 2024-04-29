@@ -1,9 +1,15 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
-import { searchCollection } from "../../utils/database";
+import {
+  insertNewWhatsappSender,
+  searchCollection,
+} from "../../utils/database";
+import useUserDetailsStore from "../../utils/stores";
 
 var convert = require("xml-js");
 export async function POST(req) {
+  const { CustId, setUserDetails } = useUserDetailsStore();
+
   const reader = req.body.getReader();
   let jsonResult = "";
   let data = "";
@@ -15,8 +21,10 @@ export async function POST(req) {
     data += new TextDecoder().decode(value);
   }
   data = JSON.parse(data);
-  const CustId = data.CustId;
-  console.log("CustId", CustId);
+  // const CustId = data.CustId;
+  setUserDetails({ CustId: data.CustId });
+
+  console.log("CustId:", CustId);
   const MobileNo = data.MobileNo;
   try {
     // const response = await axios.get(

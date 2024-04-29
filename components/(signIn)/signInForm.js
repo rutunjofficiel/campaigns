@@ -86,7 +86,7 @@ export default function SignInForm() {
                           MobileNo: values.MobileNo,
                         })
                         .then((response) => {
-                          if (response.data.statusCode == 200) {
+                          if (response?.data.statusCode == 200) {
                             console.log(
                               "response.data.statusCode",
                               response.data.statusCode,
@@ -96,7 +96,7 @@ export default function SignInForm() {
                             toast.success("OTP Sent to your phone");
                             setUserInfo(response.data.customerData);
                           } else {
-                            toast.warning(response.data.message);
+                            toast.warning(response?.data.message);
                           }
                           console.log(response.data);
                         })
@@ -104,7 +104,7 @@ export default function SignInForm() {
                           console.log("ERROR:", error.response.data.message);
                           {
                             error &&
-                              toast.error(`${error.response.data.message}`);
+                              toast.error(`${error?.response.data.message}`);
                           }
                         });
 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import Companies from "@/components/whatsapp/companies";
 import netflix from "@/public/images/whatsappLogos/netflix.png";
 import amazon from "@/public/images/whatsappLogos/amazon.png";
 import forbes from "@/public/images/whatsappLogos/forbes.png";
@@ -54,7 +55,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-center gap-4">
+      {/* <div className="flex w-full flex-col items-center gap-4">
         <h1 className="sub-heading">
           Trusted by leading consumer brands globally
         </h1>
@@ -110,8 +111,8 @@ export default function Hero() {
             />
           </div>
         </div>
-      </div>
-
+      </div> */}
+      <Companies />
     </div>
   );
 }

@@ -9,8 +9,7 @@ import { Tabs, TabsContent, TabsTrigger, TabsList } from "@/components/ui/tabs";
 import { Field, Form, Formik, useField, useFormikContext } from "formik";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { PlusIcon } from "lucide-react";
-import useWhatsappSettingsStore from "../../../utils/stores";
+import { PlusIcon } from "lucide-react"; 
 export default function Page() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 

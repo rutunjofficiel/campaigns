@@ -75,6 +75,12 @@ input {
   padding: 0.5rem 0.625rem;
   background-color: #eeeeee;
 }
+.image-container-suite {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 36vw;
+  margin: 0px;
+}
 .image-container-2 {
   position: relative;
   aspect-ratio: 1/1;
@@ -145,6 +151,12 @@ input {
   font-weight: 650;
 }
 @media (max-width: 1024px) {
+  .image-container-suite {
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 65vw;
+    margin: auto;
+  }
   .image-container {
     position: relative;
     width: 65vw;
@@ -160,6 +172,12 @@ input {
   }
 }
 @media (max-width: 768px) {
+  .image-container-suite {
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 70vw;
+    margin: auto;
+  }
   .image-container {
     position: relative;
     width: 70vw;
@@ -218,7 +236,7 @@ input {
     letter-spacing: -2px;
     font-weight: 600;
     line-height: 120%;
-    font-size: 3.8rem;
+    font-size: 3.4rem;
   }
 }
 
@@ -275,13 +293,14 @@ input {
     font-weight: 500;
     opacity: 80%;
   }
+
   .heading {
     color: #00243b;
 
     letter-spacing: -2px;
     font-weight: 600;
     line-height: 120%;
-    font-size: 3.8rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -392,7 +411,7 @@ input {
     letter-spacing: -2px;
     font-weight: 600;
     line-height: 120%;
-    font-size: 3.8rem;
+    font-size: 3.4rem;
   }
 }
 

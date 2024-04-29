@@ -99,7 +99,7 @@ export default function KYCForm() {
                     placeholder="Customer ID"
                     className="2xs:py-1.6 rounded-sm bg-[#EEEEEE] px-2 py-2.5"
                   />
-                  <ErrorMessage name="CustID">
+                  <ErrorMessage name=" CustId">
                     {(errMsg) => <CustomErrorMessage errorMessage={errMsg} />}
                   </ErrorMessage>
                 </div>

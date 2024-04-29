@@ -17,24 +17,37 @@ import {
 import { WhatsappSettings } from "@/app/utils/formSchemas";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
+import axios from "axios";
+import { toast, Toaster } from "sonner";
 export default function AddNewWhatsappIdDialog() {
+  const flag = "whatsappSettings";
   return (
     <Formik
       validationSchema={WhatsappSettings}
       initialValues={{
-        whatsappBusinessId: "433443433443",
+        whatsappBusinessId: "4334433",
         accessToken: "433443433443",
-        phoneNumberId: "",
-        phoneNumber: "",
-        fbManagerId: "",
+        phoneNumberId: "99788",
+        phoneNumber: "9978878787",
+        fbManagerId: "222",
         companyName: "RRRR",
         apiKey: "433443433443",
       }}
       onSubmit={(values) => {
+        axios
+          .post("/api/settings", { values, flag })
+          .then((response) => {
+            console.log("response", response);
+          })
+          .catch((err) => {
+            // toast.error(err);
+            console.log("err", err);
+          });
         console.log(values);
       }}
     >
       <Form>
+        <Toaster />
         <div className="flex flex-col gap-2 px-4">
           <Separator />
           <div className="grid grid-cols-2 gap-4">
